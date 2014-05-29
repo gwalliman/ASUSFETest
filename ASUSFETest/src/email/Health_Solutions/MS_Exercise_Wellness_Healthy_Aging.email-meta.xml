@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Master of Science in Exercise and Wellness (concentration in Healthy Aging)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>HealthSolutions_letterhead</letterhead>
+    <name>MS Exercise &amp; Wellness (Healthy Aging)</name>
+    <style>formalLetter</style>
+    <subject>Thank you for your interest in exercise and wellness (healthy aging)</subject>
+    <textOnly>{!Contact.Name}
+
+Thank you for your interest in the Master of Science in Exercise and Wellness (concentration in Healthy Aging) program. I invite you to review a few of our web pages, which are listed below, as you explore this exciting degree.
+
+This page offers general information about the program:
+
+https://chs.asu.edu/snhp/master-science-exercise-wellness-healthy-aging
+https://webapp4.asu.edu/programs/t5/majorinfo/ASU00/NHEXWHMS/graduate/false
+
+This page answers many frequently asked questions regarding possible deficiency course requirements, application, and student information:
+
+http://healthpromotion.asu.edu/programs/wellness/graduate/faqs/index.htm
+
+Typically students take 2 years (4 semesters) to complete the program.  You can estimate the cost of your attendance, based on current tuition/fees: https://students.asu.edu/tuition
+
+There are deficiency courses which can be taken prior to OR during your graduate program:
+
+Undergraduate Course Deficiency
+BIO 201, 202 Human Anatomy &amp; Physiology
+NTR 241 Human Nutrition
+EXW 315 Physiological Foundations of Movement
+EXW 330 Kinesiological Foundations of Movement
+EXW 420 Exercise Testing
+EXW 425 Exercise Prescription
+
+Again, thank you for your interest in the Master of Science in Exercise and Wellness (Healthy Aging) program. Please contact me if you have any additional questions.
+
+
+Thank you,
+Kristen Stone, MEd
+Program Coordinator Sr., Graduate Exercise and Wellness
+Arizona State University, School of Nutrition and Health Promotion
+550 North 3rd Street
+Phoenix, Arizona 85004
+Kristen.J.Stone@asu.edu
+Phone: 602-496-0862</textOnly>
+    <type>html</type>
+</EmailTemplate>

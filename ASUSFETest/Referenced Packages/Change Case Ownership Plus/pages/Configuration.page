@@ -1,0 +1,194 @@
+<apex:page tabStyle="Change_Case_Ownership_Plus_Setup_Wizard__tab" controller="ChangeCaseOwner.ConfigurationController">
+<style type="text/css">
+.picklist {
+    min-width: 250px;
+}
+
+.detailList tr:last-child td:first-child {
+    vertical-align: middle;
+}
+
+fieldset {border:0;display:inline;padding:10px;vertical-align:top;}
+.primaryPalette {background-color:#D36D00 !important;}
+.brdPalette, .secondaryPalette {border-top-color:#D36D00 !important;}
+.pbSubheader {
+    background: #e96e25 !important; /* Fallback to solid color for older browsers */
+    background-image: linear-gradient(to top, #b95e15, #f97e35) !important;
+    border-radius: 4px;
+    text-shadow: -1px 0 #b95e15, 0 1px #b95e15,1px 0 #b95e15, 0 -1px #b95e15;
+}
+
+#{!$Component.setupForm.setupPageBlock.setupButtons.saveButton} !important {
+    min-width: 300px;
+}
+</style>
+
+<apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"/>
+<script type="text/javascript">
+    function collapseSection(id) {
+        twistSection(document.getElementById(id).firstChild.firstChild);
+    }
+
+    $(document).ready(function() {
+        //Collapse sections
+        collapseSection("{!$Component.setupForm.setupPageBlock.additionalSetup}");
+        collapseSection("{!$Component.setupForm.setupPageBlock.setupCaseTeams}");
+    });
+</script>
+
+<apex:pageMessages id="msgs" />
+
+<apex:sectionHeader title="Change Case Ownership Plus" subtitle="Setup" help="http://kb.internetcreations.com "/>
+
+<apex:form id="setupForm">
+<apex:pageBlock id="setupPageBlock">
+    <apex:pageBlockButtons id="setupButtons" location="bottom">
+        <apex:commandButton style="width: 70px;" id="saveButton" action="{!save}" value="Save" reRender="msgs"/>
+    </apex:pageBlockButtons>
+
+    <apex:pageBlockSection Title="Introduction" columns="2">
+        <apex:pageBlockSectionItem dataStyle="vertical-align: top;">
+            Change Case Ownership Plus replaces the current Change Case Owner page to allow you to assign a new User or Queue with fewer clicks.  For Salesforce EE and UE organizations, the losing owner can also be assigned as a Case Team Member.
+
+            <ul>
+                <li>Fewer clicks to change Case owner.</li>
+                <li>Type ahead searching when entering a name.</li>
+                <li>Allows the original Case owner to maintain visibility of the case.  (For Salesforce EE and UE only)</li>
+                <li>Supports custom buttons and links with parameters. (not supported, refer to <a target="_blank" href="http://kb.internetcreations.com/?kb=000001722">http://kb.internetcreations.com/?kb=000001722</a>)</li>
+            </ul>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem dataStyle="text-align: right;">
+            <apex:image style="box-shadow:8px 8px 8px rgba(0,0,0,0.5);" value="{!URLFOR($Resource.Change_Case_Owner_Assets,'change-case-owner-assets/introduction.png') }"/>
+        </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+    
+    <apex:pageBlockSection Title="Initial Setup" columns="2">
+        <apex:pageBlockSectionItem dataStyle="vertical-align:top;">
+            <p><h1>Case Feed Setup</h1></p>
+            <p>An Action has been created with the install of Change Case Owner Plus.</p>
+
+            <p>If you are using the Page Layout Editor to Configure Actions, go <a href="/ui/setup/layout/PageLayouts?type=Case">here</a> or navigate to Setup > Customize > Cases > Page Layouts.  Click “Edit detail view” next to the feed layout you want to add the Action.  Select Actions and move Change Case Owner to the Publisher Actions section.</p>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem dataStyle="text-align:right;">
+            <apex:image style="margin-bottom:16px; box-shadow:8px 8px 8px rgba(0,0,0,0.5);" value="{!URLFOR($Resource.Change_Case_Owner_Assets,'change-case-owner-assets/case-feed-layout.png') }"/>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem dataStyle="vertical-align:top;">
+            If you are not using the Page Layout Editor to Configure Actions, go <a href="/ui/setup/layout/PageLayouts?type=Case">here</a> or navigate to Setup > Customize > Cases > Page Layouts.  Click “Edit feed view” next to the feed layout you want to add the Action.  Click “+ Add a Visualforce Page” and select case_owner_change.  Change the Pixel size to 460.  Click Save.
+            
+            <br />
+            <br />
+            <div style="padding:4px; background-image: linear-gradient(to right, #fff, transparent); border-radius: 4px;"><b>Note:</b> If you have multiple Case Team Roles you will need to play with the height (pixels) to establish the right size for Change Case Owner.</div>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem dataStyle="text-align:right;">
+            <apex:image style="margin-bottom:16px; border:1px solid #fff; box-shadow:8px 8px 8px rgba(0,0,0,0.5);" value="{!URLFOR($Resource.Change_Case_Owner_Assets,'change-case-owner-assets/publisher-options.png') }"/>
+        </apex:pageBlockSectionItem>
+
+        <apex:pageBlockSectionItem dataStyle="vertical-align:top;"> 
+            <p><h1>Standard Layout Setup</h1></p>
+            Remove the standard Case Owner field and replace it with the new Case Owner field. To do this, edit your Case page layout(s) located at Setup &gt; Customize &gt; Cases &gt; Page Layouts or <a href="/ui/setup/layout/PageLayouts?type=Case" target="_blank">click here</a>.  Click Edit next to your Case page layout. Save when finished.
+            <br/><br/>
+            Be sure to repeat this process for every Case page layout on which you want to use Change Case Ownership Plus.
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem dataStyle="text-align:right;"> 
+            <apex:image style="box-shadow:8px 8px 8px rgba(0,0,0,0.5);" value="{!URLFOR($Resource.Change_Case_Owner_Assets,'change-case-owner-assets/initial-setup.png') }"/>
+        </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+
+    <apex:pageBlockSection id="additionalSetup" Title="Additional Setup" columns="1">
+        <!--
+        <apex:outputPanel >
+            <ol style="list-style-type:upper-alpha; font-weight:bold;">
+                <li><span style="font-weight:normal;">When the Send Notification Email box is selected, a hard-coded email template will be used that is identical to the default that Salesforce provides. Optionally, you can use a Visualforce email template and specify it here. Due to Salesforce platform limitations, only Visualforce type templates are supported.<br/><br/></span></li>
+                <li><span style="font-weight:normal;">Select the maximum quantity of Case Queues you would like to display on the Change Case Owner screen.  Sixteen is the default and the maximum allowed is 999.  If you have more Case Queues than the maximum specified, the Queue list will change to a type ahead searching text box, just like when assigning to a User.</span></li>
+            </ol>
+        </apex:outputPanel>
+        -->
+        <apex:outputPanel >
+        
+        <apex:pageBlockSection columns="1">
+            When the Send Notification Email box is selected, a hard-coded email template will be used that is identical to the default that Salesforce provides. Optionally, you can use a Visualforce email template and specify it here. Due to Salesforce platform limitations, only Visualforce type templates are supported.
+        </apex:pageBlockSection>
+        <apex:pageBlockSection columns="3">
+            <apex:pageBlockSectionItem >
+                <label>Use custom Visualforce Email Template:</label>
+                <apex:inputField value="{!settings.ChangeCaseOwner__Use_Custom_Template__c}"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <label>Email Template Folder:</label>
+                <apex:selectList styleClass="picklist" value="{!EMAIL_TEMPLATES_FOLDER}" size="1">
+                    <apex:actionSupport event="onchange" reRender="templates"/>
+                    <apex:selectOptions value="{!EMAIL_TEMPLATE_FOLDER_OPTIONS}"/>
+                </apex:selectList>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <label>Email Template:</label>
+                <apex:selectList styleClass="picklist" id="templates" value="{!settings.ChangeCaseOwner__TemplateId__c}" size="1" disabled="{!EMAIL_TEMPLATE_OPTIONS.size == 1}">
+                    <apex:selectOptions value="{!EMAIL_TEMPLATE_OPTIONS}"/>
+                </apex:selectList>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        
+        <br />
+        <apex:pageBlockSection columns="1">
+            <span style="padding:4px; background-image: linear-gradient(to right, #fff, transparent); border-radius: 4px;"><b>Note:</b> These next two steps only affect users not using Case Feeds since a type-ahead text field is used to save real estate in the feed.</span>
+            <br/><br/>
+            Select the maximum quantity of Case Queues you would like to display on the Change Case Owner screen.  Selecting zero (0) will change the Queue list to a type ahead searching text box.
+        </apex:pageBlockSection>
+        <apex:pageBlockSection columns="1">
+            <apex:pageBlockSectionItem helpText="Defines a threshold on the number of Queues to be displayed.  Enter any number 0-999. If the quantity of Case Queues exceeds the threshold defined, a type ahead searching text box will be displayed.">
+                <label>Max Display Button Queues:</label>
+                <apex:inputField value="{!maxButtons.ChangeCaseOwner__Max_Button_Queues__c}"/>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        
+        <br />
+        <apex:pageBlockSection columns="1">
+            Select the maximum quantity of Users you would like to display on the Change Case Owner screen.  Selecting zero (0) will change the User list to a type ahead searching text box.
+        </apex:pageBlockSection>
+        <apex:pageBlockSection columns="1">
+            <apex:pageBlockSectionItem helpText="Defines a threshold on the number of Users to be displayed.  Enter any number 0-999. If the quantity of Users exceeds the threshold defined, a type ahead searching text box will be displayed.">
+                <label>Max Display Button Users:</label>
+                <apex:inputField value="{!maxButtons.ChangeCaseOwner__Max_Button_Users__c}"/>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        
+        <br />
+        <apex:pageBlockSection columns="1">
+            Select the field to use when filtering button users.
+        </apex:pageBlockSection>
+        <apex:pageBlockSection columns="1">
+            <apex:pageBlockSectionItem helpText="Field on user to filter on to reduce the number of results displayed.">
+                <label>User filter field:</label>
+                <apex:selectList value="{!maxButtons.ChangeCaseOwner__Filter_Field__c}" multiselect="false" size="1">
+                    <apex:selectOptions value="{!userFilterFields}"/>
+                </apex:selectList>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+
+        <table style="width: 100%;"><tr><td class="pbTitle"></td><td>
+            <apex:commandButton style="width: 70px;" id="quickSaveButton" action="{!save}" value="Quick Save" reRender="msgs">
+                <apex:param value="true" assignTo="{!isQuickSave}"/>
+            </apex:commandButton>
+        </td></tr></table>
+
+        </apex:outputPanel>
+    </apex:pageBlockSection>
+    <apex:pageBlockSection id="setupCaseTeams" Title="Setup Case Teams (For Salesforce EE and UE only)" columns="2">
+        <apex:pageBlockSectionItem dataStyle="vertical-align: top;">
+            Specify which Case Team Roles are available on the Change Case Owner page.  To do this, go to Setup &gt; Customize &gt; Cases &gt; Case Teams &gt; Case Team Roles &gt; Add new.  For instance, you may want to add "Previous Case Owner".
+            <br /><br />
+            For more information on Case Teams setup refer to Salesforce Help &amp; Training.
+            <br /><br />
+            <div style="padding:4px; background-image: linear-gradient(to right, #fff, transparent); border-radius: 4px;"><b>Note:</b> You cannot add a Queue as a Case Team member.  This functionality only adds a Case Team member when changing owners from a User, to a User or Queue.</div>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem dataStyle="text-align: right;">
+            <apex:image style="box-shadow:8px 8px 8px rgba(0,0,0,0.5);" value="{!URLFOR($Resource.Change_Case_Owner_Assets,'change-case-owner-assets/additional-setup.png') }"/>
+        </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+
+</apex:pageBlock>
+</apex:form>
+
+</apex:page>

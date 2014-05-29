@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used to send outage notices - Grad Retrofit and Biodemo</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>ASU_Maroon_Gold</letterhead>
+    <name>Mass Email-Outage 2014-0502</name>
+    <style>formalLetter</style>
+    <subject>Salesforce Accessibility</subject>
+    <textOnly>Hello Salesforce Users!
+
+We are continuing to work on migrating new functionality and data into Salesforce. I apologize for the delay, bu we anticipate you will regain access by Monday, May 2nd at the latest. Please be sure to review the documentation provided for this new functionality. There is limited information in the Google document that I will be sharing with you. However, I will have a training article available for you. I encourage you to attend the training session on Monday, May 2nd from 10:00 - 11:00 PM to review the new options. You can RSVP here. I can schedule additional training sessions as needed. Just provide me with some times you are available. I am available most afternoons next week for retraining. Please post a message in Chatter or email me. I am sorry for any inconvenience.
+
+Thanks,
+Helen Lueck,  MSISE
+Data Analyst – Certified Salesforce Administrator
+Enrollment Services, Office of Information Systems Development
+Arizona State University
+Helen.Lueck@asu.edu</textOnly>
+    <type>html</type>
+</EmailTemplate>

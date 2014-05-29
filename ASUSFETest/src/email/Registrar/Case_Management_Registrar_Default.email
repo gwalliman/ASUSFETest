@@ -1,0 +1,26 @@
+<html>
+    <body style="font-family: Helvetica, Arial; margin: 0px;">
+            <center><img class="logo_top" src="https://asu--c.na14.content.force.com/servlet/servlet.ImageServer?id=015d0000003OMyc&oid=00Dd0000000hLoc&lastMod=1400609948000" 
+                     width="60%" style="padding:0px;padding-top:5px;max-width:200px;" alt="Arizona State University" /></center>
+                
+            
+                <div style="background: #fff;
+                    width: 90%;
+                    margin-right: auto;
+                    margin-left: auto;">
+                    <hr />
+
+                    <br /><br />
+                    
+
+                    <div style="font-size:9pt;color:#990033;font-family: Arial, Helvetica !important;">
+                        <b>University Registrar Services</b><br />
+                        Arizona State University<br />
+                        Enrollment Services<br />
+                        Phone: 480-965-7302<br />
+                        <a href="www.asu.edu" style="color:#990033 !important">www.asu.edu</a>
+                    </div>
+                    <hr>
+                </div>
+    </body>
+</html>

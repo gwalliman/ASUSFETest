@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Informational__ka.Informational__kav$Title</field>
+    </columns>
+    <columns>
+        <field>Informational__ka$ArticleNumber</field>
+    </columns>
+    <columns>
+        <field>Informational__ka$FirstPublishedDate</field>
+    </columns>
+    <columns>
+        <field>Informational__ka$CreatedBy</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Informational__ka.Informational__kav$PublishStatus</column>
+            <operator>equals</operator>
+            <value>2</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Informational__ka.Informational__kav$Article_Expiration_Date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Article Expiration Report: Informational</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Article_type_Informational__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Informational__ka$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

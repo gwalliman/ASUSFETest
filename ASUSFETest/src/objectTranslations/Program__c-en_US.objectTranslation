@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Program</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Programs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Program Code --></label>
+        <name>Program_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program Status --></label>
+        <name>Program_Status__c</name>
+    </fields>
+    <layouts>
+        <layout>Program Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

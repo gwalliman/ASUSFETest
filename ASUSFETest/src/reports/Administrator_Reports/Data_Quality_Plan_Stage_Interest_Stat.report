@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity.OpportunityContactRoles$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity$StageName</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Term__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Academic_Plan__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.OpportunityContactRoles.Lead_Interests_Contact__r$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Opportunity.OpportunityContactRoles.Lead_Interests_Contact__r$Status__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.OpportunityContactRoles.Lead_Interests_Contact__r$Term__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.OpportunityContactRoles.Lead_Interests_Contact__r$Plan__c</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity$Account</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Data Quality: Plan Stage &amp; Interest Stat</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Lead_Interests_and_Opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Opportunity$Application_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

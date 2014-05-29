@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Previous Education</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Previous Education</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Previous Education --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Degree Type --></label>
+        <name>Degree_Type__c</name>
+        <picklistValues>
+            <masterLabel>Certificate</masterLabel>
+            <translation><!-- Certificate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Ed</masterLabel>
+            <translation><!-- General Ed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Graduate</masterLabel>
+            <translation><!-- Graduate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Undergraduate</masterLabel>
+            <translation><!-- Undergraduate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Degree --></label>
+        <name>Degree__c</name>
+        <relationshipLabel><!-- Previous Education --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Graduation Date --></label>
+        <name>Graduation_Date__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

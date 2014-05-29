@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Student Program Plan</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Student Program Plans</value>
+    </caseValues>
+    <fields>
+        <help><!-- A simple description of why an Action was taken --></help>
+        <label><!-- Action Reason --></label>
+        <name>Action_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Application Withdrawn</masterLabel>
+            <translation><!-- Application Withdrawn --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Applied to Graduate</masterLabel>
+            <translation><!-- Applied to Graduate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Concurrent Approved Program</masterLabel>
+            <translation><!-- Concurrent Approved Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conversion</masterLabel>
+            <translation><!-- Conversion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Courtesy App - Cert Prog Only</masterLabel>
+            <translation><!-- Courtesy App - Cert Prog Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Division of Graduate Studies</masterLabel>
+            <translation><!-- Division of Graduate Studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grad POS Sub-Plan Chg</masterLabel>
+            <translation><!-- Grad POS Sub-Plan Chg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minor Added</masterLabel>
+            <translation><!-- Minor Added --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-degree to Degree</masterLabel>
+            <translation><!-- Non-degree to Degree --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Enrolled in Previous Term</masterLabel>
+            <translation><!-- Not Enrolled in Previous Term --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requirement term changed</masterLabel>
+            <translation><!-- Requirement term changed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Request</masterLabel>
+            <translation><!-- Student Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voluntary Withdrawal (GRAD)</masterLabel>
+            <translation><!-- Voluntary Withdrawal (GRAD) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The Action responsible for the Status --></help>
+        <label><!-- Action --></label>
+        <name>Action__c</name>
+        <picklistValues>
+            <masterLabel>Activate</masterLabel>
+            <translation><!-- Activate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completion of Program</masterLabel>
+            <translation><!-- Completion of Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Change</masterLabel>
+            <translation><!-- Data Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discontinuation</masterLabel>
+            <translation><!-- Discontinuation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Matriculation</masterLabel>
+            <translation><!-- Matriculation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plan Change</masterLabel>
+            <translation><!-- Plan Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Program Change</masterLabel>
+            <translation><!-- Program Change --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The Application ID stored on a Student Program record in PeopleSoft --></help>
+        <label><!-- Application Number --></label>
+        <name>Application_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Campus Location specified on the Student Program Plan --></help>
+        <label><!-- Campus --></label>
+        <name>Campus__c</name>
+        <relationshipLabel><!-- Student Program Plans --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Career --></label>
+        <name>Career__c</name>
+        <picklistValues>
+            <masterLabel>Graduate</masterLabel>
+            <translation><!-- Graduate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Law</masterLabel>
+            <translation><!-- Law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Undergraduate</masterLabel>
+            <translation><!-- Undergraduate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Student Program Plans --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The date this Student Plan was updated to the Status shown --></help>
+        <label><!-- Effective Date --></label>
+        <name>Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plan --></label>
+        <name>Plan__c</name>
+        <relationshipLabel><!-- Student Program Plans --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The Program associated with this Student Plan record
+One Program may have multiple Plan records (e.g. a Major and a Minor) --></help>
+        <label><!-- Program --></label>
+        <name>Program__c</name>
+        <relationshipLabel><!-- Student Program Plans --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The &quot;Current Status&quot; of the Student Program associated with this Student Plan --></help>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Active in Program</masterLabel>
+            <translation><!-- Active in Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed Program</masterLabel>
+            <translation><!-- Completed Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discontinued</masterLabel>
+            <translation><!-- Discontinued --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

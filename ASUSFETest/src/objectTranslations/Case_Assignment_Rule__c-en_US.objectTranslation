@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Case Assignment Rule</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Case Assignment Rules</value>
+    </caseValues>
+    <fields>
+        <help><!-- Enter the Category  that is associated with this Case Assignment. Ensure that the value used here exists in Case &quot;Category&quot; Picklist, and that the spelling is identical. --></help>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+    </fields>
+    <fields>
+        <help><!-- The &quot;Name&quot; associated with the Email Address used  for the notice emailed to the customer that a Case has been created. --></help>
+        <label><!-- Customer Notice Email From Name --></label>
+        <name>Customer_Notice_Email_From_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- This Email Address is used:
+1. To identify which Assignment Rule to Use (if this address is found in the &quot;Initial Request Sent To Addresses&quot;)
+2. As the &quot;From&quot; address for the notice emailed to the customer that a Case has been created. --></help>
+        <label><!-- Email Address --></label>
+        <name>Email_Address__c</name>
+    </fields>
+    <fields>
+        <help><!-- The 15 character (case sensitive) ID used to identify the Email Template used for the notice emailed to the customer that a Case has been created. You can view this ID immediatly after &quot;...salesforce.com/&quot; in the URL when viewing the desired Template. --></help>
+        <label><!-- Email Template ID --></label>
+        <name>Email_Template_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is a URL created via a formula. Use this link to verify that the ID entered in the Email Template ID field accurately identifies your desired Template. --></help>
+        <label><!-- Email Template URL --></label>
+        <name>Email_Template_URL__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the Functional Group that is associated with this Case Assignment. Ensure that the value used here exists in Case &quot;Functional Group&quot; Picklist, and that the spelling is identical. --></help>
+        <label><!-- Functional Group --></label>
+        <name>Functional_Group__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the processing Priority for this Case Assignment Rule. It is not possible for two Rules to have the Same Priority. --></help>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+    </fields>
+    <fields>
+        <help><!-- The 15 character (case sensitive) ID of the Queue or User associated with this Assignment Rule.This ID  is shown immediatly after &quot;....salesforce.com/p/own/Queue/d?id=&quot;  in the URL when viewing the Queue or  &quot;...salesforce.com/&quot; when viewing the User. --></help>
+        <label><!-- Queue or User ID --></label>
+        <name>Queue_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is a URL created via a formula. Use this link to verify that the ID entered in the Queue or User ID field accurately identifies your desired Queue or User. --></help>
+        <label><!-- Queue or User URL --></label>
+        <name>Queue_URL__c</name>
+    </fields>
+    <layouts>
+        <layout>Case Assignment Rule Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

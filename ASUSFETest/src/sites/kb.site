@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomSite xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowHomePage>false</allowHomePage>
+    <allowStandardAnswersPages>false</allowStandardAnswersPages>
+    <allowStandardIdeasPages>false</allowStandardIdeasPages>
+    <allowStandardLookups>false</allowStandardLookups>
+    <allowStandardSearch>false</allowStandardSearch>
+    <analyticsTrackingCode>UA-47141114-1</analyticsTrackingCode>
+    <authorizationRequiredPage>Unauthorized</authorizationRequiredPage>
+    <bandwidthExceededPage>BandwidthExceeded</bandwidthExceededPage>
+    <clickjackProtectionLevel>AllowAllFraming</clickjackProtectionLevel>
+    <description>Public Knowledge Base for ASU</description>
+    <fileNotFoundPage>FileNotFound</fileNotFoundPage>
+    <genericErrorPage>Exception</genericErrorPage>
+    <inMaintenancePage>InMaintenance</inMaintenancePage>
+    <inactiveIndexPage>InMaintenance</inactiveIndexPage>
+    <indexPage>pkb_Home_ASU</indexPage>
+    <masterLabel>Public Knowledge Base for ASU</masterLabel>
+    <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
+    <siteAdmin>dlhurth@asu.edu</siteAdmin>
+    <siteTemplate>pkb_Template_ASU</siteTemplate>
+    <siteType>Visualforce</siteType>
+    <subdomain>asu</subdomain>
+    <urlPathPrefix>kb</urlPathPrefix>
+</CustomSite>

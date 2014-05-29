@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object containing scores from GRE, GMAT, and TOEFL</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Test Scores</relationshipLabel>
+        <relationshipName>Test_Scores_Contact</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Lead</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>Test Scores</relationshipLabel>
+        <relationshipName>Test_Scores_Lead</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Student_Type__c</fullName>
+        <description>Labels when the test was received: when the person was a Lead or a Contact</description>
+        <externalId>false</externalId>
+        <label>Student Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Lead</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Test_Component_Percentile__c</fullName>
+        <externalId>false</externalId>
+        <label>Percentile</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Test_Component_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Score</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Test_Component__c</fullName>
+        <externalId>false</externalId>
+        <label>Test Component</label>
+        <picklist>
+            <controllingField>Test_Type__c</controllingField>
+            <picklistValues>
+                <fullName>Analytical</fullName>
+                <controllingFieldValues>GMAT</controllingFieldValues>
+                <controllingFieldValues>GRE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Composite</fullName>
+                <controllingFieldValues>TOEFL</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Integrated Reasoning</fullName>
+                <controllingFieldValues>GMAT</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Quantitative</fullName>
+                <controllingFieldValues>GMAT</controllingFieldValues>
+                <controllingFieldValues>GRE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SPEAK</fullName>
+                <controllingFieldValues>TOEFL</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TSE</fullName>
+                <controllingFieldValues>TOEFL</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Verbal</fullName>
+                <controllingFieldValues>GMAT</controllingFieldValues>
+                <controllingFieldValues>GRE</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Overall</fullName>
+                <controllingFieldValues>GMAT</controllingFieldValues>
+                <controllingFieldValues>GRE</controllingFieldValues>
+                <controllingFieldValues>TOEFL</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Biochemistry, Cell &amp; Molecular Biology</fullName>
+                <controllingFieldValues>GRE Subject</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Biochemistry</fullName>
+                <controllingFieldValues>GRE Subject</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Biology</fullName>
+                <controllingFieldValues>GRE Subject</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cell Biology</fullName>
+                <controllingFieldValues>GRE Subject</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chemistry</fullName>
+                <controllingFieldValues>GRE Subject</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cellular and Molecular</fullName>
+                <controllingFieldValues>GRE Subject</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Computer Science</fullName>
+                <controllingFieldValues>GRE Subject</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Literature in English</fullName>
+                <controllingFieldValues>GRE Subject</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Experimental Psychology</fullName>
+                <controllingFieldValues>GRE Subject</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mathematics</fullName>
+                <controllingFieldValues>GRE Subject</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Organismal Biology</fullName>
+                <controllingFieldValues>GRE Subject</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Physics</fullName>
+                <controllingFieldValues>GRE Subject</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Psychology</fullName>
+                <controllingFieldValues>GRE Subject</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Social Psychology</fullName>
+                <controllingFieldValues>GRE Subject</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Test_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Test Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Test_Record_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Test Record Number</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Test_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Test Source</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Self-Reported</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Official</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Test_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Test Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GRE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GRE Subject</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GMAT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TOEFL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Test Score</label>
+    <listViews>
+        <fullName>All_Test_Scores</fullName>
+        <columns>Lead__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Test_Date__c</columns>
+        <columns>Test_Type__c</columns>
+        <columns>Test_Source__c</columns>
+        <columns>Test_Component__c</columns>
+        <columns>Test_Component_Score__c</columns>
+        <columns>Test_Component_Percentile__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Test Scores</label>
+    </listViews>
+    <nameField>
+        <label>Test Score Key</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Test Scores</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Read</sharingModel>
+</CustomObject>

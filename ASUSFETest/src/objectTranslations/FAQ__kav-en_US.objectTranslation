@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>FAQ</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>FAQ</value>
+    </caseValues>
+    <fields>
+        <label><!-- Answer --></label>
+        <name>Answer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Article Expiration Date --></label>
+        <name>Article_Expiration_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days until expires --></label>
+        <name>Days_until_expires__c</name>
+    </fields>
+    <fields>
+        <help><!-- Group which owns and maintains the article. --></help>
+        <label><!-- Functional Group --></label>
+        <name>Functional_Group__c</name>
+        <picklistValues>
+            <masterLabel>ASU Online</masterLabel>
+            <translation><!-- ASU Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Academic Technologies</masterLabel>
+            <translation><!-- Academic Technologies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Admission Services</masterLabel>
+            <translation><!-- Admission Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Aid</masterLabel>
+            <translation><!-- Financial Aid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fulton Schools of Engineering</masterLabel>
+            <translation><!-- Fulton Schools of Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Graduate Education</masterLabel>
+            <translation><!-- Graduate Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Housing</masterLabel>
+            <translation><!-- Housing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Int&apos;l Students and Scholars Center</masterLabel>
+            <translation><!-- Int&apos;l Students and Scholars Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mary Lou Fulton Teachers College</masterLabel>
+            <translation><!-- Mary Lou Fulton Teachers College --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parking and Transit Services</masterLabel>
+            <translation><!-- Parking and Transit Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Provost Office</masterLabel>
+            <translation><!-- Provost Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Registrar</masterLabel>
+            <translation><!-- Registrar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School of Letters and Sciences</masterLabel>
+            <translation><!-- School of Letters and Sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Business Services</masterLabel>
+            <translation><!-- Student Business Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sun Card Services</masterLabel>
+            <translation><!-- Sun Card Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Resources</masterLabel>
+            <translation><!-- Technical Resources --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>University Academic Success Programs</masterLabel>
+            <translation><!-- University Academic Success Programs --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Question --></label>
+        <name>Question__c</name>
+    </fields>
+    <fields>
+        <name>ValidationStatus</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Content Review</masterLabel>
+            <translation><!-- Content Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Format Review</masterLabel>
+            <translation><!-- Format Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Published</masterLabel>
+            <translation><!-- Published --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

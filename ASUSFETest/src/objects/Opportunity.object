@@ -1,0 +1,1901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddInfluence</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <businessProcesses>
+        <fullName>Graduate Application</fullName>
+        <description>Process for graduate student applicants</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Admitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Admitted - Conditional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applicant - In Committee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applicant - In Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applicant - Incomplete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applicant - Ineligible</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applicant - International Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applicant - Low English Proficiency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applicant - Pending Letters of Rec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discontinued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enrolled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enrolled - 21st Day</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Graduate Prospect</fullName>
+        <description>Process for graduate prospective students</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect - Opt Out</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <fields>
+        <fullName>Academic_Interest__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Academic Interest</label>
+        <referenceTo>Academic_Interest__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities_AcademicInterest</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Academic_Plan_Associated_College__c</fullName>
+        <description>Formula field that displays the associated Academic Plan&apos;s Program (College) name.  Used in reports.</description>
+        <externalId>false</externalId>
+        <formula>Academic_Plan__r.Program__r.Name</formula>
+        <label>Academic Plan Associated College</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Academic_Plan__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Plan Code</description>
+        <externalId>false</externalId>
+        <label>Academic Plan</label>
+        <referenceTo>Plan__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AccountId</fullName>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Application_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Application Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Application_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Application Number</label>
+        <length>8</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CampaignId</fullName>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>College__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>College of interest related to the Program object</description>
+        <externalId>false</externalId>
+        <label>College</label>
+        <referenceTo>Program__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities_Program</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Opportunities*</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Converted_Lead_ID__c</fullName>
+        <description>The ID of the originating Lead for Opportunities created by Lead conversion</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The ID of the originating Lead for Opportunities created by Lead conversion</inlineHelpText>
+        <label>Converted Lead ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deferred__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Deferred</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Degree_Type__c</fullName>
+        <description>Type of degree they are seeking</description>
+        <externalId>false</externalId>
+        <label>Degree Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Masters</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Doctoral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Certificate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non-Degree</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Juris Doctor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>External_Application_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>External Application Number</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>I_20_Sent_Date__c</fullName>
+        <description>Date I-20 was mailed to the admitted student</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date I-20 was mailed to the admitted student</inlineHelpText>
+        <label>I-20 Sent Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>LeadSource</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ASU UG</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>College Fair - Int</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>College Fair - US</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Event</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partial App</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PeopleSoft</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Test Scores</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Walk-in</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Web Form</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Lead_Source_Subtype__c</fullName>
+        <externalId>false</externalId>
+        <label>Lead Source Subtype</label>
+        <picklist>
+            <controllingField>LeadSource</controllingField>
+            <picklistValues>
+                <fullName>Coll Technology &amp; Innovation</fullName>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>Walk-in</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>College of Public Programs</fullName>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>Walk-in</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cronkite School-Journ/MassComm</fullName>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>Walk-in</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Graduate Education</fullName>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>Walk-in</controllingFieldValues>
+                <controllingFieldValues>Web Form</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Health Solutions</fullName>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>Walk-in</controllingFieldValues>
+                <controllingFieldValues>Web Form</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Herberger Institute</fullName>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>Walk-in</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ira A Fulton Engineering</fullName>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>Walk-in</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Liberal Arts &amp; Sciences</fullName>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>Walk-in</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MaryLouFulton Teachers College</fullName>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>Walk-in</controllingFieldValues>
+                <controllingFieldValues>Web Form</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Interdis Arts &amp; Sciences</fullName>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>Walk-in</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nursing &amp; Health Innovation</fullName>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>Walk-in</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>School of Letters &amp; Sciences</fullName>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>Walk-in</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>School of Sustainability</fullName>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>Walk-in</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>W.P. Carey School of Business</fullName>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>Walk-in</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>O&apos;Connor College of Law</fullName>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>Walk-in</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ASU Online</fullName>
+                <controllingFieldValues>Web Form</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USA Today</fullName>
+                <controllingFieldValues>Advertisement</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Conference</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EGSS Applying</fullName>
+                <controllingFieldValues>Event</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EGSS Financing</fullName>
+                <controllingFieldValues>Event</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EGSS GRE Prep</fullName>
+                <controllingFieldValues>Event</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EGSS Personal Statement</fullName>
+                <controllingFieldValues>Event</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Info Session - Campus</fullName>
+                <controllingFieldValues>Event</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Info Session - Online</fullName>
+                <controllingFieldValues>Event</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GRE</fullName>
+                <controllingFieldValues>Purchased List</controllingFieldValues>
+                <controllingFieldValues>Test Scores</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GRE Subject</fullName>
+                <controllingFieldValues>Test Scores</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TOEFL</fullName>
+                <controllingFieldValues>Purchased List</controllingFieldValues>
+                <controllingFieldValues>Test Scores</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NNE</fullName>
+                <controllingFieldValues>Purchased List</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CA Diversity</fullName>
+                <controllingFieldValues>College Fair - US</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Idealist</fullName>
+                <controllingFieldValues>College Fair - US</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NAU</fullName>
+                <controllingFieldValues>College Fair - US</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Import</fullName>
+                <controllingFieldValues>ASU UG</controllingFieldValues>
+                <controllingFieldValues>Partial App</controllingFieldValues>
+                <controllingFieldValues>PeopleSoft</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Degree Search</fullName>
+                <controllingFieldValues>Web Form</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <referenceTo>Location__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Online_Degree__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Interested in Online Degree</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Key__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Opportunity Key</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Prospect_Qualifier__c</fullName>
+        <externalId>false</externalId>
+        <label>Prospect Qualifier</label>
+        <picklist>
+            <picklistValues>
+                <fullName>I plan to attend</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>I&apos;m still considering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>I&apos;m not interested</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Qualifying__c</fullName>
+        <description>Level of interest in the program or attending</description>
+        <externalId>false</externalId>
+        <label>Qualifying</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Interested</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Undecided</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Longer Interested</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Reconsidered__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Reconsidered</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Session__c</fullName>
+        <externalId>false</externalId>
+        <label>Session</label>
+        <picklist>
+            <picklistValues>
+                <fullName>A/C</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Specialization_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Specialization 1</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Specialization_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Specialization 2</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Specialization_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Specialization 3</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StageName</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Prospect</fullName>
+                <closed>false</closed>
+                <default>false</default>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>5</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Applicant - Incomplete</fullName>
+                <closed>false</closed>
+                <default>false</default>
+                <description>Program Status = AP - Application
+Evaluation Status = IP - In Progress
+-or- PE - Pre-Evaluation
+-or- RV - Review (before committee)</description>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>10</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Applicant - Low English Proficiency</fullName>
+                <closed>false</closed>
+                <default>false</default>
+                <description>Program Status = AP - Application
+Evaluation Status = CR - College Review
+Program Action = APPL</description>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>15</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Applicant - Pending Letters of Rec</fullName>
+                <closed>false</closed>
+                <default>false</default>
+                <description>Program Status = AP - Application
+Evaluation Status = LR - Letters of Rec</description>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>15</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Applicant - International Review</fullName>
+                <closed>false</closed>
+                <default>false</default>
+                <description>Program Status = AP - Application
+Evaluation Status = ME - Manual Evalution</description>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>15</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Applicant - In Committee</fullName>
+                <closed>false</closed>
+                <default>false</default>
+                <description>Program Status = AP - Application
+Evaluation Status = CM - Committee
+
+-OR-
+
+Program Status = AD - Admit
+Program Action = ADMT - Admit</description>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>30</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Applicant - In Review</fullName>
+                <closed>false</closed>
+                <default>false</default>
+                <description>Program Status = AP - Application	
+
+Evaluation Status &lt;&gt; CM - Committee, DR - Dean&apos;s Review, LR - Letters of Rec, ME - Manual Eval, PE - Pre-Evaluation, RV - Review (before committee)
+
+Program Action = APPL</description>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>30</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Admitted</fullName>
+                <closed>false</closed>
+                <default>false</default>
+                <description>Program Status = AC - Complete
+Program Action = MATR - Matriculate</description>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>50</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Admitted - Conditional</fullName>
+                <closed>false</closed>
+                <default>false</default>
+                <description>Program Status = AD - Admit
+Program Action = COND - Conditional Admit
+Program Action Reason = DEFC, PROV, DFPR</description>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>50</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Enrolled</fullName>
+                <closed>false</closed>
+                <default>false</default>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>90</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Enrolled - 21st Day</fullName>
+                <closed>true</closed>
+                <default>false</default>
+                <forecastCategory>Closed</forecastCategory>
+                <probability>100</probability>
+                <won>true</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Prospect - Opt Out</fullName>
+                <closed>true</closed>
+                <default>false</default>
+                <forecastCategory>Omitted</forecastCategory>
+                <probability>0</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Applicant - Ineligible</fullName>
+                <closed>false</closed>
+                <default>false</default>
+                <description>Program Status = AP - Application
+Evaluation Status = SI - Service Indicator</description>
+                <forecastCategory>Pipeline</forecastCategory>
+                <probability>5</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Denied</fullName>
+                <closed>true</closed>
+                <default>false</default>
+                <forecastCategory>Omitted</forecastCategory>
+                <probability>0</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Discontinued</fullName>
+                <closed>true</closed>
+                <default>false</default>
+                <forecastCategory>Omitted</forecastCategory>
+                <probability>0</probability>
+                <won>false</won>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Withdrawn</fullName>
+                <closed>true</closed>
+                <default>false</default>
+                <forecastCategory>Omitted</forecastCategory>
+                <probability>0</probability>
+                <won>false</won>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Term__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Term</label>
+        <referenceTo>Term__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Graduate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Law</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <listViews>
+        <fullName>AllOpportunities</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>Term__c</columns>
+        <columns>Academic_Plan__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Opportunities</label>
+        <sharedTo/>
+    </listViews>
+    <listViews>
+        <fullName>Deferred_Apps</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>Term__c</columns>
+        <columns>Session__c</columns>
+        <columns>I_20_Sent_Date__c</columns>
+        <columns>Application_Number__c</columns>
+        <columns>Application_Date__c</columns>
+        <columns>Academic_Plan__c</columns>
+        <columns>Location__c</columns>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Deferred__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Deferred Applications</label>
+        <sharedTo/>
+    </listViews>
+    <listViews>
+        <fullName>Drupal_Submissions</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>Lead_Source_Subtype__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>Term__c</columns>
+        <columns>College__c</columns>
+        <columns>Academic_Plan__c</columns>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <filters>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <operation>equals</operation>
+            <value>asudrupl</value>
+        </filters>
+        <label>ASU API Drupal Submissions</label>
+        <sharedTo>
+            <group>QA_Testing_Group</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>LastModifiedThisWeek</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>Term__c</columns>
+        <columns>Session__c</columns>
+        <columns>Location__c</columns>
+        <columns>Application_Number__c</columns>
+        <columns>Application_Date__c</columns>
+        <columns>Academic_Plan__c</columns>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.LAST_UPDATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <label>Last Modified This Week</label>
+        <sharedTo/>
+    </listViews>
+    <listViews>
+        <fullName>Missing_Account</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>Academic_Plan__c</columns>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
+        <columns>Contact__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>Application_Date__c</columns>
+        <columns>Application_Number__c</columns>
+        <columns>Term__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ACCOUNT.NAME</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Missing Account</label>
+        <sharedTo/>
+    </listViews>
+    <listViews>
+        <fullName>Missing_Plan</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>Term__c</columns>
+        <columns>Academic_Plan__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Academic_Plan__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>Application_Number__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Missing Plan</label>
+        <sharedTo/>
+    </listViews>
+    <listViews>
+        <fullName>My_Opportunities</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>Academic_Plan__c</columns>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
+        <columns>Contact__c</columns>
+        <columns>Term__c</columns>
+        <columns>Application_Date__c</columns>
+        <columns>Application_Number__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Opportunities</label>
+        <sharedTo>
+            <roleAndSubordinates>ES_Enrollment_Services</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>NewThisWeekI20</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>Term__c</columns>
+        <columns>Session__c</columns>
+        <columns>I_20_Sent_Date__c</columns>
+        <columns>Location__c</columns>
+        <columns>Application_Number__c</columns>
+        <columns>Application_Date__c</columns>
+        <columns>Academic_Plan__c</columns>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <filters>
+            <field>I_20_Sent_Date__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>New This Week I-20</label>
+        <sharedTo/>
+    </listViews>
+    <listViews>
+        <fullName>NewThisWeekProspects</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>Term__c</columns>
+        <columns>Academic_Interest__c</columns>
+        <columns>College__c</columns>
+        <columns>Academic_Plan__c</columns>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Prospect</value>
+        </filters>
+        <label>New This Week - Prospects</label>
+        <sharedTo>
+            <group>QA_Testing_Group</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>NewThisWeekProspectsNoAdmin</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>Term__c</columns>
+        <columns>Academic_Interest__c</columns>
+        <columns>College__c</columns>
+        <columns>Academic_Plan__c</columns>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Prospect</value>
+        </filters>
+        <filters>
+            <field>CREATEDBY_USER.ALIAS</field>
+            <operation>notEqual</operation>
+            <value>dbamp,asudrupl,sfadmin</value>
+        </filters>
+        <label>New This Week - Prospects No Admin</label>
+        <sharedTo>
+            <group>QA_Testing_Group</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Opportunities_Complete</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>Term__c</columns>
+        <columns>Session__c</columns>
+        <columns>Academic_Plan__c</columns>
+        <columns>OPPORTUNITY.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Applicant - Complete</value>
+        </filters>
+        <label>Opportunities - Complete</label>
+        <sharedTo/>
+    </listViews>
+    <listViews>
+        <fullName>Opportunities_InCommittee</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>Term__c</columns>
+        <columns>Session__c</columns>
+        <columns>Academic_Plan__c</columns>
+        <columns>OPPORTUNITY.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Applicant - In Committee</value>
+        </filters>
+        <label>Opportunities - In Committee</label>
+        <sharedTo/>
+    </listViews>
+    <listViews>
+        <fullName>Opportunities_Incomplete</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>Application_Date__c</columns>
+        <columns>Term__c</columns>
+        <columns>Session__c</columns>
+        <columns>Academic_Plan__c</columns>
+        <columns>OPPORTUNITY.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Applicant - Incomplete</value>
+        </filters>
+        <label>Opportunities - Incomplete</label>
+        <sharedTo/>
+    </listViews>
+    <listViews>
+        <fullName>Prospects_Academic_Interest</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>Term__c</columns>
+        <columns>Academic_Interest__c</columns>
+        <columns>College__c</columns>
+        <columns>Academic_Plan__c</columns>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Academic_Interest__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Prospect</value>
+        </filters>
+        <label>Prospects - Academic Interest</label>
+        <sharedTo>
+            <group>QA_Testing_Group</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Prospects_Missing_College</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>Term__c</columns>
+        <columns>College__c</columns>
+        <columns>Academic_Plan__c</columns>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>College__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Prospect</value>
+        </filters>
+        <filters>
+            <field>Academic_Interest__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Prospects - Missing College</label>
+        <sharedTo>
+            <group>QA_Testing_Group</group>
+        </sharedTo>
+    </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Graduate_Application</fullName>
+        <active>true</active>
+        <businessProcess>Graduate Application</businessProcess>
+        <description>Process for graduate applications</description>
+        <label>Graduate Application</label>
+        <picklistValues>
+            <picklist>Degree_Type__c</picklist>
+            <values>
+                <fullName>Certificate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctoral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Juris Doctor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Masters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Degree</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>ASU UG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College Fair - Int</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College Fair - US</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partial App</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PeopleSoft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Scores</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Walk-in</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web Form</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Source_Subtype__c</picklist>
+            <values>
+                <fullName>ASU Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CA Diversity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coll Technology %26 Innovation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College of Public Programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cronkite School-Journ%2FMassComm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Degree Search</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EGSS Applying</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EGSS Financing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EGSS GRE Prep</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EGSS Personal Statement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRE Subject</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduate Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health Solutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Herberger Institute</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Idealist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Import</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Info Session - Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Info Session - Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ira A Fulton Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Liberal Arts %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MaryLouFulton Teachers College</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NAU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NNE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Interdis Arts %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nursing %26 Health Innovation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>O%27Connor College of Law</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Letters %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Sustainability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TOEFL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>USA Today</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>W%2EP%2E Carey School of Business</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Prospect_Qualifier__c</picklist>
+            <values>
+                <fullName>I plan to attend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m not interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m still considering</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Qualifying__c</picklist>
+            <values>
+                <fullName>Interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Longer Interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undecided</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Session__c</picklist>
+            <values>
+                <fullName>A%2FC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Graduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Law</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Graduate_Prospect</fullName>
+        <active>true</active>
+        <businessProcess>Graduate Prospect</businessProcess>
+        <description>Process for recruiting to graduate students</description>
+        <label>Graduate Prospect</label>
+        <picklistValues>
+            <picklist>Degree_Type__c</picklist>
+            <values>
+                <fullName>Certificate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctoral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Juris Doctor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Masters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Degree</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>College Fair - Int</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College Fair - US</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Scores</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Walk-in</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web Form</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Source_Subtype__c</picklist>
+            <values>
+                <fullName>ASU Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CA Diversity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coll Technology %26 Innovation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College of Public Programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cronkite School-Journ%2FMassComm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Degree Search</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EGSS Applying</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EGSS Financing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EGSS GRE Prep</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EGSS Personal Statement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRE Subject</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduate Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health Solutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Herberger Institute</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Idealist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Info Session - Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Info Session - Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ira A Fulton Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Liberal Arts %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MaryLouFulton Teachers College</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NAU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NNE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Interdis Arts %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nursing %26 Health Innovation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>O%27Connor College of Law</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Letters %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Sustainability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>USA Today</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>W%2EP%2E Carey School of Business</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Prospect_Qualifier__c</picklist>
+            <values>
+                <fullName>I plan to attend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m not interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m still considering</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Qualifying__c</picklist>
+            <values>
+                <fullName>Interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Longer Interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undecided</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Session__c</picklist>
+            <values>
+                <fullName>A%2FC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Graduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Law</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>OPPORTUNITY.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Contact__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Application_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Application_Number__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Academic_Plan__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Term__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Location__c</customTabListAdditionalFields>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>OPPORTUNITY.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Contact__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Application_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Application_Number__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Academic_Plan__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OPPORTUNITY.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Contact__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Application_Number__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Application_Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Academic_Plan__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Location__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>Application_Number__c</searchFilterFields>
+        <searchFilterFields>Contact__c</searchFilterFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Application_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Academic_Plan__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.STAGE_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Term__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.CLOSE_DATE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+    <webLinks>
+        <fullName>Mass_Delete</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Mass Delete</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/9.0/connection.js&quot;)}
+
+var records = {!GETRECORDIDS(  $ObjectType.Opportunity )};
+
+if (records[0] == null) {
+alert(&quot;Please select at least one record.&quot;) }
+else {
+
+var errors = [];
+var result = sforce.connection.deleteIds(records);
+if (result &amp;&amp; result.length){
+var numFailed = 0;
+var numSucceeded = 0;
+for (var i = 0; i &lt; result.length; i++){
+var res = result[i];
+if (res &amp;&amp; res.success == &apos;true&apos;){
+numSucceeded++;
+} else {
+var es = res.getArray(&quot;errors&quot;);
+if (es.length &gt; 0) {
+errors.push(es[0].message);
+}
+numFailed++;
+}
+}
+if (numFailed &gt; 0){
+alert(&quot;Failed: &quot; + numFailed + &quot;\nSucceeded: &quot; + numSucceeded + &quot; \n Due to: &quot; + errors.join(&quot;\n&quot;));
+} else {
+alert(&quot;Number of records deleted: &quot; + numSucceeded);
+}
+}
+window.location.reload();
+}</url>
+    </webLinks>
+</CustomObject>

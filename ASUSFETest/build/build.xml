@@ -1,0 +1,25 @@
+<project name="Sample usage of Salesforce Ant tasks" default="validate" basedir="." xmlns:sf="antlib:com.salesforce">
+
+    <property file="build.properties"/>
+    <property environment="env"/>
+	
+	<!-- Feature branch validation; creates rollback package -->
+	<target name="feature">
+	      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="../validation/ASUSFETest/src" checkOnly="true"/>
+	</target>
+	
+    <!-- Shows check only; never actually saves to the server -->
+    <target name="validate">
+      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="../src" checkOnly="true"/>
+    </target>
+
+	<!-- Retrieve the information of all items of a particular metadata type -->
+    <target name="listMetadata">
+      <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="${sf.metadataType}"/>
+    </target>
+
+	<!-- Retrieve the information on all supported metadata type -->
+    <target name="describeMetadata">
+      <sf:describeMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}"/>
+    </target>
+</project>

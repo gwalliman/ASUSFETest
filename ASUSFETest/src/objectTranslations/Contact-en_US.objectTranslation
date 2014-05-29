@@ -1,0 +1,1088 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Home Address</value>
+        </caseValues>
+        <name>other_address_contact</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Home City</value>
+        </caseValues>
+        <name>other_city_contact</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Home Country Code</value>
+        </caseValues>
+        <name>other_country_code_contact</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Home Country</value>
+        </caseValues>
+        <name>other_country_contact</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Local Phone</value>
+        </caseValues>
+        <name>other_phone_contact</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Home State/Province Code</value>
+        </caseValues>
+        <name>other_state_code_contact</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Home State/Province</value>
+        </caseValues>
+        <name>other_state_contact</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Home Street</value>
+        </caseValues>
+        <name>other_street_contact</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Home Zip/Postal Code</value>
+        </caseValues>
+        <name>other_zip_contact</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <label><!-- ASURITE ID --></label>
+        <name>ASURite_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Official ASU directory email address (usually first and last name) --></help>
+        <label><!-- Directory Email --></label>
+        <name>ASU_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- ASU Gmail --></label>
+        <name>ASU_Gmail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Alumni --></label>
+        <name>Affiliation_Alumni__c</name>
+        <picklistValues>
+            <masterLabel>Current</masterLabel>
+            <translation><!-- Current --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Previous</masterLabel>
+            <translation><!-- Previous --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Consumer --></label>
+        <name>Affiliation_Consumer__c</name>
+        <picklistValues>
+            <masterLabel>Current</masterLabel>
+            <translation><!-- Current --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Previous</masterLabel>
+            <translation><!-- Previous --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Courtesy Affiliate --></label>
+        <name>Affiliation_Courtesy_Affiliate__c</name>
+        <picklistValues>
+            <masterLabel>Current</masterLabel>
+            <translation><!-- Current --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Previous</masterLabel>
+            <translation><!-- Previous --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Employee --></label>
+        <name>Affiliation_Employee__c</name>
+        <picklistValues>
+            <masterLabel>Current</masterLabel>
+            <translation><!-- Current --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Previous</masterLabel>
+            <translation><!-- Previous --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Student Applicant --></label>
+        <name>Affiliation_Student_Applicant__c</name>
+        <picklistValues>
+            <masterLabel>Current</masterLabel>
+            <translation><!-- Current --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Previous</masterLabel>
+            <translation><!-- Previous --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Student --></label>
+        <name>Affiliation_Student__c</name>
+        <picklistValues>
+            <masterLabel>Current</masterLabel>
+            <translation><!-- Current --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Previous</masterLabel>
+            <translation><!-- Previous --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Arizona Resident --></label>
+        <name>Arizona_Resident__c</name>
+    </fields>
+    <fields>
+        <label><!-- Athletic Participation --></label>
+        <name>Athletic_Participation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Preference --></label>
+        <name>Contact_Preference__c</name>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Phone</masterLabel>
+            <translation><!-- Home Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Local Phone</masterLabel>
+            <translation><!-- Local Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile Phone</masterLabel>
+            <translation><!-- Mobile Phone --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Country of Citizenship --></label>
+        <name>Country_of_Citizenship__c</name>
+        <relationshipLabel><!-- Contacts (Country of Citizenship) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Deceased --></label>
+        <name>Deceased__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duplicate --></label>
+        <name>Duplicate__c</name>
+    </fields>
+    <fields>
+        <label><!-- EMPLID --></label>
+        <name>EMPLID__c</name>
+    </fields>
+    <fields>
+        <help><!-- This email address is the forwarding email address the person has chosen to receive ASU email communication. --></help>
+        <label><!-- Destination Email --></label>
+        <name>EPO_Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- The date and time the Contact&apos;s primary Email was changed. For the reason, see &quot;Email Change Reason&quot;. --></help>
+        <label><!-- Email Change Date --></label>
+        <name>Email_Change_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- The reason for a change to the Contact&apos;s primary Email address --></help>
+        <label><!-- Email Change Reason --></label>
+        <name>Email_Change_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Status --></label>
+        <name>Email_Status__c</name>
+        <picklistValues>
+            <masterLabel>Role</masterLabel>
+            <translation><!-- Role --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Temp</masterLabel>
+            <translation><!-- Temp --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Valid</masterLabel>
+            <translation><!-- Valid --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ethnicity --></label>
+        <name>Ethnicity__c</name>
+        <picklistValues>
+            <masterLabel>Am. Indian Alaska Native</masterLabel>
+            <translation><!-- Am. Indian Alaska Native --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Asian</masterLabel>
+            <translation><!-- Asian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Black African-American</masterLabel>
+            <translation><!-- Black African-American --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hispanic</masterLabel>
+            <translation><!-- Hispanic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pacific Islander</masterLabel>
+            <translation><!-- Pacific Islander --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>White</masterLabel>
+            <translation><!-- White --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- FERPA Directory Hold --></label>
+        <name>FERPA_Directory_Hold__c</name>
+        <picklistValues>
+            <masterLabel>Full Hold</masterLabel>
+            <translation><!-- Full Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Hold</masterLabel>
+            <translation><!-- No Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone-Address Hold</masterLabel>
+            <translation><!-- Phone-Address Hold --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- FERPA --></label>
+        <name>FERPA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gender --></label>
+        <name>Gender__c</name>
+        <picklistValues>
+            <masterLabel>Female</masterLabel>
+            <translation><!-- Female --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Male</masterLabel>
+            <translation><!-- Male --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Graduate GPA Scale --></label>
+        <name>Graduate_GPA_Scale__c</name>
+        <relationshipLabel><!-- Contacts (Graduate GPA Scale) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Graduate GPA --></label>
+        <name>Graduate_GPA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Jr-Sr GPA Scale --></label>
+        <name>Jr_Sr_GPA_Scale__c</name>
+        <relationshipLabel><!-- Contacts (Jr-Sr GPA Scale) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Jr-Sr GPA --></label>
+        <name>Jr_Sr_GPA__c</name>
+    </fields>
+    <fields>
+        <help><!-- The email this Contact last used when sending a message to an ASU address that is processed by Salesforce. --></help>
+        <label><!-- Last Case Email Used --></label>
+        <name>Last_Case_Email_Used__c</name>
+    </fields>
+    <fields>
+        <name>LeadSource</name>
+        <picklistValues>
+            <masterLabel>ASU UG</masterLabel>
+            <translation><!-- ASU UG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advertisement</masterLabel>
+            <translation><!-- Advertisement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>College Fair - Int</masterLabel>
+            <translation><!-- College Fair - Int --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>College Fair - US</masterLabel>
+            <translation><!-- College Fair - US --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee Referral</masterLabel>
+            <translation><!-- Employee Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Event</masterLabel>
+            <translation><!-- Event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partial App</masterLabel>
+            <translation><!-- Partial App --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PeopleSoft</masterLabel>
+            <translation><!-- PeopleSoft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone Call</masterLabel>
+            <translation><!-- Phone Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchased List</masterLabel>
+            <translation><!-- Purchased List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test Scores</masterLabel>
+            <translation><!-- Test Scores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Walk-in</masterLabel>
+            <translation><!-- Walk-in --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web Form</masterLabel>
+            <translation><!-- Web Form --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lead Email --></label>
+        <name>Lead_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Secondary Email --></label>
+        <name>Lead_Secondary_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Source Subtype --></label>
+        <name>Lead_Source_Subtype__c</name>
+        <picklistValues>
+            <masterLabel>ASU Online</masterLabel>
+            <translation><!-- ASU Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA Diversity</masterLabel>
+            <translation><!-- CA Diversity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coll Technology &amp; Innovation</masterLabel>
+            <translation><!-- Coll Technology &amp; Innovation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>College of Public Programs</masterLabel>
+            <translation><!-- College of Public Programs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cronkite School-Journ/MassComm</masterLabel>
+            <translation><!-- Cronkite School-Journ/MassComm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Degree Search</masterLabel>
+            <translation><!-- Degree Search --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EGSS Applying</masterLabel>
+            <translation><!-- EGSS Applying --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EGSS Financing</masterLabel>
+            <translation><!-- EGSS Financing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EGSS GRE Prep</masterLabel>
+            <translation><!-- EGSS GRE Prep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EGSS Personal Statement</masterLabel>
+            <translation><!-- EGSS Personal Statement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRE</masterLabel>
+            <translation><!-- GRE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRE Subject</masterLabel>
+            <translation><!-- GRE Subject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Graduate College</masterLabel>
+            <translation><!-- Graduate College --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Graduate Education</masterLabel>
+            <translation><!-- Graduate Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health Solutions</masterLabel>
+            <translation><!-- Health Solutions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Herberger Institute</masterLabel>
+            <translation><!-- Herberger Institute --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Idealist</masterLabel>
+            <translation><!-- Idealist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Import</masterLabel>
+            <translation><!-- Import --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Info Session - Campus</masterLabel>
+            <translation><!-- Info Session - Campus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Info Session - Online</masterLabel>
+            <translation><!-- Info Session - Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ira A Fulton Engineering</masterLabel>
+            <translation><!-- Ira A Fulton Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liberal Arts &amp; Sciences</masterLabel>
+            <translation><!-- Liberal Arts &amp; Sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MaryLouFulton Teachers College</masterLabel>
+            <translation><!-- MaryLouFulton Teachers College --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NNE</masterLabel>
+            <translation><!-- NNE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Interdis Arts &amp; Sciences</masterLabel>
+            <translation><!-- New Interdis Arts &amp; Sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nursing &amp; Health Innovation</masterLabel>
+            <translation><!-- Nursing &amp; Health Innovation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>O&apos;Connor College of Law</masterLabel>
+            <translation><!-- O&apos;Connor College of Law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School of Letters &amp; Sciences</masterLabel>
+            <translation><!-- School of Letters &amp; Sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School of Sustainability</masterLabel>
+            <translation><!-- School of Sustainability --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TOEFL</masterLabel>
+            <translation><!-- TOEFL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USA Today</masterLabel>
+            <translation><!-- USA Today --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W.P. Carey School of Business</masterLabel>
+            <translation><!-- W.P. Carey School of Business --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Marital Status --></label>
+        <name>Marital_Status__c</name>
+        <picklistValues>
+            <masterLabel>Divorced</masterLabel>
+            <translation><!-- Divorced --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Married</masterLabel>
+            <translation><!-- Married --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single</masterLabel>
+            <translation><!-- Single --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Middle Name --></label>
+        <name>Middle_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Military Branch --></label>
+        <name>Military_Branch__c</name>
+        <picklistValues>
+            <masterLabel>Air Force</masterLabel>
+            <translation><!-- Air Force --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Army</masterLabel>
+            <translation><!-- Army --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coast Guard</masterLabel>
+            <translation><!-- Coast Guard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marines</masterLabel>
+            <translation><!-- Marines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Navy</masterLabel>
+            <translation><!-- Navy --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Military Status --></label>
+        <name>Military_Status__c</name>
+        <picklistValues>
+            <masterLabel>Active Duty</masterLabel>
+            <translation><!-- Active Duty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Armed Forces Reserve</masterLabel>
+            <translation><!-- Armed Forces Reserve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National Guard</masterLabel>
+            <translation><!-- National Guard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spouse/Dependent</masterLabel>
+            <translation><!-- Spouse/Dependent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Veteran</masterLabel>
+            <translation><!-- Veteran --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Military/Veteran Status --></label>
+        <name>Military_Veteran_Status__c</name>
+        <picklistValues>
+            <masterLabel>Dependent of Veteran Verified</masterLabel>
+            <translation><!-- Dependent of Veteran Verified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Self-Identified Veteran or Dependent</masterLabel>
+            <translation><!-- Self-Identified Veteran or Dependent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Veteran Verified</masterLabel>
+            <translation><!-- Veteran Verified --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Personal non-ASU email address listed as Other in PeopleSoft --></help>
+        <label><!-- Personal Email --></label>
+        <name>Personal_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Possible Duplicate --></label>
+        <name>Possible_Duplicate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Student&apos;s Preferred email address in PeopleSoft --></help>
+        <label><!-- Preferred Email --></label>
+        <name>Preferred_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Student Number --></label>
+        <name>Student_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Suffix --></label>
+        <name>Suffix__c</name>
+        <picklistValues>
+            <masterLabel>II</masterLabel>
+            <translation><!-- II --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>III</masterLabel>
+            <translation><!-- III --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IV</masterLabel>
+            <translation><!-- IV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jr</masterLabel>
+            <translation><!-- Jr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sr</masterLabel>
+            <translation><!-- Sr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>V</masterLabel>
+            <translation><!-- V --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VI</masterLabel>
+            <translation><!-- VI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VII</masterLabel>
+            <translation><!-- VII --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test Record --></label>
+        <name>Test_Record__c</name>
+    </fields>
+    <fields>
+        <label><!-- US Citizen --></label>
+        <name>US_Citizen__c</name>
+    </fields>
+    <fields>
+        <label><!-- Undergraduate GPA Scale --></label>
+        <name>Undergraduate_GPA_Scale__c</name>
+        <relationshipLabel><!-- Contacts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Undergraduate GPA --></label>
+        <name>Undergraduate_GPA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Undergraduate Major --></label>
+        <name>Undergraduate_Major__c</name>
+    </fields>
+    <fields>
+        <label><!-- Visa Type --></label>
+        <name>Visa_Type__c</name>
+        <picklistValues>
+            <masterLabel>A1</masterLabel>
+            <translation><!-- A1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A2</masterLabel>
+            <translation><!-- A2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A3</masterLabel>
+            <translation><!-- A3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AR1</masterLabel>
+            <translation><!-- AR1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B1</masterLabel>
+            <translation><!-- B1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B2</masterLabel>
+            <translation><!-- B2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C1</masterLabel>
+            <translation><!-- C1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C2</masterLabel>
+            <translation><!-- C2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C3</masterLabel>
+            <translation><!-- C3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CO</masterLabel>
+            <translation><!-- CO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>E1</masterLabel>
+            <translation><!-- E1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>E2</masterLabel>
+            <translation><!-- E2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>E3</masterLabel>
+            <translation><!-- E3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F1</masterLabel>
+            <translation><!-- F1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F2</masterLabel>
+            <translation><!-- F2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>G1</masterLabel>
+            <translation><!-- G1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>G2</masterLabel>
+            <translation><!-- G2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>G3</masterLabel>
+            <translation><!-- G3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>G4</masterLabel>
+            <translation><!-- G4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>G5</masterLabel>
+            <translation><!-- G5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>H1</masterLabel>
+            <translation><!-- H1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>H1B</masterLabel>
+            <translation><!-- H1B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>H1C</masterLabel>
+            <translation><!-- H1C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>H2A</masterLabel>
+            <translation><!-- H2A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>H2B</masterLabel>
+            <translation><!-- H2B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>H3</masterLabel>
+            <translation><!-- H3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>H4</masterLabel>
+            <translation><!-- H4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I</masterLabel>
+            <translation><!-- I --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I9</masterLabel>
+            <translation><!-- I9 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I94</masterLabel>
+            <translation><!-- I94 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>J1</masterLabel>
+            <translation><!-- J1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>J2</masterLabel>
+            <translation><!-- J2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>K1</masterLabel>
+            <translation><!-- K1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>K2</masterLabel>
+            <translation><!-- K2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>K3</masterLabel>
+            <translation><!-- K3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>K4</masterLabel>
+            <translation><!-- K4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>L1</masterLabel>
+            <translation><!-- L1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>L2</masterLabel>
+            <translation><!-- L2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M1</masterLabel>
+            <translation><!-- M1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M2</masterLabel>
+            <translation><!-- M2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N6</masterLabel>
+            <translation><!-- N6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N8</masterLabel>
+            <translation><!-- N8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N9</masterLabel>
+            <translation><!-- N9 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>O1</masterLabel>
+            <translation><!-- O1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>O2</masterLabel>
+            <translation><!-- O2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>O3</masterLabel>
+            <translation><!-- O3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P1</masterLabel>
+            <translation><!-- P1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P2</masterLabel>
+            <translation><!-- P2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P3</masterLabel>
+            <translation><!-- P3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P4</masterLabel>
+            <translation><!-- P4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Q</masterLabel>
+            <translation><!-- Q --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R1</masterLabel>
+            <translation><!-- R1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R2</masterLabel>
+            <translation><!-- R2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S</masterLabel>
+            <translation><!-- S --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TD</masterLabel>
+            <translation><!-- TD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TN</masterLabel>
+            <translation><!-- TN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TN1</masterLabel>
+            <translation><!-- TN1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TN2</masterLabel>
+            <translation><!-- TN2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>V1</masterLabel>
+            <translation><!-- V1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>V2</masterLabel>
+            <translation><!-- V2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>V3</masterLabel>
+            <translation><!-- V3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VSA</masterLabel>
+            <translation><!-- VSA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WB</masterLabel>
+            <translation><!-- WB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WT</masterLabel>
+            <translation><!-- WT --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CRMI Modified Date --></label>
+        <name>silverpop__CRMI_Modified_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Sync Date --></label>
+        <name>silverpop__Last_Sync_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Sync Id --></label>
+        <name>silverpop__Last_Sync_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Rank --></label>
+        <name>silverpop__Lead_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Score --></label>
+        <name>silverpop__Lead_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Silverpop Behavior Score --></label>
+        <name>silverpop__Silverpop_Behavior_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Silverpop Lead Rank --></label>
+        <name>silverpop__Silverpop_Lead_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- Silverpop Lead Score --></label>
+        <name>silverpop__Silverpop_Lead_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Silverpop RecipientID --></label>
+        <name>silverpop__Silverpop_RecipientID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use &quot;Sync to Silverpop&quot; to determine which contacts you want to sync with Silverpop. When the box is checked, the field value CANNOT be changed, the selected contacts will be synced to Silverpop and will always sync. --></help>
+        <label><!-- Sync to Silverpop --></label>
+        <name>silverpop__Sync_to_Silverpop_Chk__c</name>
+    </fields>
+    <fields>
+        <label><!-- No Longer Used --></label>
+        <name>silverpop__Sync_to_Silverpop__c</name>
+        <picklistValues>
+            <masterLabel>Not Used</masterLabel>
+            <translation><!-- Not Used --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>External Mastered Contact Layout</layout>
+        <sections>
+            <label><!-- Affiliation --></label>
+            <section>Affiliation</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Insight --></label>
+            <section>Contact Insight</section>
+        </sections>
+        <sections>
+            <label><!-- Recruitment Data --></label>
+            <section>Recruitment Data</section>
+        </sections>
+        <sections>
+            <label><!-- Silverpop --></label>
+            <section>Silverpop</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SF Mastered Contact Layout</layout>
+        <sections>
+            <label><!-- Academic History --></label>
+            <section>Academic History</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Insight --></label>
+            <section>Contact Insight</section>
+        </sections>
+        <sections>
+            <label><!-- Silverpop --></label>
+            <section>Silverpop</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Create New Opportunity --></label>
+        <name>Graduate_Prospect</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- External Mastered --></label>
+        <name>External_Mastered</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- SF Mastered --></label>
+        <name>SF_Mastered</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Sync to Silverpop selection cannot be changed. Once the box is checked, it cannot be unchecked. --></errorMessage>
+        <name>silverpop__Disable_Changing_Enable_Sync</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Sync to Silverpop selection cannot be changed. Once set to &quot;Yes, Always Sync&quot; or &quot;No, Don&apos;t Sync&quot; it cannot be changed back to &quot;-None-.” --></errorMessage>
+        <name>silverpop__Disable_Changing_To_None</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Engage contact could not sync to Salesforce because the matching lead or contact in Salesforce has been set to not sync. You will need to change the &quot;Sync to Silverpop&quot; setting for the lead or contact in Salesforce. --></errorMessage>
+        <name>silverpop__Prevent_Change_From_Engage</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Delete --></label>
+        <name>Mass_Delete</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendGmail --></label>
+        <name>SendGmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooWeather --></label>
+        <name>YahooWeather</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Silverpop_Email --></label>
+        <name>silverpop__Send_Silverpop_Email</name>
+    </webLinks>
+</CustomObjectTranslation>

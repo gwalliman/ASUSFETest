@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>CREATED_BY</field>
+    </columns>
+    <columns>
+        <field>ASSIGNED</field>
+    </columns>
+    <description>Tasks created by Carol</description>
+    <filter>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <operator>equals</operator>
+            <value>Carol Kamen-Kannel</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>GRTE: Tasks Created</name>
+    <params>
+        <name>closed</name>
+        <value>open</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadActivity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

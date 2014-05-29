@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Category  that is associated with this Case Assignment. Ensure that the value used here exists in Case &quot;Category&quot; Picklist, and that the spelling is identical.</inlineHelpText>
+        <label>Category</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Notice_Email_From_Name__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The &quot;Name&quot; associated with the Email Address used  for the notice emailed to the customer that a Case has been created.</inlineHelpText>
+        <label>Customer Notice Email From Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Address__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This Email Address is used:
+1. To identify which Assignment Rule to Use (if this address is found in the &quot;Initial Request Sent To Addresses&quot;)
+2. As the &quot;From&quot; address for the notice emailed to the customer that a Case has been created.</inlineHelpText>
+        <label>Email Address</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Template_ID__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The 15 character (case sensitive) ID used to identify the Email Template used for the notice emailed to the customer that a Case has been created. You can view this ID immediatly after &quot;...salesforce.com/&quot; in the URL when viewing the desired Template.</inlineHelpText>
+        <label>Email Template ID</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Template_URL__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+LEN(Email_Template_ID__c)&lt;&gt;15
+||
+LEFT(Email_Template_ID__c,3) &lt;&gt;&quot;00X&quot;
+,
+&quot;Enter a valid ID in the Email Template ID field&quot;
+,
+HYPERLINK(&quot;/&quot;&amp;Email_Template_ID__c,&quot;Click to View Associated Template&quot;)
+)</formula>
+        <inlineHelpText>This is a URL created via a formula. Use this link to verify that the ID entered in the Email Template ID field accurately identifies your desired Template.</inlineHelpText>
+        <label>Email Template URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Functional_Group__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Functional Group that is associated with this Case Assignment. Ensure that the value used here exists in Case &quot;Functional Group&quot; Picklist, and that the spelling is identical.</inlineHelpText>
+        <label>Functional Group</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the processing Priority for this Case Assignment Rule. It is not possible for two Rules to have the Same Priority.</inlineHelpText>
+        <label>Priority</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Queue_ID__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The 15 character (case sensitive) ID of the Queue or User associated with this Assignment Rule.This ID  is shown immediatly after &quot;....salesforce.com/p/own/Queue/d?id=&quot;  in the URL when viewing the Queue or  &quot;...salesforce.com/&quot; when viewing the User.</inlineHelpText>
+        <label>Queue or User ID</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Queue_URL__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+LEN(Queue_ID__c) &lt;&gt; 15
+||
+(
+LEFT(Queue_ID__c,3) &lt;&gt; &quot;005&quot;
+&amp;&amp;
+LEFT(Queue_ID__c,3) &lt;&gt; &quot;00G&quot;
+)
+,
+&quot;Enter a valid ID in the Queue or User ID field&quot;
+,
+IF(LEFT(Queue_ID__c,3) = &quot;005&quot;,
+HYPERLINK(&quot;/&quot;&amp;Queue_ID__c&amp;&quot;?noredirect=1&quot;,&quot;Click to View Associated User&quot;)
+,
+HYPERLINK(&quot;/p/own/Queue/d?id=&quot;&amp;Queue_ID__c,&quot;Click to View Associated Queue&quot;))
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This is a URL created via a formula. Use this link to verify that the ID entered in the Queue or User ID field accurately identifies your desired Queue or User.</inlineHelpText>
+        <label>Queue or User URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Case Assignment Rule</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Priority__c</columns>
+        <columns>Email_Address__c</columns>
+        <columns>Customer_Notice_Email_From_Name__c</columns>
+        <columns>Functional_Group__c</columns>
+        <columns>Category__c</columns>
+        <columns>Email_Template_ID__c</columns>
+        <columns>Email_Template_URL__c</columns>
+        <columns>Queue_ID__c</columns>
+        <columns>Queue_URL__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>CAR-{0000}</displayFormat>
+        <label>Case Assignment Rule</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Case Assignment Rules</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Priority__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Email_Address__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Customer_Notice_Email_From_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Email_Template_URL__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Queue_URL__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Functional_Group__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Category__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

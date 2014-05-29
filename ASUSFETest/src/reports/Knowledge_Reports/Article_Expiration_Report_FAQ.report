@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FAQ__ka.FAQ__kav$Title</field>
+    </columns>
+    <columns>
+        <field>FAQ__ka$ArticleNumber</field>
+    </columns>
+    <columns>
+        <field>FAQ__ka$FirstPublishedDate</field>
+    </columns>
+    <columns>
+        <field>FAQ__ka$CreatedBy</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>FAQ__ka.FAQ__kav$PublishStatus</column>
+            <operator>equals</operator>
+            <value>2</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FAQ__ka.FAQ__kav$Article_Expiration_Date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Article Expiration Report: FAQ</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Article_type_FAQ__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>FAQ__ka$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

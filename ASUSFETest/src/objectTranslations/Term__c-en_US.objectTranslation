@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Term</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Terms</value>
+    </caseValues>
+    <fields>
+        <label><!-- PeopleSoft Code --></label>
+        <name>PeopleSoft_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Semester --></label>
+        <name>Semester__c</name>
+        <picklistValues>
+            <masterLabel>Fall</masterLabel>
+            <translation><!-- Fall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spring</masterLabel>
+            <translation><!-- Spring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Summer</masterLabel>
+            <translation><!-- Summer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Session A/C Close Date --></label>
+        <name>Session_A_C_Close_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Session A/C Start Date --></label>
+        <name>Session_A_C_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Session B Close Date --></label>
+        <name>Session_B_Close_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Session B Start Date --></label>
+        <name>Session_B_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Term Status --></label>
+        <name>Term_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year --></label>
+        <name>Year__c</name>
+    </fields>
+    <layouts>
+        <layout>Term Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

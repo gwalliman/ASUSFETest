@@ -1,0 +1,2344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChangeStatus</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CloneAsChild</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CloseCase</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>MassClose</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewCase</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <businessProcesses>
+        <fullName>ASU Service</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed%3A Customer Self-Resolved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed%3A Customer Unresponsive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed%3A Duplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed%3A Forwarded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed%3A Resolved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed%3A SPAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Waiting on Customer</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>ASU_Service_Compact_Layout</fullName>
+        <fields>OwnerId</fields>
+        <fields>Functional_Group__c</fields>
+        <fields>Category__c</fields>
+        <fields>Status</fields>
+        <fields>LastModifiedById</fields>
+        <label>ASU Service Compact Layout</label>
+    </compactLayouts>
+    <enableFeeds>true</enableFeeds>
+    <fields>
+        <fullName>AccountId</fullName>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AssetId</fullName>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BusinessHoursId</fullName>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <picklist>
+            <controllingField>Functional_Group__c</controllingField>
+            <picklistValues>
+                <fullName>1098-T</fullName>
+                <controllingFieldValues>Student Business Services</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Collections</fullName>
+                <controllingFieldValues>Student Business Services</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Counselor</fullName>
+                <controllingFieldValues>Financial Aid</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer Services</fullName>
+                <controllingFieldValues>Admission Services - Graduate</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Document Processing</fullName>
+                <controllingFieldValues>Admission Services - Graduate</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Downtown Campus</fullName>
+                <controllingFieldValues>Registrar</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Graduate Applicant Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Graduation</fullName>
+                <controllingFieldValues>Registrar</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>International</fullName>
+                <controllingFieldValues>Admission Services - Graduate</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Late Fee Appeals</fullName>
+                <controllingFieldValues>Student Business Services</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Loan Research</fullName>
+                <controllingFieldValues>Financial Aid</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non-Degree</fullName>
+                <controllingFieldValues>Admission Services - Graduate</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Office Specialist</fullName>
+                <controllingFieldValues>Financial Aid</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Online Student</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <controllingFieldValues>Admission Services - Graduate</controllingFieldValues>
+                <controllingFieldValues>Financial Aid</controllingFieldValues>
+                <controllingFieldValues>Registrar</controllingFieldValues>
+                <controllingFieldValues>Student Business Services</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outgoing Transcripts</fullName>
+                <controllingFieldValues>Registrar</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Poly Campus</fullName>
+                <controllingFieldValues>Registrar</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>QA Research</fullName>
+                <controllingFieldValues>Financial Aid</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Registrar</fullName>
+                <controllingFieldValues>Registrar</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RegTech</fullName>
+                <controllingFieldValues>Registrar</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Residency</fullName>
+                <controllingFieldValues>Registrar</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Returned Mail</fullName>
+                <controllingFieldValues>Financial Aid</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Scholarship Research</fullName>
+                <controllingFieldValues>Financial Aid</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sponsor Billings</fullName>
+                <controllingFieldValues>Student Business Services</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sponsored Apps</fullName>
+                <controllingFieldValues>Admission Services - Graduate</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Student Accounts</fullName>
+                <controllingFieldValues>Student Business Services</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Student Business Services</fullName>
+                <controllingFieldValues>Student Business Services</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Student Employment</fullName>
+                <controllingFieldValues>Financial Aid</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tempe Cashiering</fullName>
+                <controllingFieldValues>Student Business Services</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TIP Late Registration Appeals</fullName>
+                <controllingFieldValues>Student Business Services</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tuition Calculation Issues</fullName>
+                <controllingFieldValues>Student Business Services</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VA Billing</fullName>
+                <controllingFieldValues>Student Business Services</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VIP</fullName>
+                <controllingFieldValues>Financial Aid</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ChangeCaseOwner__Case_Owner2__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(
+	IF(BEGINS(OwnerId, &apos;00G&apos;),
+		&apos;p/own/Queue/d?id=&apos;&amp;OwnerId,
+		OwnerId
+	),
+	IF(BEGINS(OwnerId, &apos;00G&apos;),
+		Owner:Queue.Name,
+		Owner:User.FirstName &amp; &apos; &apos; &amp; Owner:User.LastName
+	)
+) &amp; &apos; &apos; &amp; HYPERLINK( 
+	&apos;javascript:u=&quot;/apex/ChangeCaseOwner__Case_Owner_Change?cid=&apos;&amp;Id&amp;&apos;&quot;;if(typeof srcUp == &quot;function&quot;){srcUp(u+&quot;&amp;isdtp=vw&quot;)}else{location=u};&apos;,
+	&apos;[Change]&apos;, 
+	&apos;_self&apos;
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Case Owner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ChangeCaseOwner__Case_Owner_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is no longer necessary as of the Summer 2013 release</description>
+        <externalId>false</externalId>
+        <label>zDep Case Owner Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ContactId</fullName>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer_emoticon__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(   (TEXT( Customer_emoticon_value__c ) ==&quot;&quot;)  ,&quot;&quot; ,IMAGE( &quot;resource/pkb_mobile/imgs/&quot;+TEXT( Customer_emoticon_value__c ) +&quot;.png&quot; ,TEXT( Customer_emoticon_value__c )  ,20,20))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>How the customer was feeling when he enter the support case.</inlineHelpText>
+        <label>Customer emoticon</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_emoticon_value__c</fullName>
+        <description>Store the emoticon as a text value.</description>
+        <externalId>false</externalId>
+        <label>Customer emoticon value</label>
+        <picklist>
+            <picklistValues>
+                <fullName>happy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>confused</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>annoyed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>frustrated</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Forward_Case_Comments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Any text entered here will be included in the email sent to a unit or individual when this Case is &quot;Closed: Forwarded&quot;.</inlineHelpText>
+        <label>Forward Case Comments</label>
+        <length>5000</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Forward_To_Email_Calculation__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(CONTAINS(TEXT(Forward_To_Unit__c),&quot;@&quot;)
+,
+MID(TEXT(Forward_To_Unit__c),
+FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))+1,
+LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
+,&quot;&quot;)</formula>
+        <inlineHelpText>A list of emails associated with the &quot;Forward Case To Department&quot;. If the &quot;Forward Case To Email&quot; is left blank, it is automatically populated with this address.</inlineHelpText>
+        <label>Forward To Email Calculation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Forward_To_Email__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>For most &quot;Forward To Units&quot; this email will be automatically provided. If forwarding to &quot;Other Unit&quot; an to an Individual, this field is required.</inlineHelpText>
+        <label>Forward To Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Forward_To_Unit__c</fullName>
+        <externalId>false</externalId>
+        <label>Forward To Unit</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Admission Services - International (asuinternational@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Admission Services - Undergraduate (admissions@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alumni Association (alumni@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>American English and Culture Program - AECP (aecp@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ASU Online Admission (undergraduate-inquiry@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Athletics (SparkyCares@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bookstores (sundevil@bkstr.com)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Career Services (careerservices@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Clubs and Organizations - Downtown (downtownclubs@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Clubs and Organizations - Polytechnic (polytechnicclubs@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Clubs and Organizations - Tempe (tempeclubs@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Clubs and Organizations - West (westclubs@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DARS (dars-q@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dining (SunDevilDining@gmail.com)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Disability Resource Center (drc@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>First Year Success (fys@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Graduate Education (grad-gps@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Greek Life (greeklife@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Immunization - Health Services (measles@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>International Students and Scholars Center (isso@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Math Placement (placement.math@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Orientation (orientation@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Parking and Transit Services (parking@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Study Abroad (studyabroad@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sun Card Services (sundevilcardinfo@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transfer Systems Development (articulation@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>University Housing (housing@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Veterans Center (VeteransServices@asu.edu)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Unit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Functional_Group__c</fullName>
+        <externalId>false</externalId>
+        <label>Functional Group</label>
+        <picklist>
+            <controllingField>Status</controllingField>
+            <picklistValues>
+                <fullName>Admission Services - Graduate</fullName>
+                <controllingFieldValues>Closed: Customer Self-Resolved</controllingFieldValues>
+                <controllingFieldValues>Closed: Customer Unresponsive</controllingFieldValues>
+                <controllingFieldValues>Closed: Resolved</controllingFieldValues>
+                <controllingFieldValues>Closed: SPAM</controllingFieldValues>
+                <controllingFieldValues>In Progress</controllingFieldValues>
+                <controllingFieldValues>New</controllingFieldValues>
+                <controllingFieldValues>Waiting on Customer</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Financial Aid</fullName>
+                <controllingFieldValues>Closed: Customer Self-Resolved</controllingFieldValues>
+                <controllingFieldValues>Closed: Customer Unresponsive</controllingFieldValues>
+                <controllingFieldValues>Closed: Resolved</controllingFieldValues>
+                <controllingFieldValues>Closed: SPAM</controllingFieldValues>
+                <controllingFieldValues>In Progress</controllingFieldValues>
+                <controllingFieldValues>New</controllingFieldValues>
+                <controllingFieldValues>Waiting on Customer</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Registrar</fullName>
+                <controllingFieldValues>Closed: Customer Self-Resolved</controllingFieldValues>
+                <controllingFieldValues>Closed: Customer Unresponsive</controllingFieldValues>
+                <controllingFieldValues>Closed: Resolved</controllingFieldValues>
+                <controllingFieldValues>Closed: SPAM</controllingFieldValues>
+                <controllingFieldValues>In Progress</controllingFieldValues>
+                <controllingFieldValues>New</controllingFieldValues>
+                <controllingFieldValues>Waiting on Customer</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Student Business Services</fullName>
+                <controllingFieldValues>Closed: Customer Self-Resolved</controllingFieldValues>
+                <controllingFieldValues>Closed: Customer Unresponsive</controllingFieldValues>
+                <controllingFieldValues>Closed: Resolved</controllingFieldValues>
+                <controllingFieldValues>Closed: SPAM</controllingFieldValues>
+                <controllingFieldValues>In Progress</controllingFieldValues>
+                <controllingFieldValues>New</controllingFieldValues>
+                <controllingFieldValues>Waiting on Customer</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>External Unit</fullName>
+                <controllingFieldValues>Closed: Forwarded</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Illegal_Characters_In_Outbound_Email__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Set to TRUE (via Workflow) if an Email is sent containing illegal characters (e.g. the &quot;&lt;&lt;&quot; in a Email Template that indicate a staff member should fill out missing information.</inlineHelpText>
+        <label>Illegal Characters In Outbound Email</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Initial_Request_Sent_To_Addresses__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If this case was created because a customer sent an email to one of ASU&apos;s service addresses, all addresses that initial email was sent to are stored here.</inlineHelpText>
+        <label>Initial Request Sent To Addresses</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Origin</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ParentId</fullName>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Private_Note_Financial_Aid__c</fullName>
+        <description>Private notes are visible only to Financial Aid team members and any other user who has been given explicit permission to view.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Private notes are visible only to Financial Aid team members and any other user who has been given explicit permission to view.</inlineHelpText>
+        <label>Private Note - Financial Aid</label>
+        <length>5000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Private_Note_Graduate_Admissions__c</fullName>
+        <description>Private notes are visible only to Graduate Admissions team members and any other user who has been given explicit permission to view.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Private notes are visible only to Graduate Admissions team members and any other user who has been given explicit permission to view.</inlineHelpText>
+        <label>Private Note - Graduate Admissions</label>
+        <length>5000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Private_Note_Registrar__c</fullName>
+        <description>Private notes are visible only to Registrar team members and any other user who has been given explicit permission to view.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Private notes are visible only to Registrar team members and any other user who has been given explicit permission to view.</inlineHelpText>
+        <label>Private Note - Registrar</label>
+        <length>5000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Private_Note_Student_Business_Services__c</fullName>
+        <description>Private notes are visible only to Student Business Services team members and any other user who has been given explicit permission to view.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Private notes are visible only to Student Business Services team members and any other user who has been given explicit permission to view.</inlineHelpText>
+        <label>Private Note - Student Business Services</label>
+        <length>5000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Reason</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>User didn&apos;t attend training</fullName>
+                <cssExposed>false</cssExposed>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complex functionality</fullName>
+                <cssExposed>false</cssExposed>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Existing problem</fullName>
+                <cssExposed>false</cssExposed>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Instructions not clear</fullName>
+                <cssExposed>false</cssExposed>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New problem</fullName>
+                <cssExposed>false</cssExposed>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <closed>false</closed>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <closed>false</closed>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting on Customer</fullName>
+                <closed>false</closed>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed: Resolved</fullName>
+                <closed>true</closed>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed: Customer Self-Resolved</fullName>
+                <closed>true</closed>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed: Customer Unresponsive</fullName>
+                <closed>true</closed>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed: Forwarded</fullName>
+                <closed>true</closed>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed: SPAM</fullName>
+                <closed>true</closed>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed: Duplicate</fullName>
+                <closed>true</closed>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Problem</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Feature Request</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>pkbgeolocalization__c</fullName>
+        <description>Store the geolocalization of the customer on case creation from mobile.</description>
+        <displayLocationInDecimal>false</displayLocationInDecimal>
+        <externalId>false</externalId>
+        <inlineHelpText>Where the customer was when the case has been created</inlineHelpText>
+        <label>Customer Geolocalization</label>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Location</type>
+    </fields>
+    <listViews>
+        <fullName>ALL_ASU_EMAIL_SERVICE_CASES</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Category__c</columns>
+        <columns>Functional_Group__c</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.ALIAS</field>
+            <operation>equals</operation>
+            <value>asuemail</value>
+        </filters>
+        <label>ALL ASU EMAIL SERVICE CASES</label>
+        <sharedTo>
+            <roleAndSubordinates>UTO_University_Technology_Office</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ALL_OPEN_CASES</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Category__c</columns>
+        <columns>Functional_Group__c</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.ASU_Service</value>
+        </filters>
+        <label>ALL OPEN CASES</label>
+        <sharedTo>
+            <roleAndSubordinates>UTO_University_Technology_Office</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_Financial_Aid</fullName>
+        <columns>Category__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.ORIGIN</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.LAST_UPDATE</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Functional_Group__c</field>
+            <operation>equals</operation>
+            <value>Financial Aid</value>
+        </filters>
+        <label>All Open - Financial Aid</label>
+        <sharedTo>
+            <group>Student_Financial_Assistance_Case</group>
+            <group>UTO_Administration</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_Graduate_Admission_Services</fullName>
+        <columns>Category__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.ORIGIN</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.LAST_UPDATE</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Functional_Group__c</field>
+            <operation>equals</operation>
+            <value>Admission Services - Graduate</value>
+        </filters>
+        <label>All Open - Graduate Admission Services</label>
+        <sharedTo>
+            <group>Graduate_Admissions_Case</group>
+            <group>UTO_Administration</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_Registrar</fullName>
+        <columns>Category__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Functional_Group__c</field>
+            <operation>equals</operation>
+            <value>Registrar</value>
+        </filters>
+        <label>All Open - Registrar</label>
+        <sharedTo>
+            <group>Registrar_Case</group>
+            <group>UTO_Administration</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_Student_Business_Services</fullName>
+        <columns>Category__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Functional_Group__c</field>
+            <operation>equals</operation>
+            <value>Student Business Services</value>
+        </filters>
+        <label>All Open - Student Business Services</label>
+        <sharedTo>
+            <group>Student_Business_Services_Case</group>
+            <group>UTO_Administration</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Closed_Financial_Aid</fullName>
+        <columns>Category__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Functional_Group__c</field>
+            <operation>equals</operation>
+            <value>Financial Aid</value>
+        </filters>
+        <label>Closed - Financial Aid</label>
+        <sharedTo>
+            <group>Student_Financial_Assistance_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Closed_Graduate_Admission_Services</fullName>
+        <columns>Category__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Functional_Group__c</field>
+            <operation>equals</operation>
+            <value>Admission Services - Graduate</value>
+        </filters>
+        <label>Closed - Graduate Admission Services</label>
+        <sharedTo>
+            <group>Graduate_Admissions_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Closed_Registrar</fullName>
+        <columns>Category__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Functional_Group__c</field>
+            <operation>equals</operation>
+            <value>Registrar</value>
+        </filters>
+        <label>Closed - Registrar</label>
+        <sharedTo>
+            <group>Registrar_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Closed_Student_Business_Services</fullName>
+        <columns>Category__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Functional_Group__c</field>
+            <operation>equals</operation>
+            <value>Student Business Services</value>
+        </filters>
+        <label>Closed - Student Business Services</label>
+        <sharedTo>
+            <group>Student_Business_Services_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Collections_Student_Business_Services</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Collections</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>SBS Collections</label>
+        <queue>Student_Business_Services_Case</queue>
+        <sharedTo>
+            <group>Student_Business_Services_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Downtown_Campus_Registrar</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Downtown Campus</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>REG Downtown Campus</label>
+        <queue>University_Registrar_Services_Case</queue>
+        <sharedTo>
+            <group>Registrar_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>FA_Counselor_Financial_Aid</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Counselor</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>FA Counselor</label>
+        <queue>Financial_Aid_Case</queue>
+        <sharedTo>
+            <group>Student_Financial_Assistance_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>FA_VIP</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>VIP</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>FA VIP</label>
+        <queue>Financial_Aid_Case</queue>
+        <sharedTo>
+            <group>Student_Financial_Assistance_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Graduation_Registrar</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Graduation</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>REG Graduation</label>
+        <queue>University_Registrar_Services_Case</queue>
+        <sharedTo>
+            <group>Registrar_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Late_Fee_Appeals_Student_Business_Serv</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Late Fee Appeals</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>SBS Late Fee Appeals</label>
+        <queue>Student_Business_Services_Case</queue>
+        <sharedTo>
+            <group>Student_Business_Services_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Loan_Research_Financial_Aid</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Loan Research</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>FA Loan Research</label>
+        <queue>Financial_Aid_Case</queue>
+        <sharedTo>
+            <group>Student_Financial_Assistance_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MyCases</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>MyOpenCases</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>My Open Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>Office_Specialist_Financial_Aid</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Office Specialist</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>FA Office Specialist</label>
+        <queue>Financial_Aid_Case</queue>
+        <sharedTo>
+            <group>Student_Financial_Assistance_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Online_Student_Financial_Aid</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Online Student</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>FA Online Student</label>
+        <queue>Financial_Aid_Case</queue>
+        <sharedTo>
+            <group>Student_Financial_Assistance_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Outgoing_Transcripts_Registrar</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Outgoing Transcripts</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>REG Outgoing Transcripts</label>
+        <queue>University_Registrar_Services_Case</queue>
+        <sharedTo>
+            <group>Registrar_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Poly_Campus_Registrar</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Poly Campus</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>REG Poly Campus</label>
+        <queue>University_Registrar_Services_Case</queue>
+        <sharedTo>
+            <group>Registrar_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>QA_Research_Financial_Aid</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>QA Research</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>FA QA Research</label>
+        <queue>Financial_Aid_Case</queue>
+        <sharedTo>
+            <group>Student_Financial_Assistance_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>REG_Open_Assigned</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Category__c</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Functional_Group__c</field>
+            <operation>equals</operation>
+            <value>Registrar</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.ALIAS</field>
+            <operation>notEqual</operation>
+            <value>University Registrar Services (Case)</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>REG Open Assigned</label>
+        <sharedTo>
+            <group>Registrar_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>RegTech_Registrar</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>RegTech</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>REG RegTech</label>
+        <queue>University_Registrar_Services_Case</queue>
+        <sharedTo>
+            <group>Registrar_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Registrar_Registrar</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Registrar</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>REG Registrar</label>
+        <queue>University_Registrar_Services_Case</queue>
+        <sharedTo>
+            <group>Registrar_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Residency_Registrar</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Residency</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>REG Residency</label>
+        <queue>University_Registrar_Services_Case</queue>
+        <sharedTo>
+            <group>Registrar_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Returned_Mail</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Returned Mail</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>FA Returned Mail</label>
+        <queue>Financial_Aid_Case</queue>
+        <sharedTo>
+            <group>Student_Financial_Assistance_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Scholarship_Research_Financial_Aid</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Scholarship Research</value>
+        </filters>
+        <label>FA Scholarship Research</label>
+        <queue>Financial_Aid_Case</queue>
+        <sharedTo>
+            <group>Student_Financial_Assistance_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Sponsor_Billings_Student_Business_Serv</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Sponsor Billings</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>SBS Sponsor Billings</label>
+        <queue>Student_Business_Services_Case</queue>
+        <sharedTo>
+            <group>Student_Business_Services_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Student_Accounts_Student_Business_Serv</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Student Accounts</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>SBS Student Accounts</label>
+        <queue>Student_Business_Services_Case</queue>
+        <sharedTo>
+            <group>Student_Business_Services_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Student_Business_Services</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Student Business Services</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>SBS Student Business Services</label>
+        <queue>Student_Business_Services_Case</queue>
+        <sharedTo>
+            <group>Student_Business_Services_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Student_Employment_Financial_Aid</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Student Employment</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>FA Student Employment</label>
+        <queue>Financial_Aid_Case</queue>
+        <sharedTo>
+            <group>Student_Financial_Assistance_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TIP_Late_Reg_Student_Business_Serv</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>TIP Late Registration Appeals</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>SBS TIP Late Registration Appeals</label>
+        <queue>Student_Business_Services_Case</queue>
+        <sharedTo>
+            <group>Student_Business_Services_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Tempe_Cashiering_Student_Business_Serv</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Tempe Cashiering</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>SBS Tempe Cashiering</label>
+        <queue>Student_Business_Services_Case</queue>
+        <sharedTo>
+            <group>Student_Business_Services_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Tuition_Issues_Student_Business_Serv</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Tuition Calculation Issues</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>SBS Tuition Issues</label>
+        <queue>Student_Business_Services_Case</queue>
+        <sharedTo>
+            <group>Student_Business_Services_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>VA_Billing_Student_Business_Serv</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>VA Billing</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>SBS VA Billing</label>
+        <queue>Student_Business_Services_Case</queue>
+        <sharedTo>
+            <group>Student_Business_Services_Case</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>X1098_T_Student_Business_Services</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>1098-T</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>SBS 1098-T</label>
+        <queue>Student_Business_Services_Case</queue>
+        <sharedTo>
+            <group>Student_Business_Services_Case</group>
+        </sharedTo>
+    </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>ASU_Service</fullName>
+        <active>true</active>
+        <businessProcess>ASU Service</businessProcess>
+        <label>ASU Service</label>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>1098-T</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Collections</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Counselor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Document Processing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Downtown Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduate Applicant Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Late Fee Appeals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan Research</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Degree</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Specialist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outgoing Transcripts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poly Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QA Research</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RegTech</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Registrar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Returned Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scholarship Research</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsor Billings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsored Apps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student Accounts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student Business Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student Employment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TIP Late Registration Appeals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tempe Cashiering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tuition Calculation Issues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VA Billing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Customer_emoticon_value__c</picklist>
+            <values>
+                <fullName>annoyed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>confused</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>frustrated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>happy</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Forward_To_Unit__c</picklist>
+            <values>
+                <fullName>ASU Online Admission %28undergraduate-inquiry%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Admission Services - International %28asuinternational%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Admission Services - Undergraduate %28admissions%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alumni Association %28alumni%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>American English and Culture Program - AECP %28aecp%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Athletics %28SparkyCares%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bookstores %28sundevil%40bkstr%2Ecom%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Career Services %28careerservices%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clubs and Organizations - Downtown %28downtownclubs%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clubs and Organizations - Polytechnic %28polytechnicclubs%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clubs and Organizations - Tempe %28tempeclubs%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clubs and Organizations - West %28westclubs%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DARS %28dars-q%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dining %28SunDevilDining%40gmail%2Ecom%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disability Resource Center %28drc%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First Year Success %28fys%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduate Education %28grad-gps%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Greek Life %28greeklife%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Immunization - Health Services %28measles%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>International Students and Scholars Center %28isso%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Math Placement %28placement%2Emath%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Orientation %28orientation%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parking and Transit Services %28parking%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Study Abroad %28studyabroad%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sun Card Services %28sundevilcardinfo%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transfer Systems Development %28articulation%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>University Housing %28housing%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Veterans Center %28VeteransServices%40asu%2Eedu%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Functional_Group__c</picklist>
+            <values>
+                <fullName>Admission Services - Graduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial Aid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Registrar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student Business Services</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Feature Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>CASES.CASE_NUMBER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.SUBJECT</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.CREATED_DATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.PRIORITY</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.CASE_NUMBER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.SUBJECT</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.STATUS</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.CASE_NUMBER</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.SUBJECT</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.STATUS</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.CASE_NUMBER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.SUBJECT</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.STATUS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.CREATED_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWriteTransfer</sharingModel>
+    <validationRules>
+        <fullName>Disallow_Illegal_Characters_on_Email</fullName>
+        <active>false</active>
+        <description>If an outbound Email is sent that contains &quot;__&quot;, &quot;&lt;&lt;&quot;, or &quot;&gt;&gt;&quot; (indicating information the individual sending the email should fill out), the &quot;Illegal Characters In Outbound Email&quot; is set to True, activating this rule.</description>
+        <errorConditionFormula>Illegal_Characters_In_Outbound_Email__c</errorConditionFormula>
+        <errorMessage>An attempt was made to send outbound email that contains &quot;__&quot;,  &quot;&lt;&lt;&quot;, or &quot;&gt;&gt;&quot;. These brackets are used to indicate information the staff sending the email should fill out. Please edit the email, and send again.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_Email_for_Closed_Forwarded</fullName>
+        <active>true</active>
+        <description>Forward Case To Email</description>
+        <errorConditionFormula>ISPICKVAL(Status,&quot;Closed: Forwarded&quot;)
+&amp;&amp;
+ISBLANK(Forward_To_Email__c)
+&amp;&amp;
+ISBLANK(Forward_To_Email_Calculation__c)</errorConditionFormula>
+        <errorMessage>A &quot;Closed: Forwarded&quot; Case must have a recipient. Either Select a &quot;Forward to Unit&quot; or enter a &quot;Forward To Email&quot;.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Mass_Delete</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Mass Delete</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/9.0/connection.js&quot;)}
+
+var records = {!GETRECORDIDS(  $ObjectType.Case  )};
+
+if (records[0] == null) {
+alert(&quot;Please select at least one record.&quot;) }
+else {
+
+var errors = [];
+var result = sforce.connection.deleteIds(records);
+if (result &amp;&amp; result.length){
+var numFailed = 0;
+var numSucceeded = 0;
+for (var i = 0; i &lt; result.length; i++){
+var res = result[i];
+if (res &amp;&amp; res.success == &apos;true&apos;){
+numSucceeded++;
+} else {
+var es = res.getArray(&quot;errors&quot;);
+if (es.length &gt; 0) {
+errors.push(es[0].message);
+}
+numFailed++;
+}
+}
+if (numFailed &gt; 0){
+alert(&quot;Failed: &quot; + numFailed + &quot;\nSucceeded: &quot; + numSucceeded + &quot; \n Due to: &quot; + errors.join(&quot;\n&quot;));
+} else {
+alert(&quot;Number of records deleted: &quot; + numSucceeded);
+}
+}
+window.location.reload();
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>takeownership__Take_Ownership</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Take Ownership</masterLabel>
+        <openType>sidebar</openType>
+        <page>takeownership__TakeOwnershipPassThru</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>takeownership__Take_Ownership_Multi</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Take Ownership</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>var records = {!GETRECORDIDS($ObjectType.Case)}; 
+
+if(records.length == 0)
+  alert(&quot;You must select at least one case&quot;);
+else { 
+  var url = &apos;/apex/takeownership__TakeOwnershipPassThru?&apos;; 
+
+  if(typeof(srcUp) == &quot;function&quot;)
+    url += &apos;isdtp=nv&amp;&apos;;
+
+  for(var i = 0; i &lt; records.length; i++)
+    url += &quot;cs&quot; + (i+1) + &quot;=&quot; + records[i] + &quot;&amp;&quot;; 
+
+  window.location.href = url; 
+}</url>
+    </webLinks>
+</CustomObject>

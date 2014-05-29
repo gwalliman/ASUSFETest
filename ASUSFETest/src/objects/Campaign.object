@@ -1,0 +1,1038 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddCampaign</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AdvancedSetup</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Requested__c</fullName>
+        <description>College, school or department who requested the campaign</description>
+        <externalId>false</externalId>
+        <label>Department</label>
+        <picklist>
+            <picklistValues>
+                <fullName>College of Public Programs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Coll Technology &amp; Innovation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cronkite School-Journ/MassComm</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Enrollment Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Graduate Education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Health Solutions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Herberger Institute</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ira A Fulton Engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Liberal Arts &amp; Sciences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MaryLouFulton Teachers College</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Interdis Arts &amp; Sciences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nursing &amp; Health Innovation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>O&apos;Connor College of Law</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>School of Letters &amp; Sciences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>School of Sustainability</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>W.P. Carey School of Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Planned</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Aborted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Template</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Test_Record__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used to filter out Test Campaigns</description>
+        <externalId>false</externalId>
+        <label>Test Record</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Banner Ads</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Event</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mailing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Walk-in/Phone Call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Web Form</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>silverpop__Silverpop_ID__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Silverpop_ID</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <listViews>
+        <fullName>ASU_UG_Campaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.ACTIVE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Test_Record__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>ASU UG</value>
+        </filters>
+        <label>ASU UG Campaigns</label>
+        <sharedTo>
+            <role>ES_Enrollment_Services_Communication</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Admit_Campaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.ACTIVE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Test_Record__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>Admit</value>
+        </filters>
+        <label>Admit Campaigns</label>
+        <sharedTo>
+            <role>ES_Enrollment_Services_Communication</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>AllActiveCampaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Test_Record__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Aborted,Template,Completed</value>
+        </filters>
+        <label>Active Status</label>
+        <sharedTo>
+            <role>ES_Enrollment_Services_Communication</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All_Campaigns_No_Tests_GRTE_Info</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Test_Record__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>notContain</operation>
+            <value>GRTE Information Session</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Active - No Tests or GRTE Info</label>
+        <sharedTo>
+            <role>ES_Enrollment_Services_Communication</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All_Completed_Campaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Test_Record__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.STATUS</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </filters>
+        <label>Completed Status</label>
+        <sharedTo>
+            <role>ES_Enrollment_Services</role>
+            <role>ES_Enrollment_Services_Communication</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All_Test_Campaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Test_Record__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Test Campaigns</label>
+        <sharedTo>
+            <role>ES_Enrollment_Services_Communication</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>GRE_Campaigns</fullName>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Test_Record__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>Test Scores-GRE</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>Purchased List-GRE</value>
+        </filters>
+        <label>GRE Test Scores</label>
+        <sharedTo>
+            <role>ES_Enrollment_Services_Communication</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>GRTE_Info_Sessions_2014_iTeach</fullName>
+        <booleanFilter>1 AND (2 and 3)</booleanFilter>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.ACTIVE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>iTeach</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.START_DATE</field>
+            <operation>lessOrEqual</operation>
+            <value>12/31/2014</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.START_DATE</field>
+            <operation>greaterOrEqual</operation>
+            <value>1/1/2014</value>
+        </filters>
+        <label>MLF Grad Info Sessions 2014 iTeach</label>
+        <sharedTo>
+            <role>ES_Teachers_College</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>GRTE_Info_Sessions_EdDLdrshp</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONVERTED_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>Event-GRTE</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>EdD Ldrshp</value>
+        </filters>
+        <label>MLF Graduate Info Sessions EdD Ldrshp</label>
+        <sharedTo>
+            <role>ES_Teachers_College</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>GRTE_Information_Sessions</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONVERTED_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>Event-GRTE</value>
+        </filters>
+        <label>MLF Graduate Information Sessions</label>
+        <sharedTo>
+            <roleAndSubordinates>ES_Teachers_College</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>GRTE_Information_Sessions_2013</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.ACTIVE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>Event-GRTE</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.START_DATE</field>
+            <operation>lessOrEqual</operation>
+            <value>12/31/2013</value>
+        </filters>
+        <label>MLF Graduate Information Sessions 2013</label>
+        <sharedTo>
+            <role>ES_Teachers_College</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>GRTE_Information_Sessions_2014</fullName>
+        <booleanFilter>1 AND (2 and 3)</booleanFilter>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.ACTIVE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>Event-GRTE</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.START_DATE</field>
+            <operation>lessOrEqual</operation>
+            <value>12/31/2014</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.START_DATE</field>
+            <operation>greaterOrEqual</operation>
+            <value>1/1/2014</value>
+        </filters>
+        <label>MLF Graduate Information Sessions 2014</label>
+        <sharedTo>
+            <role>ES_Teachers_College</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>IncompleteAppCampaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.ACTIVE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>incomplete</value>
+        </filters>
+        <label>Incomplete App Campaigns</label>
+        <sharedTo>
+            <role>ES_Enrollment_Services_Communication</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MyActiveCampaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CAMPAIGN.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>My Active Campaigns</label>
+    </listViews>
+    <listViews>
+        <fullName>Planned_Campaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Test_Record__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.STATUS</field>
+            <operation>equals</operation>
+            <value>Planned,In Progress</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>notContain</operation>
+            <value>GRTE Information Session</value>
+        </filters>
+        <label>Planned Status</label>
+        <sharedTo>
+            <role>ES_Enrollment_Services_Communication</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Prospect_Campaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.ACTIVE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Test_Record__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>Prospect</value>
+        </filters>
+        <label>Prospect Campaigns</label>
+        <sharedTo>
+            <role>ES_Enrollment_Services_Communication</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SilverpopPrograms</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Test_Record__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>Military</value>
+        </filters>
+        <label>Silverpop Programs</label>
+        <sharedTo>
+            <role>ES_Enrollment_Services_Communication</role>
+        </sharedTo>
+    </listViews>
+    <recordTypes>
+        <fullName>Marketing</fullName>
+        <active>true</active>
+        <label>Marketing</label>
+        <picklistValues>
+            <picklist>Requested__c</picklist>
+            <values>
+                <fullName>Coll Technology %26 Innovation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College of Public Programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cronkite School-Journ%2FMassComm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrollment Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduate Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health Solutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Herberger Institute</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ira A Fulton Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Liberal Arts %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MaryLouFulton Teachers College</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Interdis Arts %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nursing %26 Health Innovation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>O%27Connor College of Law</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Letters %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Sustainability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>W%2EP%2E Carey School of Business</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Aborted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planned</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Template</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banner Ads</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mailing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Walk-in%2FPhone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web Form</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Standard</fullName>
+        <active>true</active>
+        <label>Standard</label>
+        <picklistValues>
+            <picklist>Requested__c</picklist>
+            <values>
+                <fullName>Coll Technology %26 Innovation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College of Public Programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cronkite School-Journ%2FMassComm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enrollment Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduate Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health Solutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Herberger Institute</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ira A Fulton Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Liberal Arts %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MaryLouFulton Teachers College</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Interdis Arts %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nursing %26 Health Innovation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>O%27Connor College of Law</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Letters %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Sustainability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>W%2EP%2E Carey School of Business</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Aborted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planned</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Template</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banner Ads</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mailing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Walk-in%2FPhone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web Form</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>CAMPAIGN.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CAMPAIGN.STATUS</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CAMPAIGN.START_DATE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>CAMPAIGN.NAME</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CAMPAIGN.NAME</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>CAMPAIGN.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Mass_Delete</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Mass Delete</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/9.0/connection.js&quot;)} 
+
+var records = {!GETRECORDIDS(  $ObjectType.Campaign  )}; 
+
+if (records[0] == null) { 
+alert(&quot;Please select at least one record.&quot;) } 
+else { 
+
+var errors = []; 
+var result = sforce.connection.deleteIds(records); 
+if (result &amp;&amp; result.length){ 
+var numFailed = 0; 
+var numSucceeded = 0; 
+for (var i = 0; i &lt; result.length; i++){ 
+var res = result[i]; 
+if (res &amp;&amp; res.success == &apos;true&apos;){ 
+numSucceeded++; 
+} else { 
+var es = res.getArray(&quot;errors&quot;); 
+if (es.length &gt; 0) { 
+errors.push(es[0].message); 
+} 
+numFailed++; 
+} 
+} 
+if (numFailed &gt; 0){ 
+alert(&quot;Failed: &quot; + numFailed + &quot;\nSucceeded: &quot; + numSucceeded + &quot; \n Due to: &quot; + errors.join(&quot;\n&quot;)); 
+} else { 
+alert(&quot;Number of records deleted: &quot; + numSucceeded); 
+} 
+} 
+window.location.reload(); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>ViewAllCampaignMembers</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>500</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>View All Campaign Members</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/camp/rptcmpgncalldown.jsp?scope=1&amp;scopeid={!Campaign_Name}</url>
+        <width>500</width>
+    </webLinks>
+    <webLinks>
+        <fullName>ViewCampaignInfluenceReport</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>500</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>View Campaign Influence Report</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/00O?rt=117&amp;break0=CAN&amp;scope=1&amp;scopeid_lkid={!Campaign.Id}&amp;scopeid={!Campaign_Name}&amp;c=CAN&amp;c=MR&amp;c=PCS&amp;c=CFN&amp;c=RN&amp;c=ON&amp;c=OA&amp;c=OS&amp;c=OCD&amp;c=AN&amp;s=OA&amp;duel0=CAN%2CMR%2CCFN%2CRN%2CAN%2CON%2CPCS%2COS%2COCD%2COA&amp;details=yes&amp;format=t</url>
+        <width>500</width>
+    </webLinks>
+    <webLinks>
+        <fullName>silverpop__Send_Silverpop_Email</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send Silverpop Email</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>//Display new window 90% of height
+
+var contactnumber = {!FLOOR(Campaign.NumberOfContacts)};
+var leadnumber = {!FLOOR(Campaign.NumberOfLeads)};
+
+if ( !{!ISNULL( Campaign.silverpop__Silverpop_ID__c )}  || !{!ISBLANK( Campaign.silverpop__Silverpop_ID__c )} ) {
+
+    alert(&apos;This Campaign is already associated with a Silverpop Sent Email. Create a new Campaign to send another Silverpop Email.&apos;);
+
+} else if ((contactnumber &lt;= 0) &amp;&amp; (leadnumber &lt;= 0)) {
+      
+     alert(&apos;This Campaign must have at least one member before an email can be sent.&apos;);   
+        
+} else {
+     window.open(&apos;/apex/silverpop__SP_EngageCampaignLogin?id={!Campaign.Id}&apos;, &apos;_blank&apos;, 
+    &apos;height=700,width=1024,location=0,resizable=0,toolbar=0,status=0,menubar=no,scrollbars=1&apos;);
+
+}</url>
+    </webLinks>
+</CustomObject>

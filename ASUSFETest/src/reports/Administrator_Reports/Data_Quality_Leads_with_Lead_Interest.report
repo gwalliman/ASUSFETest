@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Lead$Id</field>
+    </columns>
+    <columns>
+        <field>Lead$Name</field>
+    </columns>
+    <columns>
+        <field>Lead$Email</field>
+    </columns>
+    <columns>
+        <field>Lead.Lead_Interests_Lead__r$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Lead.Lead_Interests_Lead__r$Term__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Lead_Interests_Lead__r$Status__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Lead_Interests_Lead__r$Primary_Source__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Lead_Interests_Lead__r$Secondary_Source__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Lead_Interests_Lead__r$College__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Lead_Interests_Lead__r$Plan__c</field>
+    </columns>
+    <description>Leads not converted and their associated Lead Interest</description>
+    <filter>
+        <criteriaItems>
+            <column>Lead$IsConverted</column>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead$Test_Record__c</column>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Lead_Interests_Lead__r$Primary_Source__c</column>
+            <operator>notEqual</operator>
+            <value>Purchased List,ASU UG,Test Scores</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Data Quality: Leads with Lead Interest</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Leads_with_Lead_Interests__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Lead$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

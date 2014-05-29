@@ -1,0 +1,1875 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Lead State or Province Code</value>
+        </caseValues>
+        <name>state_code_lead</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Lead State or Province</value>
+        </caseValues>
+        <name>state_lead</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Postal Code</value>
+        </caseValues>
+        <name>zip_lead</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <help><!-- Check if the student has attended ASU. If known, please also enter the EMPLID. --></help>
+        <label><!-- ASU Student --></label>
+        <name>ASU_Student__c</name>
+    </fields>
+    <fields>
+        <label><!-- RFI Academic Plan --></label>
+        <name>Academic_Plan_List__c</name>
+    </fields>
+    <fields>
+        <label><!-- RFI College --></label>
+        <name>College__c</name>
+        <picklistValues>
+            <masterLabel>GRAS</masterLabel>
+            <translation><!-- GRAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRBA</masterLabel>
+            <translation><!-- GRBA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRCS</masterLabel>
+            <translation><!-- GRCS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRES</masterLabel>
+            <translation><!-- GRES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRGC</masterLabel>
+            <translation><!-- GRGC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRHI</masterLabel>
+            <translation><!-- GRHI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRLA</masterLabel>
+            <translation><!-- GRLA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRLS</masterLabel>
+            <translation><!-- GRLS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRNH</masterLabel>
+            <translation><!-- GRNH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRNU</masterLabel>
+            <translation><!-- GRNU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRPP</masterLabel>
+            <translation><!-- GRPP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRSU</masterLabel>
+            <translation><!-- GRSU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRTE</masterLabel>
+            <translation><!-- GRTE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRTS</masterLabel>
+            <translation><!-- GRTS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LWLW</masterLabel>
+            <translation><!-- LWLW --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Select the primary method the Lead would like to be contacted. --></help>
+        <label><!-- Contact Preference --></label>
+        <name>Contact_Preference__c</name>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Phone</masterLabel>
+            <translation><!-- Home Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile Phone</masterLabel>
+            <translation><!-- Mobile Phone --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The ID of the Account Associated with the Contact specified in the Convert To Contact Lookup field. This is a lazy hack to allow the trigger to work for the proof of concept. --></help>
+        <label><!-- Convert: Contact Account ID --></label>
+        <name>Convert_Contact_Account_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- If a Contact  is connected here, the Lead will automatically convert to that Contact (without an Opportunity). --></help>
+        <label><!-- Convert: Contact --></label>
+        <name>Convert_Contact__c</name>
+        <relationshipLabel><!-- Leads --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- If checked, the Conversion process initiated by checking &quot;Convert: Perform Conversion&quot; will result in the creation of a new Opportunity. --></help>
+        <label><!-- Convert: Create Opportunity --></label>
+        <name>Convert_Create_Opportunity__c</name>
+    </fields>
+    <fields>
+        <help><!-- If Checked, this Contact will be Converted with a Status of &quot;Prospect. To Convert into an exciting Contact, associate that record in the &quot;Convert: Contact&quot; field. To determine if an Opportunity is created, choose an option in &quot;Convert: Create Opportunity&quot; --></help>
+        <label><!-- Convert: Perform Conversion --></label>
+        <name>Convert_Perform_Conversion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country of Citizenship --></label>
+        <name>Country_of_Citizenship__c</name>
+        <picklistValues>
+            <masterLabel>Afghanistan</masterLabel>
+            <translation><!-- Afghanistan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aland Islands</masterLabel>
+            <translation><!-- Aland Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Albania</masterLabel>
+            <translation><!-- Albania --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Algeria</masterLabel>
+            <translation><!-- Algeria --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Andorra</masterLabel>
+            <translation><!-- Andorra --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Angola</masterLabel>
+            <translation><!-- Angola --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Anguilla</masterLabel>
+            <translation><!-- Anguilla --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Antarctica</masterLabel>
+            <translation><!-- Antarctica --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Antigua and Barbuda</masterLabel>
+            <translation><!-- Antigua and Barbuda --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Argentina</masterLabel>
+            <translation><!-- Argentina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Armenia</masterLabel>
+            <translation><!-- Armenia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aruba</masterLabel>
+            <translation><!-- Aruba --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Australia</masterLabel>
+            <translation><!-- Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Austria</masterLabel>
+            <translation><!-- Austria --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Azerbaijan</masterLabel>
+            <translation><!-- Azerbaijan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bahamas</masterLabel>
+            <translation><!-- Bahamas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bahrain</masterLabel>
+            <translation><!-- Bahrain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bangladesh</masterLabel>
+            <translation><!-- Bangladesh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Barbados</masterLabel>
+            <translation><!-- Barbados --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Belarus</masterLabel>
+            <translation><!-- Belarus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Belgium</masterLabel>
+            <translation><!-- Belgium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Belize</masterLabel>
+            <translation><!-- Belize --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Benin</masterLabel>
+            <translation><!-- Benin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bermuda</masterLabel>
+            <translation><!-- Bermuda --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bhutan</masterLabel>
+            <translation><!-- Bhutan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bolivia, Plurinational State of</masterLabel>
+            <translation><!-- Bolivia, Plurinational State of --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bonaire, Sint Eustatius and Saba</masterLabel>
+            <translation><!-- Bonaire, Sint Eustatius and Saba --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bosnia and Herzegovina</masterLabel>
+            <translation><!-- Bosnia and Herzegovina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Botswana</masterLabel>
+            <translation><!-- Botswana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bouvet Island</masterLabel>
+            <translation><!-- Bouvet Island --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brazil</masterLabel>
+            <translation><!-- Brazil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>British Indian Ocean Territory</masterLabel>
+            <translation><!-- British Indian Ocean Territory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brunei</masterLabel>
+            <translation><!-- Brunei --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brunei Darussalam</masterLabel>
+            <translation><!-- Brunei Darussalam --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bulgaria</masterLabel>
+            <translation><!-- Bulgaria --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Burkina Faso</masterLabel>
+            <translation><!-- Burkina Faso --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cambodia</masterLabel>
+            <translation><!-- Cambodia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cameroon</masterLabel>
+            <translation><!-- Cameroon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Canada</masterLabel>
+            <translation><!-- Canada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cape Verde</masterLabel>
+            <translation><!-- Cape Verde --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cayman Islands</masterLabel>
+            <translation><!-- Cayman Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Central African Republic</masterLabel>
+            <translation><!-- Central African Republic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chad</masterLabel>
+            <translation><!-- Chad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chile</masterLabel>
+            <translation><!-- Chile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>China</masterLabel>
+            <translation><!-- China --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chinese Taipei</masterLabel>
+            <translation><!-- Chinese Taipei --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Christmas Island</masterLabel>
+            <translation><!-- Christmas Island --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cocos (Keeling) Islands</masterLabel>
+            <translation><!-- Cocos (Keeling) Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colombia</masterLabel>
+            <translation><!-- Colombia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comoros</masterLabel>
+            <translation><!-- Comoros --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Congo</masterLabel>
+            <translation><!-- Congo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Congo, the Democratic Republic of the</masterLabel>
+            <translation><!-- Congo, the Democratic Republic of the --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cook Islands</masterLabel>
+            <translation><!-- Cook Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Costa Rica</masterLabel>
+            <translation><!-- Costa Rica --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cote D&apos;Ivoire</masterLabel>
+            <translation><!-- Cote D&apos;Ivoire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Croatia</masterLabel>
+            <translation><!-- Croatia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cuba</masterLabel>
+            <translation><!-- Cuba --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Curaçao</masterLabel>
+            <translation><!-- Curaçao --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cyprus</masterLabel>
+            <translation><!-- Cyprus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Czech Republic</masterLabel>
+            <translation><!-- Czech Republic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Denmark</masterLabel>
+            <translation><!-- Denmark --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Djibouti</masterLabel>
+            <translation><!-- Djibouti --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dominica</masterLabel>
+            <translation><!-- Dominica --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dominican Republic</masterLabel>
+            <translation><!-- Dominican Republic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ecuador</masterLabel>
+            <translation><!-- Ecuador --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Egypt</masterLabel>
+            <translation><!-- Egypt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>El Salvador</masterLabel>
+            <translation><!-- El Salvador --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equatorial Guinea</masterLabel>
+            <translation><!-- Equatorial Guinea --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eritrea</masterLabel>
+            <translation><!-- Eritrea --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estonia</masterLabel>
+            <translation><!-- Estonia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ethiopia</masterLabel>
+            <translation><!-- Ethiopia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Falkland Islands (Malvinas)</masterLabel>
+            <translation><!-- Falkland Islands (Malvinas) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Faroe Islands</masterLabel>
+            <translation><!-- Faroe Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fiji</masterLabel>
+            <translation><!-- Fiji --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finland</masterLabel>
+            <translation><!-- Finland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>France</masterLabel>
+            <translation><!-- France --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>French Guiana</masterLabel>
+            <translation><!-- French Guiana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>French Polynesia</masterLabel>
+            <translation><!-- French Polynesia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>French Southern Territories</masterLabel>
+            <translation><!-- French Southern Territories --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gabon</masterLabel>
+            <translation><!-- Gabon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gambia</masterLabel>
+            <translation><!-- Gambia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia</masterLabel>
+            <translation><!-- Georgia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Germany</masterLabel>
+            <translation><!-- Germany --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ghana</masterLabel>
+            <translation><!-- Ghana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gibraltar</masterLabel>
+            <translation><!-- Gibraltar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greece</masterLabel>
+            <translation><!-- Greece --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greenland</masterLabel>
+            <translation><!-- Greenland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grenada</masterLabel>
+            <translation><!-- Grenada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guadeloupe</masterLabel>
+            <translation><!-- Guadeloupe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guatemala</masterLabel>
+            <translation><!-- Guatemala --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guernsey</masterLabel>
+            <translation><!-- Guernsey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guinea</masterLabel>
+            <translation><!-- Guinea --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guinea-Bissau</masterLabel>
+            <translation><!-- Guinea-Bissau --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guyana</masterLabel>
+            <translation><!-- Guyana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Haiti</masterLabel>
+            <translation><!-- Haiti --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Heard Island and McDonald Islands</masterLabel>
+            <translation><!-- Heard Island and McDonald Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Holy See (Vatican City State)</masterLabel>
+            <translation><!-- Holy See (Vatican City State) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Honduras</masterLabel>
+            <translation><!-- Honduras --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hong Kong</masterLabel>
+            <translation><!-- Hong Kong --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hungary</masterLabel>
+            <translation><!-- Hungary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Iceland</masterLabel>
+            <translation><!-- Iceland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>India</masterLabel>
+            <translation><!-- India --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indonesia</masterLabel>
+            <translation><!-- Indonesia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Iran, Islamic Republic of</masterLabel>
+            <translation><!-- Iran, Islamic Republic of --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Iraq</masterLabel>
+            <translation><!-- Iraq --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ireland</masterLabel>
+            <translation><!-- Ireland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Isle of Man</masterLabel>
+            <translation><!-- Isle of Man --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Israel</masterLabel>
+            <translation><!-- Israel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Italy</masterLabel>
+            <translation><!-- Italy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jamaica</masterLabel>
+            <translation><!-- Jamaica --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Japan</masterLabel>
+            <translation><!-- Japan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jersey</masterLabel>
+            <translation><!-- Jersey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jordan</masterLabel>
+            <translation><!-- Jordan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kazakhstan</masterLabel>
+            <translation><!-- Kazakhstan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kenya</masterLabel>
+            <translation><!-- Kenya --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kiribati</masterLabel>
+            <translation><!-- Kiribati --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Korea, Democratic People&apos;s Republic of</masterLabel>
+            <translation><!-- Korea, Democratic People&apos;s Republic of --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Korea, Republic of</masterLabel>
+            <translation><!-- Korea, Republic of --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kuwait</masterLabel>
+            <translation><!-- Kuwait --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kyrgyzstan</masterLabel>
+            <translation><!-- Kyrgyzstan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lao People&apos;s Democratic Republic</masterLabel>
+            <translation><!-- Lao People&apos;s Democratic Republic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Latvia</masterLabel>
+            <translation><!-- Latvia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lebanon</masterLabel>
+            <translation><!-- Lebanon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lesotho</masterLabel>
+            <translation><!-- Lesotho --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liberia</masterLabel>
+            <translation><!-- Liberia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Libyan Arab Jamahiriya</masterLabel>
+            <translation><!-- Libyan Arab Jamahiriya --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liechtenstein</masterLabel>
+            <translation><!-- Liechtenstein --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lithuania</masterLabel>
+            <translation><!-- Lithuania --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Luxembourg</masterLabel>
+            <translation><!-- Luxembourg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Macao</masterLabel>
+            <translation><!-- Macao --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Macedonia, the former Yugoslav Republic of</masterLabel>
+            <translation><!-- Macedonia, the former Yugoslav Republic of --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Madagascar</masterLabel>
+            <translation><!-- Madagascar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Malawi</masterLabel>
+            <translation><!-- Malawi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Malaysia</masterLabel>
+            <translation><!-- Malaysia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maldives</masterLabel>
+            <translation><!-- Maldives --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mali</masterLabel>
+            <translation><!-- Mali --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Malta</masterLabel>
+            <translation><!-- Malta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Martinique</masterLabel>
+            <translation><!-- Martinique --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mauritania</masterLabel>
+            <translation><!-- Mauritania --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mauritius</masterLabel>
+            <translation><!-- Mauritius --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mayotte</masterLabel>
+            <translation><!-- Mayotte --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mexico</masterLabel>
+            <translation><!-- Mexico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moldova, Republic of</masterLabel>
+            <translation><!-- Moldova, Republic of --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monaco</masterLabel>
+            <translation><!-- Monaco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mongolia</masterLabel>
+            <translation><!-- Mongolia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Montenegro</masterLabel>
+            <translation><!-- Montenegro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Montserrat</masterLabel>
+            <translation><!-- Montserrat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Morocco</masterLabel>
+            <translation><!-- Morocco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mozambique</masterLabel>
+            <translation><!-- Mozambique --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Myanmar</masterLabel>
+            <translation><!-- Myanmar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Namibia</masterLabel>
+            <translation><!-- Namibia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nauru</masterLabel>
+            <translation><!-- Nauru --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nepal</masterLabel>
+            <translation><!-- Nepal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Netherlands</masterLabel>
+            <translation><!-- Netherlands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Caledonia</masterLabel>
+            <translation><!-- New Caledonia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Zealand</masterLabel>
+            <translation><!-- New Zealand --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nicaragua</masterLabel>
+            <translation><!-- Nicaragua --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Niger</masterLabel>
+            <translation><!-- Niger --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nigeria</masterLabel>
+            <translation><!-- Nigeria --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Niue</masterLabel>
+            <translation><!-- Niue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Norfolk Island</masterLabel>
+            <translation><!-- Norfolk Island --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Norway</masterLabel>
+            <translation><!-- Norway --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oman</masterLabel>
+            <translation><!-- Oman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pakistan</masterLabel>
+            <translation><!-- Pakistan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Palestinian Territory, Occupied</masterLabel>
+            <translation><!-- Palestinian Territory, Occupied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Panama</masterLabel>
+            <translation><!-- Panama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Papua New Guinea</masterLabel>
+            <translation><!-- Papua New Guinea --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paraguay</masterLabel>
+            <translation><!-- Paraguay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peru</masterLabel>
+            <translation><!-- Peru --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Philippines</masterLabel>
+            <translation><!-- Philippines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pitcairn</masterLabel>
+            <translation><!-- Pitcairn --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pitcairn Island</masterLabel>
+            <translation><!-- Pitcairn Island --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poland</masterLabel>
+            <translation><!-- Poland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portugal</masterLabel>
+            <translation><!-- Portugal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Qatar</masterLabel>
+            <translation><!-- Qatar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reunion</masterLabel>
+            <translation><!-- Reunion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Romania</masterLabel>
+            <translation><!-- Romania --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Russian Federation</masterLabel>
+            <translation><!-- Russian Federation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rwanda</masterLabel>
+            <translation><!-- Rwanda --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saint Barthélemy</masterLabel>
+            <translation><!-- Saint Barthélemy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saint Helena, Ascension and Tristan da Cunha</masterLabel>
+            <translation><!-- Saint Helena, Ascension and Tristan da Cunha --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saint Kitts and Nevis</masterLabel>
+            <translation><!-- Saint Kitts and Nevis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saint Lucia</masterLabel>
+            <translation><!-- Saint Lucia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saint Martin (French part)</masterLabel>
+            <translation><!-- Saint Martin (French part) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saint Pierre and Miquelon</masterLabel>
+            <translation><!-- Saint Pierre and Miquelon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saint Vincent and the Grenadines</masterLabel>
+            <translation><!-- Saint Vincent and the Grenadines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Samoa</masterLabel>
+            <translation><!-- Samoa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Marino</masterLabel>
+            <translation><!-- San Marino --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sao Tome and Principe</masterLabel>
+            <translation><!-- Sao Tome and Principe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saudi Arabia</masterLabel>
+            <translation><!-- Saudi Arabia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Senegal</masterLabel>
+            <translation><!-- Senegal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Serbia</masterLabel>
+            <translation><!-- Serbia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seychelles</masterLabel>
+            <translation><!-- Seychelles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sierra Leone</masterLabel>
+            <translation><!-- Sierra Leone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Singapore</masterLabel>
+            <translation><!-- Singapore --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sint Maarten (Dutch part)</masterLabel>
+            <translation><!-- Sint Maarten (Dutch part) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slovakia</masterLabel>
+            <translation><!-- Slovakia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slovenia</masterLabel>
+            <translation><!-- Slovenia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solomon Islands</masterLabel>
+            <translation><!-- Solomon Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Somalia</masterLabel>
+            <translation><!-- Somalia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Africa</masterLabel>
+            <translation><!-- South Africa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Georgia and the South Sandwich Islands</masterLabel>
+            <translation><!-- South Georgia and the South Sandwich Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Sudan</masterLabel>
+            <translation><!-- South Sudan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spain</masterLabel>
+            <translation><!-- Spain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sri Lanka</masterLabel>
+            <translation><!-- Sri Lanka --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sudan</masterLabel>
+            <translation><!-- Sudan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Suriname</masterLabel>
+            <translation><!-- Suriname --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Svalbard and Jan Mayen</masterLabel>
+            <translation><!-- Svalbard and Jan Mayen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Swaziland</masterLabel>
+            <translation><!-- Swaziland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sweden</masterLabel>
+            <translation><!-- Sweden --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Switzerland</masterLabel>
+            <translation><!-- Switzerland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Syrian Arab Republic</masterLabel>
+            <translation><!-- Syrian Arab Republic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tajikistan</masterLabel>
+            <translation><!-- Tajikistan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tanzania, United Republic of</masterLabel>
+            <translation><!-- Tanzania, United Republic of --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thailand</masterLabel>
+            <translation><!-- Thailand --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Timor-Leste</masterLabel>
+            <translation><!-- Timor-Leste --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Togo</masterLabel>
+            <translation><!-- Togo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tokelau</masterLabel>
+            <translation><!-- Tokelau --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tonga</masterLabel>
+            <translation><!-- Tonga --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trinidad and Tobago</masterLabel>
+            <translation><!-- Trinidad and Tobago --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tunisia</masterLabel>
+            <translation><!-- Tunisia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Turkey</masterLabel>
+            <translation><!-- Turkey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Turkmenistan</masterLabel>
+            <translation><!-- Turkmenistan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Turks and Caicos Islands</masterLabel>
+            <translation><!-- Turks and Caicos Islands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tuvalu</masterLabel>
+            <translation><!-- Tuvalu --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Uganda</masterLabel>
+            <translation><!-- Uganda --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ukraine</masterLabel>
+            <translation><!-- Ukraine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Arab Emirates</masterLabel>
+            <translation><!-- United Arab Emirates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Kingdom</masterLabel>
+            <translation><!-- United Kingdom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United States</masterLabel>
+            <translation><!-- United States --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Uruguay</masterLabel>
+            <translation><!-- Uruguay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Uzbekistan</masterLabel>
+            <translation><!-- Uzbekistan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vanuatu</masterLabel>
+            <translation><!-- Vanuatu --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Venezuela, Bolivarian Republic of</masterLabel>
+            <translation><!-- Venezuela, Bolivarian Republic of --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Viet Nam</masterLabel>
+            <translation><!-- Viet Nam --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virgin Islands, British</masterLabel>
+            <translation><!-- Virgin Islands, British --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wallis and Futuna</masterLabel>
+            <translation><!-- Wallis and Futuna --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Western Sahara</masterLabel>
+            <translation><!-- Western Sahara --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yemen</masterLabel>
+            <translation><!-- Yemen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zambia</masterLabel>
+            <translation><!-- Zambia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zimbabwe</masterLabel>
+            <translation><!-- Zimbabwe --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Course Load --></label>
+        <name>Course_Load__c</name>
+        <picklistValues>
+            <masterLabel>Full-time</masterLabel>
+            <translation><!-- Full-time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No response</masterLabel>
+            <translation><!-- No response --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Part-time</masterLabel>
+            <translation><!-- Part-time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Undecided</masterLabel>
+            <translation><!-- Undecided --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Date of Birth --></label>
+        <name>Date_of_Birth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Degree Type --></label>
+        <name>Degree_Type__c</name>
+        <picklistValues>
+            <masterLabel>Certificate</masterLabel>
+            <translation><!-- Certificate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doctoral</masterLabel>
+            <translation><!-- Doctoral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Masters</masterLabel>
+            <translation><!-- Masters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Degree</masterLabel>
+            <translation><!-- Non-Degree --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please enter the student&apos;s ID number. --></help>
+        <label><!-- EMPLID --></label>
+        <name>EMPLID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Status --></label>
+        <name>Email_Status__c</name>
+        <picklistValues>
+            <masterLabel>Role</masterLabel>
+            <translation><!-- Role --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Temp</masterLabel>
+            <translation><!-- Temp --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Valid</masterLabel>
+            <translation><!-- Valid --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Term --></label>
+        <name>Enrollment_Term__c</name>
+        <picklistValues>
+            <masterLabel>2012 Fall</masterLabel>
+            <translation><!-- 2012 Fall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2013 Fall</masterLabel>
+            <translation><!-- 2013 Fall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2013 Spring</masterLabel>
+            <translation><!-- 2013 Spring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2013 Summer</masterLabel>
+            <translation><!-- 2013 Summer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2014 Fall</masterLabel>
+            <translation><!-- 2014 Fall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2014 Spring</masterLabel>
+            <translation><!-- 2014 Spring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2014 Summer</masterLabel>
+            <translation><!-- 2014 Summer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2015 Fall</masterLabel>
+            <translation><!-- 2015 Fall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2015 Spring</masterLabel>
+            <translation><!-- 2015 Spring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2015 Summer</masterLabel>
+            <translation><!-- 2015 Summer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2016 Fall</masterLabel>
+            <translation><!-- 2016 Fall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2016 Spring</masterLabel>
+            <translation><!-- 2016 Spring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2016 Summer</masterLabel>
+            <translation><!-- 2016 Summer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2017 Fall</masterLabel>
+            <translation><!-- 2017 Fall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2017 Spring</masterLabel>
+            <translation><!-- 2017 Spring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2017 Summer</masterLabel>
+            <translation><!-- 2017 Summer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ethnicity --></label>
+        <name>Ethnicity__c</name>
+        <picklistValues>
+            <masterLabel>Am. Indian Alaska Native</masterLabel>
+            <translation><!-- Am. Indian Alaska Native --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Asian</masterLabel>
+            <translation><!-- Asian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Black African-American</masterLabel>
+            <translation><!-- Black African-American --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hispanic</masterLabel>
+            <translation><!-- Hispanic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pacific Islander</masterLabel>
+            <translation><!-- Pacific Islander --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>White</masterLabel>
+            <translation><!-- White --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Gender --></label>
+        <name>Gender__c</name>
+        <picklistValues>
+            <masterLabel>Female</masterLabel>
+            <translation><!-- Female --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Male</masterLabel>
+            <translation><!-- Male --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Industry</name>
+        <picklistValues>
+            <masterLabel>Agriculture</masterLabel>
+            <translation><!-- Agriculture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Apparel</masterLabel>
+            <translation><!-- Apparel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banking</masterLabel>
+            <translation><!-- Banking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Biotechnology</masterLabel>
+            <translation><!-- Biotechnology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chemicals</masterLabel>
+            <translation><!-- Chemicals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Communications</masterLabel>
+            <translation><!-- Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction</masterLabel>
+            <translation><!-- Construction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consulting</masterLabel>
+            <translation><!-- Consulting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electronics</masterLabel>
+            <translation><!-- Electronics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Energy</masterLabel>
+            <translation><!-- Energy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering</masterLabel>
+            <translation><!-- Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entertainment</masterLabel>
+            <translation><!-- Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Environmental</masterLabel>
+            <translation><!-- Environmental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food &amp; Beverage</masterLabel>
+            <translation><!-- Food &amp; Beverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Government</masterLabel>
+            <translation><!-- Government --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Healthcare</masterLabel>
+            <translation><!-- Healthcare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hospitality</masterLabel>
+            <translation><!-- Hospitality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance</masterLabel>
+            <translation><!-- Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Machinery</masterLabel>
+            <translation><!-- Machinery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manufacturing</masterLabel>
+            <translation><!-- Manufacturing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media</masterLabel>
+            <translation><!-- Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not For Profit</masterLabel>
+            <translation><!-- Not For Profit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recreation</masterLabel>
+            <translation><!-- Recreation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shipping</masterLabel>
+            <translation><!-- Shipping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technology</masterLabel>
+            <translation><!-- Technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telecommunications</masterLabel>
+            <translation><!-- Telecommunications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transportation</masterLabel>
+            <translation><!-- Transportation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities</masterLabel>
+            <translation><!-- Utilities --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Jr-Sr GPA Scale --></label>
+        <name>Jr_Sr_GPA_Scale__c</name>
+        <relationshipLabel><!-- Leads (Jr-Sr GPA Scale) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- GPA of Junior and Senior course work --></help>
+        <label><!-- Jr-Sr GPA --></label>
+        <name>Jr_Sr_GPA__c</name>
+    </fields>
+    <fields>
+        <name>LeadSource</name>
+        <picklistValues>
+            <masterLabel>ASU UG</masterLabel>
+            <translation><!-- ASU UG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advertisement</masterLabel>
+            <translation><!-- Advertisement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>College Fair - Int</masterLabel>
+            <translation><!-- College Fair - Int --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>College Fair - US</masterLabel>
+            <translation><!-- College Fair - US --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee Referral</masterLabel>
+            <translation><!-- Employee Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Event</masterLabel>
+            <translation><!-- Event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partial App</masterLabel>
+            <translation><!-- Partial App --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PeopleSoft</masterLabel>
+            <translation><!-- PeopleSoft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone Call</masterLabel>
+            <translation><!-- Phone Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchased List</masterLabel>
+            <translation><!-- Purchased List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test Scores</masterLabel>
+            <translation><!-- Test Scores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Walk-in</masterLabel>
+            <translation><!-- Walk-in --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web Form</masterLabel>
+            <translation><!-- Web Form --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lead Source Subtype --></label>
+        <name>Lead_Source_Subtype__c</name>
+        <picklistValues>
+            <masterLabel>ASU Online</masterLabel>
+            <translation><!-- ASU Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA Diversity</masterLabel>
+            <translation><!-- CA Diversity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coll Technology &amp; Innovation</masterLabel>
+            <translation><!-- Coll Technology &amp; Innovation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>College of Public Programs</masterLabel>
+            <translation><!-- College of Public Programs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conference</masterLabel>
+            <translation><!-- Conference --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cronkite School-Journ/MassComm</masterLabel>
+            <translation><!-- Cronkite School-Journ/MassComm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Degree Search</masterLabel>
+            <translation><!-- Degree Search --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EGSS Applying</masterLabel>
+            <translation><!-- EGSS Applying --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EGSS Financing</masterLabel>
+            <translation><!-- EGSS Financing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EGSS GRE Prep</masterLabel>
+            <translation><!-- EGSS GRE Prep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EGSS Personal Statement</masterLabel>
+            <translation><!-- EGSS Personal Statement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRE</masterLabel>
+            <translation><!-- GRE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRE Subject</masterLabel>
+            <translation><!-- GRE Subject --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Graduate College</masterLabel>
+            <translation><!-- Graduate College --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Graduate Education</masterLabel>
+            <translation><!-- Graduate Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health Solutions</masterLabel>
+            <translation><!-- Health Solutions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Herberger Institute</masterLabel>
+            <translation><!-- Herberger Institute --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Idealist</masterLabel>
+            <translation><!-- Idealist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Import</masterLabel>
+            <translation><!-- Import --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Info Session - Campus</masterLabel>
+            <translation><!-- Info Session - Campus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Info Session - Online</masterLabel>
+            <translation><!-- Info Session - Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ira A Fulton Engineering</masterLabel>
+            <translation><!-- Ira A Fulton Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liberal Arts &amp; Sciences</masterLabel>
+            <translation><!-- Liberal Arts &amp; Sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MaryLouFulton Teachers College</masterLabel>
+            <translation><!-- MaryLouFulton Teachers College --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NAU</masterLabel>
+            <translation><!-- NAU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NNE</masterLabel>
+            <translation><!-- NNE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Interdis Arts &amp; Sciences</masterLabel>
+            <translation><!-- New Interdis Arts &amp; Sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nursing &amp; Health Innovation</masterLabel>
+            <translation><!-- Nursing &amp; Health Innovation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>O&apos;Connor College of Law</masterLabel>
+            <translation><!-- O&apos;Connor College of Law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saudi Arabia</masterLabel>
+            <translation><!-- Saudi Arabia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School of Letters &amp; Sciences</masterLabel>
+            <translation><!-- School of Letters &amp; Sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School of Sustainability</masterLabel>
+            <translation><!-- School of Sustainability --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TOEFL</masterLabel>
+            <translation><!-- TOEFL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USA Today</masterLabel>
+            <translation><!-- USA Today --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W.P. Carey School of Business</masterLabel>
+            <translation><!-- W.P. Carey School of Business --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- If checked, the student is interested in earning their degree online. --></help>
+        <label><!-- Interested in Online Degree --></label>
+        <name>Online__c</name>
+    </fields>
+    <fields>
+        <name>Rating</name>
+        <picklistValues>
+            <masterLabel>Cold</masterLabel>
+            <translation><!-- Cold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hot</masterLabel>
+            <translation><!-- Hot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warm</masterLabel>
+            <translation><!-- Warm --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Recruiting Email --></label>
+        <name>Recruiting_Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select if you know the prospective student has research experience --></help>
+        <label><!-- Research Experience --></label>
+        <name>Research_Experience__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Secondary Email --></label>
+        <name>Secondary_Email__c</name>
+    </fields>
+    <fields>
+        <name>Status</name>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open - Converted</masterLabel>
+            <translation><!-- Open - Converted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect</masterLabel>
+            <translation><!-- Prospect --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test Record --></label>
+        <name>Test_Record__c</name>
+    </fields>
+    <fields>
+        <label><!-- Undergraduate GPA Scale --></label>
+        <name>Undergraduate_GPA_Scale__c</name>
+        <relationshipLabel><!-- Leads --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Undergraduate GPA --></label>
+        <name>Undergraduate_GPA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Undergraduate Major --></label>
+        <name>Undergraduate_Major__c</name>
+    </fields>
+    <fields>
+        <label><!-- Veteran Status --></label>
+        <name>Veteran_Status__c</name>
+        <picklistValues>
+            <masterLabel>I am a spouse or dependent of an active duty or veteran</masterLabel>
+            <translation><!-- I am a spouse or dependent of an active duty or veteran --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I am a veteran</masterLabel>
+            <translation><!-- I am a veteran --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I am active duty</masterLabel>
+            <translation><!-- I am active duty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National Guard</masterLabel>
+            <translation><!-- National Guard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reserves</masterLabel>
+            <translation><!-- Reserves --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CRMI Modified Date --></label>
+        <name>silverpop__CRMI_Modified_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Sync Date --></label>
+        <name>silverpop__Last_Sync_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Sync Id --></label>
+        <name>silverpop__Last_Sync_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Rank --></label>
+        <name>silverpop__Lead_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Score --></label>
+        <name>silverpop__Lead_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Silverpop Behavior Score --></label>
+        <name>silverpop__Silverpop_Behavior_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Silverpop Lead Rank --></label>
+        <name>silverpop__Silverpop_Lead_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- Silverpop Lead Score --></label>
+        <name>silverpop__Silverpop_Lead_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Silverpop RecipientID --></label>
+        <name>silverpop__Silverpop_RecipientID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use &quot;Sync to Silverpop&quot; to determine which leads you want to sync with Silverpop. When the box is checked, the field value CANNOT be changed, the selected leads will be synced to Silverpop and will always sync. --></help>
+        <label><!-- Sync to Silverpop --></label>
+        <name>silverpop__Sync_to_Silverpop_Chk__c</name>
+    </fields>
+    <fields>
+        <label><!-- No Longer Used --></label>
+        <name>silverpop__Sync_to_Silverpop__c</name>
+        <picklistValues>
+            <masterLabel>Not Used</masterLabel>
+            <translation><!-- Not Used --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Admin Layout</layout>
+        <sections>
+            <label><!-- Academic History --></label>
+            <section>Academic History</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Insight --></label>
+            <section>Contact Insight</section>
+        </sections>
+        <sections>
+            <label><!-- Conversion Data --></label>
+            <section>Conversion Data</section>
+        </sections>
+        <sections>
+            <label><!-- Silverpop --></label>
+            <section>Silverpop</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Lead Layout</layout>
+        <sections>
+            <label><!-- Academic History --></label>
+            <section>Academic History</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Insight --></label>
+            <section>Contact Insight</section>
+        </sections>
+        <sections>
+            <label><!-- Description Information --></label>
+            <section>Description Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Processing --></label>
+        <name>Processing</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Prospective Student --></label>
+        <name>Prospective_Student</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please enter the EMPLID for your ASU student. --></errorMessage>
+        <name>EMPLID_Requirement</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Sync to Silverpop selection cannot be changed. Once the box is checked, it cannot be unchecked. --></errorMessage>
+        <name>silverpop__Disable_Changing_Enable_Sync</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Sync to Silverpop selection cannot be changed. Once set to &quot;Yes, Always Sync&quot; or &quot;No, Don&apos;t Sync&quot; it cannot be changed back to &quot;-None-.” --></errorMessage>
+        <name>silverpop__Disable_Changing_To_None</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Engage contact could not sync to Salesforce because the matching lead or contact in Salesforce has been set to not sync. You will need to change the &quot;Sync to Silverpop&quot; setting for the lead or contact in Salesforce. --></errorMessage>
+        <name>silverpop__Prevent_Change_From_Engage</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Delete --></label>
+        <name>Mass_Delete</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendGmail --></label>
+        <name>SendGmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Silverpop_Email --></label>
+        <name>silverpop__Send_Silverpop_Email</name>
+    </webLinks>
+</CustomObjectTranslation>
