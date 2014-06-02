@@ -238,20 +238,6 @@
         <members>MaryLouFulton_Teachers_College/RandallC_Thank_you_for_your_interest_template</members>
         <members>Registrar</members>
         <members>Registrar/Case_Management_Registrar_Default</members>
-        <members>SF_Sample_Templates</members>
-        <members>SF_Sample_Templates/LeadsNewassignmentnotificationSAMPLE</members>
-        <members>SF_Sample_Templates/SUPPORT%3A Self-Service New Comment %28SAMPLE%29</members>
-        <members>SF_Sample_Templates/SUPPORT%3A Self-Service New Comment Notification %28SAMPLE%29</members>
-        <members>SF_Sample_Templates/SUPPORT%3A Self-Service New User Login %28SAMPLE%29</members>
-        <members>SF_Sample_Templates/SUPPORT%3A Self-Service New User Login Information %28SAMPLE%29</members>
-        <members>SF_Sample_Templates/SUPPORT%3A Self-Service Reset Password %28SAMPLE%29</members>
-        <members>SF_Sample_Templates/SUPPORTCaseResponsewithSolutionSAMPLE</members>
-        <members>SF_Sample_Templates/SUPPORTCaseescalationnotificationSAMPLE</members>
-        <members>SF_Sample_Templates/SUPPORTNewassignmentnotificationSAMPLE</members>
-        <members>SF_Sample_Templates/SUPPORTSelfServiceNewCommentNotificationSAMPLE</members>
-        <members>SF_Sample_Templates/SUPPORTSelfServiceNewUserLoginInformationSAMPLE</members>
-        <members>SF_Sample_Templates/SUPPORTSelfServiceResetPasswordSAMPLE</members>
-        <members>SF_Sample_Templates/SUPPORTWebtoCaseemailresponseSAMPLE</members>
         <members>Student_Business_Services</members>
         <members>Student_Business_Services/Case_Management_Student_Business_Services</members>
         <members>Student_Business_Services/Case_Management_Student_Business_Services_Collections</members>
@@ -273,7 +259,6 @@
         <members>User_Emails/Mass_Email_Outage_2014_0505</members>
         <members>User_Emails/Mass_Email_Outage_Reminder</members>
         <members>User_Emails/Notice_to_All_Users</members>
-        <members>unfiled$public</members>
         <name>EmailTemplate</name>
     </types>
     <types>
@@ -694,26 +679,6 @@
         <members>UserLicense</members>
         <members>pkb_ka__c</members>
         <name>Workflow</name>
-    </types>
-    <types>
-        <members>Activities</members>
-        <members>Address</members>
-        <members>BusinessHours</members>
-        <members>Case</members>
-        <members>ChatterAnswers</members>
-        <members>Company</members>
-        <members>Contract</members>
-        <members>Entitlement</members>
-        <members>Forecasting</members>
-        <members>Ideas</members>
-        <members>Knowledge</members>
-        <members>Mobile</members>
-        <members>Opportunity</members>
-        <members>Order</members>
-        <members>Product</members>
-        <members>Quote</members>
-        <members>Security</members>
-        <name>Settings</name>
     </types>
     <version>30.0</version>
 </Package>
