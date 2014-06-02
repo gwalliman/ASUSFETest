@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>*</members>
@@ -114,7 +114,6 @@
         <members>Product2</members>
         <members>QuickText</members>
         <members>Site</members>
-        <members>SiteChangelist</members>
         <members>Solution</members>
         <members>Task</members>
         <members>User</members>
@@ -328,7 +327,6 @@
         <name>RemoteSiteSetting</name>
     </types>
     <types>
-        <members>Administrator_Reports</members>
         <members>Administrator_Reports/AR_Wall_of_Shame_Login</members>
         <members>Administrator_Reports/ASU_EMAIL_SERVICE_Contacts_w_o_Cases</members>
         <members>Administrator_Reports/Accounts_without_Contacts</members>
@@ -366,24 +364,14 @@
         <members>Administrator_Reports/Non_Degree_Opportunities</members>
         <members>Administrator_Reports/Possible_Duplicates</members>
         <members>Administrator_Reports/RR_Academic_Interests</members>
-        <members>Administrator_Reports/RR_Academic_Plan_Report</members>
         <members>Administrator_Reports/RR_Campaigns</members>
         <members>Administrator_Reports/RR_College_Users</members>
-        <members>Administrator_Reports/RR_Country_List</members>
-        <members>Administrator_Reports/RR_Locations</members>
-        <members>Administrator_Reports/RR_Plans_Organizations</members>
-        <members>Administrator_Reports/RR_Program_Organization</members>
-        <members>Administrator_Reports/RR_Program_Plan</members>
-        <members>Administrator_Reports/RR_Term_Table</members>
         <members>Administrator_Reports/RR_Users</members>
         <members>Administrator_Reports/Record_Report_Leads</members>
         <members>Administrator_Reports/Searches_by_Keyword</members>
         <members>Administrator_Reports/Task_Web_Form_Submissions</members>
         <members>Administrator_Reports/User_Browser_Logins_Last_30_Days</members>
         <members>Administrator_Reports/User_Browser_Logins_Last_7_Days</members>
-        <members>Administrator_Reports/User_Lead_Interest_Create_Last_14_Days</members>
-        <members>Administrator_Reports/User_Lead_Interest_Create_Last_30_Days</members>
-        <members>Administrator_Reports/User_Lead_Interest_Creation_Last_7_Days</members>
         <members>Administrator_Reports/User_Logins_Last_14_Days</members>
         <members>Administrator_Reports/User_Logins_Last_30_Days</members>
         <members>Administrator_Reports/User_Logins_Last_7_Days</members>
