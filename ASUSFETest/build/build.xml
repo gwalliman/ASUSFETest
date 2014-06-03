@@ -4,15 +4,15 @@
     <property environment="env"/>
 	
 	<!-- Feature branch validation; creates rollback package -->
-	<target name="feature">
+	<target name="validate">
 	      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="../validation/ASUSFETest/src" checkOnly="true"/>
 	</target>
-	
-    <!-- Shows check only; never actually saves to the server -->
-    <target name="validate">
-      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="../src" checkOnly="true"/>
-    </target>
 
+	<!-- Shows check only; never actually saves to the server -->
+	<target name="deploy">
+	  <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="../deployment/ASUSFETest/src"/>
+	</target>
+	
 	<!-- Retrieve the information of all items of a particular metadata type -->
     <target name="listMetadata">
       <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="${sf.metadataType}"/>

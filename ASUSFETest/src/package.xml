@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>*</members>
@@ -114,7 +114,6 @@
         <members>Product2</members>
         <members>QuickText</members>
         <members>Site</members>
-        <members>SiteChangelist</members>
         <members>Solution</members>
         <members>Task</members>
         <members>User</members>
@@ -238,20 +237,6 @@
         <members>MaryLouFulton_Teachers_College/RandallC_Thank_you_for_your_interest_template</members>
         <members>Registrar</members>
         <members>Registrar/Case_Management_Registrar_Default</members>
-        <members>SF_Sample_Templates</members>
-        <members>SF_Sample_Templates/LeadsNewassignmentnotificationSAMPLE</members>
-        <members>SF_Sample_Templates/SUPPORT%3A Self-Service New Comment %28SAMPLE%29</members>
-        <members>SF_Sample_Templates/SUPPORT%3A Self-Service New Comment Notification %28SAMPLE%29</members>
-        <members>SF_Sample_Templates/SUPPORT%3A Self-Service New User Login %28SAMPLE%29</members>
-        <members>SF_Sample_Templates/SUPPORT%3A Self-Service New User Login Information %28SAMPLE%29</members>
-        <members>SF_Sample_Templates/SUPPORT%3A Self-Service Reset Password %28SAMPLE%29</members>
-        <members>SF_Sample_Templates/SUPPORTCaseResponsewithSolutionSAMPLE</members>
-        <members>SF_Sample_Templates/SUPPORTCaseescalationnotificationSAMPLE</members>
-        <members>SF_Sample_Templates/SUPPORTNewassignmentnotificationSAMPLE</members>
-        <members>SF_Sample_Templates/SUPPORTSelfServiceNewCommentNotificationSAMPLE</members>
-        <members>SF_Sample_Templates/SUPPORTSelfServiceNewUserLoginInformationSAMPLE</members>
-        <members>SF_Sample_Templates/SUPPORTSelfServiceResetPasswordSAMPLE</members>
-        <members>SF_Sample_Templates/SUPPORTWebtoCaseemailresponseSAMPLE</members>
         <members>Student_Business_Services</members>
         <members>Student_Business_Services/Case_Management_Student_Business_Services</members>
         <members>Student_Business_Services/Case_Management_Student_Business_Services_Collections</members>
@@ -273,7 +258,6 @@
         <members>User_Emails/Mass_Email_Outage_2014_0505</members>
         <members>User_Emails/Mass_Email_Outage_Reminder</members>
         <members>User_Emails/Notice_to_All_Users</members>
-        <members>unfiled$public</members>
         <name>EmailTemplate</name>
     </types>
     <types>
@@ -343,7 +327,6 @@
         <name>RemoteSiteSetting</name>
     </types>
     <types>
-        <members>Administrator_Reports</members>
         <members>Administrator_Reports/AR_Wall_of_Shame_Login</members>
         <members>Administrator_Reports/ASU_EMAIL_SERVICE_Contacts_w_o_Cases</members>
         <members>Administrator_Reports/Accounts_without_Contacts</members>
@@ -381,24 +364,14 @@
         <members>Administrator_Reports/Non_Degree_Opportunities</members>
         <members>Administrator_Reports/Possible_Duplicates</members>
         <members>Administrator_Reports/RR_Academic_Interests</members>
-        <members>Administrator_Reports/RR_Academic_Plan_Report</members>
         <members>Administrator_Reports/RR_Campaigns</members>
         <members>Administrator_Reports/RR_College_Users</members>
-        <members>Administrator_Reports/RR_Country_List</members>
-        <members>Administrator_Reports/RR_Locations</members>
-        <members>Administrator_Reports/RR_Plans_Organizations</members>
-        <members>Administrator_Reports/RR_Program_Organization</members>
-        <members>Administrator_Reports/RR_Program_Plan</members>
-        <members>Administrator_Reports/RR_Term_Table</members>
         <members>Administrator_Reports/RR_Users</members>
         <members>Administrator_Reports/Record_Report_Leads</members>
         <members>Administrator_Reports/Searches_by_Keyword</members>
         <members>Administrator_Reports/Task_Web_Form_Submissions</members>
         <members>Administrator_Reports/User_Browser_Logins_Last_30_Days</members>
         <members>Administrator_Reports/User_Browser_Logins_Last_7_Days</members>
-        <members>Administrator_Reports/User_Lead_Interest_Create_Last_14_Days</members>
-        <members>Administrator_Reports/User_Lead_Interest_Create_Last_30_Days</members>
-        <members>Administrator_Reports/User_Lead_Interest_Creation_Last_7_Days</members>
         <members>Administrator_Reports/User_Logins_Last_14_Days</members>
         <members>Administrator_Reports/User_Logins_Last_30_Days</members>
         <members>Administrator_Reports/User_Logins_Last_7_Days</members>
@@ -694,26 +667,6 @@
         <members>UserLicense</members>
         <members>pkb_ka__c</members>
         <name>Workflow</name>
-    </types>
-    <types>
-        <members>Activities</members>
-        <members>Address</members>
-        <members>BusinessHours</members>
-        <members>Case</members>
-        <members>ChatterAnswers</members>
-        <members>Company</members>
-        <members>Contract</members>
-        <members>Entitlement</members>
-        <members>Forecasting</members>
-        <members>Ideas</members>
-        <members>Knowledge</members>
-        <members>Mobile</members>
-        <members>Opportunity</members>
-        <members>Order</members>
-        <members>Product</members>
-        <members>Quote</members>
-        <members>Security</members>
-        <name>Settings</name>
     </types>
     <version>30.0</version>
 </Package>
