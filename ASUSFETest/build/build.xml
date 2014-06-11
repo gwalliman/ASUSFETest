@@ -5,12 +5,12 @@
 	
 	<!-- Feature branch validation; creates rollback package -->
 	<target name="validate">
-	      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="../validation/ASUSFETest/src" checkOnly="true"/>
+	      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="../deployStage/ASUSFETest/src" checkOnly="true"/>
 	</target>
 
 	<!-- Shows check only; never actually saves to the server -->
 	<target name="deploy">
-	  <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="../deployment/ASUSFETest/src"/>
+	  <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="../deployStage/ASUSFETest/src"/>
 	</target>
 	
 	<!-- Retrieve the information of all items of a particular metadata type -->
