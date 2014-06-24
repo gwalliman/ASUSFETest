@@ -1,0 +1,25 @@
+<project name="My DevSandbox" default="validate" basedir="." xmlns:sf="antlib:com.salesforce">
+
+    <property file="Dev.properties"/>
+    <property environment="env"/>
+	
+	<!-- Validate -->
+	<target name="validate">
+	      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" pollWaitMillis="${sf.pollWaitMillis}" deployRoot="../src" checkOnly="true"/>
+	</target>
+	
+	<!-- Deploy -->
+	<target name="deploy">
+	  <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" pollWaitMillis="${sf.pollWaitMillis}" deployRoot="../src"/>
+	</target>
+	
+	<!-- Retrieve the information of all items of a particular metadata type -->
+    <target name="listMetadata">
+      <sf:listMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" metadataType="${sf.metadataType}"/>
+    </target>
+
+	<!-- Retrieve the information on all supported metadata type -->
+    <target name="describeMetadata">
+      <sf:describeMetadata username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}"/>
+    </target>
+</project>
