@@ -10,7 +10,16 @@
         <field>Contact$Name</field>
     </columns>
     <columns>
+        <field>Contact$Email_Change_Date__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Email_Change_Reason__c</field>
+    </columns>
+    <columns>
         <field>Contact$Email</field>
+    </columns>
+    <columns>
+        <field>Contact$ASU_Email__c</field>
     </columns>
     <columns>
         <field>Contact$Personal_Email__c</field>
@@ -26,9 +35,6 @@
     </columns>
     <columns>
         <field>Contact.Opportunities__r$LeadSource</field>
-    </columns>
-    <columns>
-        <field>Contact.Opportunities__r$Lead_Source_Subtype__c</field>
     </columns>
     <columns>
         <field>Contact$EMPLID__c</field>

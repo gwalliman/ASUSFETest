@@ -10,5 +10,10 @@
         <sharedTo>ES_Enrollment_Services</sharedTo>
         <sharedToType>Role</sharedToType>
     </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>UTO_University_Technology_Office</sharedTo>
+        <sharedToType>Role</sharedToType>
+    </folderShares>
     <name>ES Data Quality</name>
 </ReportFolder>

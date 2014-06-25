@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_20463809</developerName>
+        <masterLabel>Opportunity Stage</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Contact.Opportunities__r$StageName</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Prospect</sourceValue>
+            </sourceValues>
+            <value>Prospect</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Applicant - Incomplete</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Applicant - Low English Proficiency</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Applicant - Pending Letters of Rec</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Applicant - International Review</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Applicant - In Committee</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Applicant - In Review</sourceValue>
+            </sourceValues>
+            <value>Applicant</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Admitted</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Admitted - Conditional</sourceValue>
+            </sourceValues>
+            <value>Admitted</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Enrolled</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Enrolled - 21st Day</sourceValue>
+            </sourceValues>
+            <value>Enrolled</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Withdrawn</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Discontinued</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Denied</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Applicant - Ineligible</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Prospect - Opt Out</sourceValue>
+            </sourceValues>
+            <value>Closed</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Academic_Plan__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Academic_Plan__c.Plan_Code__c</field>
+    </columns>
+    <columns>
+        <field>Contact$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Contact$MailingCity</field>
+    </columns>
+    <columns>
+        <field>Contact$MailingStateCode</field>
+    </columns>
+    <columns>
+        <field>Contact$MailingCountryCode</field>
+    </columns>
+    <columns>
+        <field>Contact$Country_of_Citizenship__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>(1 OR 2) AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$College__c</column>
+            <operator>equals</operator>
+            <value>Coll Technology &amp; Innovation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Academic_Plan_Associated_College__c</column>
+            <operator>equals</operator>
+            <value>Coll Technology &amp; Innovation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Term__c</column>
+            <operator>equals</operator>
+            <value>2015 Spring</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>BucketField_20463809</column>
+            <operator>notEqual</operator>
+            <value>Closed</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_20463809</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>GRTS: 2015 Spring Opportunities Stage</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Opportunities_and_Plans__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Contact$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

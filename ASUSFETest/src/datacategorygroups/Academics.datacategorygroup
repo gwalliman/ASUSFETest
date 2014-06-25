@@ -26,10 +26,6 @@
             <label>School of Letters &amp; Sciences</label>
             <name>My_School_of_Letters_Sciences</name>
         </dataCategory>
-        <dataCategory>
-            <label>Exclusive College Achievement Program</label>
-            <name>Exclusive_College_Achievement_Program</name>
-        </dataCategory>
         <label>All</label>
         <name>All</name>
     </dataCategory>

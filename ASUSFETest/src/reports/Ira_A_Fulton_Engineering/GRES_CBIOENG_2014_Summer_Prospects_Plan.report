@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Academic_Plan__c.Plan_Code__c</field>
+    </columns>
+    <columns>
+        <field>Contact$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Contact$MailingCity</field>
+    </columns>
+    <columns>
+        <field>Contact$MailingStateCode</field>
+    </columns>
+    <columns>
+        <field>Contact$MailingCountryCode</field>
+    </columns>
+    <columns>
+        <field>Contact$Country_of_Citizenship__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>(1 AND 2) AND 3 AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$College__c.Name</column>
+            <operator>equals</operator>
+            <value>Ira A Fulton Engineering</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Academic_Plan_Associated_College__c</column>
+            <operator>equals</operator>
+            <value>Ira A Fulton Engineering</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$StageName</column>
+            <operator>equals</operator>
+            <value>Prospect</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Term__c</column>
+            <operator>equals</operator>
+            <value>2014 Summer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Academic_Plan__c.Plan_Code__c</column>
+            <operator>equals</operator>
+            <value>ESBIOENMS,ESBIOENPHD</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.Opportunities__r$Academic_Plan__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>GRES-CBIOENG: 2014 Summer Prospects Plan</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Opportunities_and_Plans__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Contact$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

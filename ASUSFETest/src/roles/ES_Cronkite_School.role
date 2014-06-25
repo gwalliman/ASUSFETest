@@ -5,6 +5,6 @@
     <description>Cronkite School-Journ/MassComm</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>ES Cronkite School-Journ/MassComm</name>
-    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
     <parentRole>ES_Enrollment_Services</parentRole>
 </Role>

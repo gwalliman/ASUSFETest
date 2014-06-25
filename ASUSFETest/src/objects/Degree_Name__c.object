@@ -52,6 +52,11 @@
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
     <label>Degree Name</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Degree Name</label>
         <type>Text</type>

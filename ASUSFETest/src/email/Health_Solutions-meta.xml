@@ -4,6 +4,8 @@
     <name>Health Solutions</name>
     <publicFolderAccess>ReadOnly</publicFolderAccess>
     <sharedTo>
-        <roleAndSubordinates>ES_Health_Solutions</roleAndSubordinates>
+        <group>ES_Health_Solutions_Group</group>
+        <role>ES_Enrollment_Services_Communication</role>
+        <role>ES_Health_Solutions</role>
     </sharedTo>
 </EmailFolder>

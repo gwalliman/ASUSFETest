@@ -51,7 +51,7 @@
         <field>KnowledgeArticle$Title</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Article Views</name>
+    <name>Article Views: Public Knowledge Base</name>
     <params>
         <name>co</name>
         <value>1</value>

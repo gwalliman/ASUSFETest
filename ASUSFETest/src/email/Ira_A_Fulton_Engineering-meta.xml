@@ -4,6 +4,8 @@
     <name>Ira A Fulton Engineering</name>
     <publicFolderAccess>ReadOnly</publicFolderAccess>
     <sharedTo>
-        <roleAndSubordinates>ES_Fulton_Engineering</roleAndSubordinates>
+        <group>ES_Ira_A_Fulton_Engineering_Group</group>
+        <role>ES_Enrollment_Services_Communication</role>
+        <role>ES_Fulton_Engineering</role>
     </sharedTo>
 </EmailFolder>

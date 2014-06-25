@@ -11,6 +11,17 @@
         <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>GRLA_Assign_Leah_Legg</fullName>
+        <description>Assign task to Leah Legg</description>
+        <field>OwnerId</field>
+        <lookupValue>llegg@asu.edu</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>GRLA: Assign Leah Legg</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>GRLA_Assign_Task_Sno_Klespies</fullName>
         <description>Assign web form submission tasks to Sno Kleespies</description>
         <field>OwnerId</field>
@@ -69,7 +80,7 @@
         <fullName>GRNH_Assign_Task_Nate</fullName>
         <description>Assign task to Nate Wade for Science of Health Care Delivery MS - NHSHCDMS</description>
         <field>OwnerId</field>
-        <lookupValue>wawaj@asu.edu</lookupValue>
+        <lookupValue>nlwade@asu.edu</lookupValue>
         <lookupValueType>User</lookupValueType>
         <name>GRNH: Assign Task-Nate</name>
         <notifyAssignee>false</notifyAssignee>
@@ -165,6 +176,61 @@
         <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Task_GRLA_Assign_Alicia_Richardson</fullName>
+        <description>Assign task to Alicia Richardson</description>
+        <field>OwnerId</field>
+        <lookupValue>abricha@asu.edu</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Task: GRLA Assign Alicia Richardson</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Task_GRLA_Assign_Corey_Campbell</fullName>
+        <description>Assign task to Corey Campbell</description>
+        <field>OwnerId</field>
+        <lookupValue>ccampb17@asu.edu</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Task: GRLA Assign Corey Campbell</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Task_GRLA_Assign_Georgianna_Miller</fullName>
+        <description>Assign task to Georgianna Miller</description>
+        <field>OwnerId</field>
+        <lookupValue>gomiller@asu.edu</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Task: GRLA Assign Georgianna Miller</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Task_GRLA_Assign_Rebecca_Dial</fullName>
+        <description>Assign task to Rebecca Dial</description>
+        <field>OwnerId</field>
+        <lookupValue>rescobar@asu.edu</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Task: GRLA Assign Rebecca Dial</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Task_GRND_Assign_Mike</fullName>
+        <description>Assign ASU Online Rover submissions to Mike Mobley</description>
+        <field>OwnerId</field>
+        <lookupValue>mcmobley@asu.edu</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Task: GRND Assign Mike</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Task_GRNH_Assign_Cindy</fullName>
         <description>Assign web form submissions to Cindy Lucas for the plan code ECNUTRIPHD</description>
         <field>OwnerId</field>
@@ -197,6 +263,81 @@
         <operation>LookupValue</operation>
         <protected>false</protected>
     </fieldUpdates>
+    <rules>
+        <fullName>GRLA%3A Assign Alicia Richardson</fullName>
+        <actions>
+            <name>Task_GRLA_Assign_Alicia_Richardson</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.Plan_Code__c</field>
+            <operation>equals</operation>
+            <value>LAAISCMS,LAAISIMS,LAAISTMS,LAAISVMS</value>
+        </criteriaItems>
+        <description>Assign task to Alicia Richardson for the following plan codes: LAAISCMS, LAAISIMS, LAAISTMS, LAAISVMS</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Task%3A GRLA Assign Corey Campbell</fullName>
+        <actions>
+            <name>Task_GRLA_Assign_Corey_Campbell</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.Plan_Code__c</field>
+            <operation>equals</operation>
+            <value>LACWRITMFA</value>
+        </criteriaItems>
+        <description>Assign task to Corey Campbell for the following plan code: LACWRITMFA</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Task%3A GRLA Assign Georgianna Miller</fullName>
+        <actions>
+            <name>Task_GRLA_Assign_Georgianna_Miller</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.Plan_Code__c</field>
+            <operation>equals</operation>
+            <value>LAAMLCPHD,LAAMLPHD,LAANTHRPHD,LAESSCPHD,LAESSPHD,LAESSURPHD,LAIMMSTUCE,LAMUSEUMCE,LAMUSSTMA,LASSHCHPHD,LASSHCPHD,LASSHEPHD,LASSHMA,LASSHPHD,LASSHURPHD,LAURBPHD</value>
+        </criteriaItems>
+        <description>Assign the following plan codes: LAANTHRPHD, LAURBPHD, LAAMLPHD, LAAMLCPHD, LAESSURPHD, LAESSPHD, LAESSCPHD, LASSHPHD, LASSHMA, LASSHCPHD, LASSHCHPHD, LASSHEPHD, LASSHURPHD, LAIMMSTUCE, LAMUSSTMA, LAMUSEUMCE</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Task%3A GRLA Assign Leah Legg</fullName>
+        <actions>
+            <name>GRLA_Assign_Leah_Legg</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.Plan_Code__c</field>
+            <operation>equals</operation>
+            <value>LAPOLSCPHD,LAPOLSCMA</value>
+        </criteriaItems>
+        <description>Assign task to Leah Legg for the following plan codes: LAPOLSCPHD, LAPOLSCMA</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Task%3A GRLA Assign Rebecca Dial</fullName>
+        <actions>
+            <name>Task_GRLA_Assign_Rebecca_Dial</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.Plan_Code__c</field>
+            <operation>equals</operation>
+            <value>LAASTPHPHD,LAASTPHMS,LAESDPHD,LAESDSEPHD,LAESDIPHD,LAGEOSCPHD,LAGEOSCMS,LANATSCIMN</value>
+        </criteriaItems>
+        <description>Assign task to Rebecca Dial for the following plan codes: LAASTPHPHD, LAASTPHMS, LAESDPHD, LAESDSEPHD, LAESDIPHD, LAGEOSCPHD, LAGEOSCMS, LANATSCIMN</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
     <rules>
         <fullName>Task%3A GRLA Assign Tracey Hayes</fullName>
         <actions>
@@ -255,7 +396,37 @@
             <operation>equals</operation>
             <value>LAGRNONDGR,ASGRNONDGR,BAGRNONDGR,CSGRNONDGR,ESGRNONDGR,GRNONDEG,HIGRNONDGR,LSGRNONDGR,LWNONDEG,NHGRNONDGR,NUGRNONDGR,PPGRNONDGR,TEGRNONDGR,TSGRNONDGR</value>
         </criteriaItems>
+        <criteriaItems>
+            <field>Task.Task_Source_Subtype__c</field>
+            <operation>notEqual</operation>
+            <value>ASU Online Rover</value>
+        </criteriaItems>
         <description>Assign web form submissions to Lynn Pratt for all non-degree inquiries</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Task%3A GRND Assign Mike</fullName>
+        <actions>
+            <name>Task_GRND_Assign_Mike</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.Subject</field>
+            <operation>equals</operation>
+            <value>Web Form Submission</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Plan_Code__c</field>
+            <operation>equals</operation>
+            <value>GRNONDEG</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Task_Source_Subtype__c</field>
+            <operation>equals</operation>
+            <value>ASU Online Rover</value>
+        </criteriaItems>
+        <description>Assign ASU Online Rover web form submissions to Mike Mobley for all non-degree inquiries</description>
         <triggerType>onCreateOnly</triggerType>
     </rules>
     <rules>
@@ -309,11 +480,6 @@
             <field>Task.Plan_Code__c</field>
             <operation>equals</operation>
             <value>ECEXERMS,NHEXWHMS,NHCEPMS</value>
-        </criteriaItems>
-        <criteriaItems>
-            <field>Task.Subject</field>
-            <operation>equals</operation>
-            <value>Web Form Submission</value>
         </criteriaItems>
         <description>Web Form Submissions for ECEXERMS, NHEXWHMS, NHCEPMS to be assigned to Kristen Stone</description>
         <triggerType>onCreateOnly</triggerType>
@@ -385,11 +551,6 @@
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
-        <criteriaItems>
-            <field>Task.Subject</field>
-            <operation>equals</operation>
-            <value>Web Form Submission</value>
-        </criteriaItems>
         <criteriaItems>
             <field>Task.Plan_Code__c</field>
             <operation>equals</operation>
@@ -479,23 +640,18 @@
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
-        <fullName>Task%3A GRTE Assign Gina</fullName>
+        <fullName>Task%3A GRTE Assign PHD</fullName>
         <actions>
-            <name>GRTE_Assign_Task_Gina</name>
+            <name>GRTE_Assign_Web_Submission_Task</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>false</active>
-        <criteriaItems>
-            <field>Task.Subject</field>
-            <operation>equals</operation>
-            <value>Web Form Submission</value>
-        </criteriaItems>
+        <active>true</active>
         <criteriaItems>
             <field>Task.Plan_Code__c</field>
             <operation>equals</operation>
             <value>EDLDRSHPHD,EDCIPHD</value>
         </criteriaItems>
-        <description>Assign web form submission tasks for GRTE to Gina Perez for the plan codes EDCIPHD, EDLDRSHPHD</description>
+        <description>Assign web form submission tasks for GRTE to Amy H. for the plan codes EDCIPHD, EDLDRSHPHD (temporary)</description>
         <triggerType>onCreateOnly</triggerType>
     </rules>
     <rules>
@@ -508,7 +664,7 @@
         <criteriaItems>
             <field>Task.Plan_Code__c</field>
             <operation>equals</operation>
-            <value>TEEEACLMED,ECPHYEDMPE,TESCERTMED,TESECRTMED,EDCIPHD,EDLDRSHPHD</value>
+            <value>TEEEACLMED,ECPHYEDMPE,TESCERTMED,TESECRTMED</value>
         </criteriaItems>
         <criteriaItems>
             <field>Task.Subject</field>
@@ -516,7 +672,7 @@
             <value>Web Form Submission</value>
         </criteriaItems>
         <description>Assign web form submission tasks to Randy Crawford for the plan codes 
-TEEEACLMED, ECPHYEDMPE, TESCERTMED, TESECRTMED,EDCIPHD, EDLDRSHPHD</description>
+TEEEACLMED, ECPHYEDMPE, TESCERTMED, TESECRTMED</description>
         <triggerType>onCreateOnly</triggerType>
     </rules>
     <rules>

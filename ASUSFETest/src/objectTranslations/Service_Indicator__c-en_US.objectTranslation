@@ -1,0 +1,1314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Service Indicator</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Service Indicators</value>
+    </caseValues>
+    <fields>
+        <label><!-- Code --></label>
+        <name>SI_Code__c</name>
+        <picklistValues>
+            <masterLabel>A10</masterLabel>
+            <translation><!-- A10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A11</masterLabel>
+            <translation><!-- A11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A12</masterLabel>
+            <translation><!-- A12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A13</masterLabel>
+            <translation><!-- A13 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A14</masterLabel>
+            <translation><!-- A14 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A15</masterLabel>
+            <translation><!-- A15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A16</masterLabel>
+            <translation><!-- A16 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AA1</masterLabel>
+            <translation><!-- AA1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AD1</masterLabel>
+            <translation><!-- AD1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AD2</masterLabel>
+            <translation><!-- AD2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AD3</masterLabel>
+            <translation><!-- AD3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AD4</masterLabel>
+            <translation><!-- AD4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AD5</masterLabel>
+            <translation><!-- AD5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AD6</masterLabel>
+            <translation><!-- AD6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AD7</masterLabel>
+            <translation><!-- AD7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AD8</masterLabel>
+            <translation><!-- AD8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AD9</masterLabel>
+            <translation><!-- AD9 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CC1</masterLabel>
+            <translation><!-- CC1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CC2</masterLabel>
+            <translation><!-- CC2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F01</masterLabel>
+            <translation><!-- F01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F02</masterLabel>
+            <translation><!-- F02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F03</masterLabel>
+            <translation><!-- F03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F04</masterLabel>
+            <translation><!-- F04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F05</masterLabel>
+            <translation><!-- F05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F06</masterLabel>
+            <translation><!-- F06 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F07</masterLabel>
+            <translation><!-- F07 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F08</masterLabel>
+            <translation><!-- F08 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F09</masterLabel>
+            <translation><!-- F09 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F10</masterLabel>
+            <translation><!-- F10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F11</masterLabel>
+            <translation><!-- F11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F12</masterLabel>
+            <translation><!-- F12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F13</masterLabel>
+            <translation><!-- F13 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F14</masterLabel>
+            <translation><!-- F14 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F15</masterLabel>
+            <translation><!-- F15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F16</masterLabel>
+            <translation><!-- F16 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F17</masterLabel>
+            <translation><!-- F17 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F18</masterLabel>
+            <translation><!-- F18 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F19</masterLabel>
+            <translation><!-- F19 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F20</masterLabel>
+            <translation><!-- F20 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F21</masterLabel>
+            <translation><!-- F21 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F22</masterLabel>
+            <translation><!-- F22 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FSS</masterLabel>
+            <translation><!-- FSS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FST</masterLabel>
+            <translation><!-- FST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR1</masterLabel>
+            <translation><!-- HR1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR2</masterLabel>
+            <translation><!-- HR2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR3</masterLabel>
+            <translation><!-- HR3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LW1</masterLabel>
+            <translation><!-- LW1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S00</masterLabel>
+            <translation><!-- S00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S01</masterLabel>
+            <translation><!-- S01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S02</masterLabel>
+            <translation><!-- S02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S03</masterLabel>
+            <translation><!-- S03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S04</masterLabel>
+            <translation><!-- S04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S05</masterLabel>
+            <translation><!-- S05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S06</masterLabel>
+            <translation><!-- S06 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S07</masterLabel>
+            <translation><!-- S07 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S08</masterLabel>
+            <translation><!-- S08 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S09</masterLabel>
+            <translation><!-- S09 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S10</masterLabel>
+            <translation><!-- S10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S11</masterLabel>
+            <translation><!-- S11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S12</masterLabel>
+            <translation><!-- S12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S13</masterLabel>
+            <translation><!-- S13 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S14</masterLabel>
+            <translation><!-- S14 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S15</masterLabel>
+            <translation><!-- S15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S16</masterLabel>
+            <translation><!-- S16 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S17</masterLabel>
+            <translation><!-- S17 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S18</masterLabel>
+            <translation><!-- S18 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S19</masterLabel>
+            <translation><!-- S19 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S20</masterLabel>
+            <translation><!-- S20 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S21</masterLabel>
+            <translation><!-- S21 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S22</masterLabel>
+            <translation><!-- S22 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S23</masterLabel>
+            <translation><!-- S23 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S24</masterLabel>
+            <translation><!-- S24 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S25</masterLabel>
+            <translation><!-- S25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S26</masterLabel>
+            <translation><!-- S26 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S27</masterLabel>
+            <translation><!-- S27 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S28</masterLabel>
+            <translation><!-- S28 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S29</masterLabel>
+            <translation><!-- S29 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S30</masterLabel>
+            <translation><!-- S30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S31</masterLabel>
+            <translation><!-- S31 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S32</masterLabel>
+            <translation><!-- S32 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S33</masterLabel>
+            <translation><!-- S33 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S34</masterLabel>
+            <translation><!-- S34 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S35</masterLabel>
+            <translation><!-- S35 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S36</masterLabel>
+            <translation><!-- S36 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S37</masterLabel>
+            <translation><!-- S37 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S38</masterLabel>
+            <translation><!-- S38 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S39</masterLabel>
+            <translation><!-- S39 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S40</masterLabel>
+            <translation><!-- S40 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S41</masterLabel>
+            <translation><!-- S41 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S42</masterLabel>
+            <translation><!-- S42 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S43</masterLabel>
+            <translation><!-- S43 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S44</masterLabel>
+            <translation><!-- S44 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S45</masterLabel>
+            <translation><!-- S45 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S46</masterLabel>
+            <translation><!-- S46 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S47</masterLabel>
+            <translation><!-- S47 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S48</masterLabel>
+            <translation><!-- S48 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S49</masterLabel>
+            <translation><!-- S49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S50</masterLabel>
+            <translation><!-- S50 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S51</masterLabel>
+            <translation><!-- S51 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S52</masterLabel>
+            <translation><!-- S52 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S53</masterLabel>
+            <translation><!-- S53 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S54</masterLabel>
+            <translation><!-- S54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S55</masterLabel>
+            <translation><!-- S55 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S56</masterLabel>
+            <translation><!-- S56 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S57</masterLabel>
+            <translation><!-- S57 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S58</masterLabel>
+            <translation><!-- S58 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S59</masterLabel>
+            <translation><!-- S59 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S60</masterLabel>
+            <translation><!-- S60 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S61</masterLabel>
+            <translation><!-- S61 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S62</masterLabel>
+            <translation><!-- S62 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S63</masterLabel>
+            <translation><!-- S63 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S64</masterLabel>
+            <translation><!-- S64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S65</masterLabel>
+            <translation><!-- S65 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S66</masterLabel>
+            <translation><!-- S66 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S67</masterLabel>
+            <translation><!-- S67 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S68</masterLabel>
+            <translation><!-- S68 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S70</masterLabel>
+            <translation><!-- S70 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S71</masterLabel>
+            <translation><!-- S71 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S72</masterLabel>
+            <translation><!-- S72 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S73</masterLabel>
+            <translation><!-- S73 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S74</masterLabel>
+            <translation><!-- S74 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S75</masterLabel>
+            <translation><!-- S75 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S76</masterLabel>
+            <translation><!-- S76 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S77</masterLabel>
+            <translation><!-- S77 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S78</masterLabel>
+            <translation><!-- S78 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S79</masterLabel>
+            <translation><!-- S79 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S80</masterLabel>
+            <translation><!-- S80 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S81</masterLabel>
+            <translation><!-- S81 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S82</masterLabel>
+            <translation><!-- S82 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S83</masterLabel>
+            <translation><!-- S83 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S84</masterLabel>
+            <translation><!-- S84 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S85</masterLabel>
+            <translation><!-- S85 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S86</masterLabel>
+            <translation><!-- S86 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S87</masterLabel>
+            <translation><!-- S87 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S88</masterLabel>
+            <translation><!-- S88 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S89</masterLabel>
+            <translation><!-- S89 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S90</masterLabel>
+            <translation><!-- S90 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SF1</masterLabel>
+            <translation><!-- SF1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SF2</masterLabel>
+            <translation><!-- SF2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFA</masterLabel>
+            <translation><!-- SFA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFB</masterLabel>
+            <translation><!-- SFB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFC</masterLabel>
+            <translation><!-- SFC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFD</masterLabel>
+            <translation><!-- SFD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFE</masterLabel>
+            <translation><!-- SFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFF</masterLabel>
+            <translation><!-- SFF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFG</masterLabel>
+            <translation><!-- SFG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFH</masterLabel>
+            <translation><!-- SFH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFK</masterLabel>
+            <translation><!-- SFK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFL</masterLabel>
+            <translation><!-- SFL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFM</masterLabel>
+            <translation><!-- SFM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFP</masterLabel>
+            <translation><!-- SFP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFQ</masterLabel>
+            <translation><!-- SFQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFR</masterLabel>
+            <translation><!-- SFR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFS</masterLabel>
+            <translation><!-- SFS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFT</masterLabel>
+            <translation><!-- SFT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFV</masterLabel>
+            <translation><!-- SFV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFW</masterLabel>
+            <translation><!-- SFW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFX</masterLabel>
+            <translation><!-- SFX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFZ</masterLabel>
+            <translation><!-- SFZ --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>SI_Contact__c</name>
+        <relationshipLabel><!-- Service Indicators --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>SI_Description__c</name>
+        <picklistValues>
+            <masterLabel>AECP Student Restrictions</masterLabel>
+            <translation><!-- AECP Student Restrictions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AECP std - interested in ASU</masterLabel>
+            <translation><!-- AECP std - interested in ASU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AZ Universities Network</masterLabel>
+            <translation><!-- AZ Universities Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Academic Administrative Hold</masterLabel>
+            <translation><!-- Academic Administrative Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Admin Hold</masterLabel>
+            <translation><!-- Admin Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administrative Hold</masterLabel>
+            <translation><!-- Administrative Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Admissions Hold</masterLabel>
+            <translation><!-- Admissions Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Admissions Hold 1 Semester</masterLabel>
+            <translation><!-- Admissions Hold 1 Semester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Admissions VIP</masterLabel>
+            <translation><!-- Admissions VIP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Applied Arts &amp; Sci</masterLabel>
+            <translation><!-- Advising Applied Arts &amp; Sci --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Business</masterLabel>
+            <translation><!-- Advising Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Design</masterLabel>
+            <translation><!-- Advising Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising EITP</masterLabel>
+            <translation><!-- Advising EITP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Education</masterLabel>
+            <translation><!-- Advising Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Engineering</masterLabel>
+            <translation><!-- Advising Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Global Management</masterLabel>
+            <translation><!-- Advising Global Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Graduate College</masterLabel>
+            <translation><!-- Advising Graduate College --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Health Solutions</masterLabel>
+            <translation><!-- Advising Health Solutions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Herberger</masterLabel>
+            <translation><!-- Advising Herberger --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Honors</masterLabel>
+            <translation><!-- Advising Honors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Human Services</masterLabel>
+            <translation><!-- Advising Human Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Journalism</masterLabel>
+            <translation><!-- Advising Journalism --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Law</masterLabel>
+            <translation><!-- Advising Law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Letter and Sciences</masterLabel>
+            <translation><!-- Advising Letter and Sciences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Liberal Arts</masterLabel>
+            <translation><!-- Advising Liberal Arts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Liberal Arts Online</masterLabel>
+            <translation><!-- Advising Liberal Arts Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Management</masterLabel>
+            <translation><!-- Advising Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising New College</masterLabel>
+            <translation><!-- Advising New College --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Nursing and Health</masterLabel>
+            <translation><!-- Advising Nursing and Health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Public Programs</masterLabel>
+            <translation><!-- Advising Public Programs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Sustainability</masterLabel>
+            <translation><!-- Advising Sustainability --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Teacher Education</masterLabel>
+            <translation><!-- Advising Teacher Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Technology</masterLabel>
+            <translation><!-- Advising Technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Univ College DPC</masterLabel>
+            <translation><!-- Advising Univ College DPC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Univ College Poly</masterLabel>
+            <translation><!-- Advising Univ College Poly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising Univ College at West</masterLabel>
+            <translation><!-- Advising Univ College at West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advising University College</masterLabel>
+            <translation><!-- Advising University College --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Citizenship Verification Hold</masterLabel>
+            <translation><!-- Citizenship Verification Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Collection Agency Pmt Verified</masterLabel>
+            <translation><!-- Collection Agency Pmt Verified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cond Admit-Need Transcripts</masterLabel>
+            <translation><!-- Cond Admit-Need Transcripts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consent for Access</masterLabel>
+            <translation><!-- Consent for Access --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Converted Pre-SIS Record</masterLabel>
+            <translation><!-- Converted Pre-SIS Record --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Departmental Misc Holds</masterLabel>
+            <translation><!-- Departmental Misc Holds --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disqualified</masterLabel>
+            <translation><!-- Disqualified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dual Career Enrollment</masterLabel>
+            <translation><!-- Dual Career Enrollment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ECSI AR Assignments</masterLabel>
+            <translation><!-- ECSI AR Assignments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee</masterLabel>
+            <translation><!-- Employee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engineering Cont Probation</masterLabel>
+            <translation><!-- Engineering Cont Probation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrollment Deposit Reg Hold</masterLabel>
+            <translation><!-- Enrollment Deposit Reg Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exclude From Billing</masterLabel>
+            <translation><!-- Exclude From Billing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F1 non-degree permission req</masterLabel>
+            <translation><!-- F1 non-degree permission req --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Federal Aid Issues Pending</masterLabel>
+            <translation><!-- Federal Aid Issues Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>File Complete</masterLabel>
+            <translation><!-- File Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>File Declaration of Graduation</masterLabel>
+            <translation><!-- File Declaration of Graduation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>First Time Freshman</masterLabel>
+            <translation><!-- First Time Freshman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Graduate Education Hold</masterLabel>
+            <translation><!-- Graduate Education Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Graduate GPA Warning</masterLabel>
+            <translation><!-- Graduate GPA Warning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Graduate Hold</masterLabel>
+            <translation><!-- Graduate Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Graduate Provisional Admit</masterLabel>
+            <translation><!-- Graduate Provisional Admit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Graduation Check</masterLabel>
+            <translation><!-- Graduation Check --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Graduation Extension</masterLabel>
+            <translation><!-- Graduation Extension --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Graduation hold</masterLabel>
+            <translation><!-- Graduation hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disb:  AZ Grants</masterLabel>
+            <translation><!-- Hold Disb:  AZ Grants --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disb: Citizenship Verif</masterLabel>
+            <translation><!-- Hold Disb: Citizenship Verif --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disb: F1/JI Student Visa</masterLabel>
+            <translation><!-- Hold Disb: F1/JI Student Visa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disb: Final Transcript</masterLabel>
+            <translation><!-- Hold Disb: Final Transcript --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disb: Ineligible Fed Loan</masterLabel>
+            <translation><!-- Hold Disb: Ineligible Fed Loan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disb: On-line Campus</masterLabel>
+            <translation><!-- Hold Disb: On-line Campus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disb: Pell 2 Progression</masterLabel>
+            <translation><!-- Hold Disb: Pell 2 Progression --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disb: Pell Flag</masterLabel>
+            <translation><!-- Hold Disb: Pell Flag --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disb: Pell Origination</masterLabel>
+            <translation><!-- Hold Disb: Pell Origination --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disb: Prior Degree</masterLabel>
+            <translation><!-- Hold Disb: Prior Degree --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disb: Reject ISIR</masterLabel>
+            <translation><!-- Hold Disb: Reject ISIR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disb: Summer 1 Enrollment</masterLabel>
+            <translation><!-- Hold Disb: Summer 1 Enrollment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disb: Summer 2 Enrollment</masterLabel>
+            <translation><!-- Hold Disb: Summer 2 Enrollment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disb: Summer 8 Wk Enrollm</masterLabel>
+            <translation><!-- Hold Disb: Summer 8 Wk Enrollm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disb: Summer Dyn</masterLabel>
+            <translation><!-- Hold Disb: Summer Dyn --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disb: Verify PLUS Consent</masterLabel>
+            <translation><!-- Hold Disb: Verify PLUS Consent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disb: WUE</masterLabel>
+            <translation><!-- Hold Disb: WUE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disb:Insufficient Enrllmt</masterLabel>
+            <translation><!-- Hold Disb:Insufficient Enrllmt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disb:Pending ISIR Correct</masterLabel>
+            <translation><!-- Hold Disb:Pending ISIR Correct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold Disbursement: TEACH GPA</masterLabel>
+            <translation><!-- Hold Disbursement: TEACH GPA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hold sub &amp; unsub</masterLabel>
+            <translation><!-- Hold sub &amp; unsub --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Honors Student</masterLabel>
+            <translation><!-- Honors Student --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Human Resources Hold 01</masterLabel>
+            <translation><!-- Human Resources Hold 01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Human Resources Hold 02</masterLabel>
+            <translation><!-- Human Resources Hold 02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Human Resources Hold 03</masterLabel>
+            <translation><!-- Human Resources Hold 03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ID Check</masterLabel>
+            <translation><!-- ID Check --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In-House Payment Plan</masterLabel>
+            <translation><!-- In-House Payment Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inelig - Contact Your Advisor</masterLabel>
+            <translation><!-- Inelig - Contact Your Advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Junior Advising Check-in</masterLabel>
+            <translation><!-- Junior Advising Check-in --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kinesiology Acad Standg Review</masterLabel>
+            <translation><!-- Kinesiology Acad Standg Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lake Havasu Student</masterLabel>
+            <translation><!-- Lake Havasu Student --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MMR Immunization</masterLabel>
+            <translation><!-- MMR Immunization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Max Hour Violation</masterLabel>
+            <translation><!-- Max Hour Violation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Measles Immunization</masterLabel>
+            <translation><!-- Measles Immunization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Med/Comp W/D</masterLabel>
+            <translation><!-- Med/Comp W/D --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Military Activation</masterLabel>
+            <translation><!-- Military Activation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Military/Veteran Related</masterLabel>
+            <translation><!-- Military/Veteran Related --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Miscellaneous Hold</masterLabel>
+            <translation><!-- Miscellaneous Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Music Academic Issue/Director</masterLabel>
+            <translation><!-- Music Academic Issue/Director --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Must change Academic Plan</masterLabel>
+            <translation><!-- Must change Academic Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Must change plan</masterLabel>
+            <translation><!-- Must change plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Need New English Proficiency</masterLabel>
+            <translation><!-- Need New English Proficiency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Need to complete GPS</masterLabel>
+            <translation><!-- Need to complete GPS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Needs Advising/Advisor Placed</masterLabel>
+            <translation><!-- Needs Advising/Advisor Placed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Needs Readmissions</masterLabel>
+            <translation><!-- Needs Readmissions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No releasable ASU transcript</masterLabel>
+            <translation><!-- No releasable ASU transcript --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not in use F1/J1 fulltime stat</masterLabel>
+            <translation><!-- Not in use F1/J1 fulltime stat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nursing Academic Probation</masterLabel>
+            <translation><!-- Nursing Academic Probation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Official College Transcript</masterLabel>
+            <translation><!-- Official College Transcript --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Official Transcript Required</masterLabel>
+            <translation><!-- Official Transcript Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PRC Pre-SIS Record</masterLabel>
+            <translation><!-- PRC Pre-SIS Record --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pace Rate Violation</masterLabel>
+            <translation><!-- Pace Rate Violation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parking Hold</masterLabel>
+            <translation><!-- Parking Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Past Due Balance</masterLabel>
+            <translation><!-- Past Due Balance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Past Due Student Acct Charges</masterLabel>
+            <translation><!-- Past Due Student Acct Charges --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Program of Study</masterLabel>
+            <translation><!-- Program of Study --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Readmissions policy update</masterLabel>
+            <translation><!-- Readmissions policy update --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reapply for Graduation</masterLabel>
+            <translation><!-- Reapply for Graduation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Registration Restriction</masterLabel>
+            <translation><!-- Registration Restriction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Report to ISSO</masterLabel>
+            <translation><!-- Report to ISSO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rhodes Scholar</masterLabel>
+            <translation><!-- Rhodes Scholar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAP Violation</masterLabel>
+            <translation><!-- SAP Violation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SF Between Collection Agencies</masterLabel>
+            <translation><!-- SF Between Collection Agencies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SF Collection&apos;s Office</masterLabel>
+            <translation><!-- SF Collection&apos;s Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SF Default</masterLabel>
+            <translation><!-- SF Default --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SF Follow-Up Activity</masterLabel>
+            <translation><!-- SF Follow-Up Activity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SF Miscellaneous Holds</masterLabel>
+            <translation><!-- SF Miscellaneous Holds --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SF Parking</masterLabel>
+            <translation><!-- SF Parking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SF Past Due</masterLabel>
+            <translation><!-- SF Past Due --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SF Perkins Loan</masterLabel>
+            <translation><!-- SF Perkins Loan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SF Refund Hold</masterLabel>
+            <translation><!-- SF Refund Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SF Write Off</masterLabel>
+            <translation><!-- SF Write Off --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seek advising to change major</masterLabel>
+            <translation><!-- Seek advising to change major --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sponsor Billing Hold</masterLabel>
+            <translation><!-- Sponsor Billing Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Affairs at Downtown</masterLabel>
+            <translation><!-- Student Affairs at Downtown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Affairs at Polytechnic</masterLabel>
+            <translation><!-- Student Affairs at Polytechnic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Affairs at Tempe</masterLabel>
+            <translation><!-- Student Affairs at Tempe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Affairs at West</masterLabel>
+            <translation><!-- Student Affairs at West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Life - Limited Contact</masterLabel>
+            <translation><!-- Student Life - Limited Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student Requested Hold</masterLabel>
+            <translation><!-- Student Requested Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student-Athlete: Info only</masterLabel>
+            <translation><!-- Student-Athlete: Info only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submit official test scores</masterLabel>
+            <translation><!-- Submit official test scores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Summer only admit</masterLabel>
+            <translation><!-- Summer only admit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Traveling Scholar</masterLabel>
+            <translation><!-- Traveling Scholar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Undergrad Academic Standing</masterLabel>
+            <translation><!-- Undergrad Academic Standing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Univ Testing Req</masterLabel>
+            <translation><!-- Univ Testing Req --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VA: Inactive Military</masterLabel>
+            <translation><!-- VA: Inactive Military --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VA: Inactive Military Depen</masterLabel>
+            <translation><!-- VA: Inactive Military Depen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VA: Inactive Nat Grd/Resv</masterLabel>
+            <translation><!-- VA: Inactive Nat Grd/Resv --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WPC Adm Response &amp; Enroll Auth</masterLabel>
+            <translation><!-- WPC Adm Response &amp; Enroll Auth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WPC Deposit</masterLabel>
+            <translation><!-- WPC Deposit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WPC Matriculation Fee</masterLabel>
+            <translation><!-- WPC Matriculation Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WPC Policy Acknowledgement</masterLabel>
+            <translation><!-- WPC Policy Acknowledgement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>eAdvisor - 2x Off Info Only</masterLabel>
+            <translation><!-- eAdvisor - 2x Off Info Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>eAdvisor Hold</masterLabel>
+            <translation><!-- eAdvisor Hold --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>SI_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Term --></label>
+        <name>SI_End_Term__c</name>
+        <relationshipLabel><!-- Service Indicators (End Term) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>SI_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Term --></label>
+        <name>SI_Start_Term__c</name>
+        <relationshipLabel><!-- Service Indicators --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Service Indicator Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

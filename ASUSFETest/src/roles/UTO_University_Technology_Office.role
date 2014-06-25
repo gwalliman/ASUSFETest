@@ -5,5 +5,5 @@
     <description>UTO University Technology Office</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>UTO University Technology Office</name>
-    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
 </Role>

@@ -3,6 +3,14 @@
     <active>true</active>
     <dataCategory>
         <dataCategory>
+            <label>Technical Resources</label>
+            <name>Technical_Resources</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Guest Access</label>
+            <name>Guest_Access</name>
+        </dataCategory>
+        <dataCategory>
             <label>Dining</label>
             <name>Dining</name>
         </dataCategory>
@@ -21,10 +29,6 @@
         <dataCategory>
             <label>Transportation</label>
             <name>Transportation</name>
-        </dataCategory>
-        <dataCategory>
-            <label>Exclusive College Achievement Program</label>
-            <name>Exclusive_College_Achievement_Program</name>
         </dataCategory>
         <label>All</label>
         <name>All</name>

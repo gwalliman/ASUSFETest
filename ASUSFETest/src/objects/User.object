@@ -72,13 +72,15 @@
     </fields>
     <fields>
         <fullName>View_Edit_Login__c</fullName>
+        <description>Can be used in Reports to give an admin the ability to View, Edit or Login as the User.</description>
         <externalId>false</externalId>
         <formula>HYPERLINK(&quot;https://asu.my.salesforce.com/&quot;&amp;Id&amp;&quot;?noredirect=1&quot;,&quot;View&quot;,&quot;_blank&quot;)
 &amp;&quot;  |  &quot;&amp;
 HYPERLINK(&quot;https://asu.my.salesforce.com/&quot;&amp;Id&amp;&quot;/e?retURL=%2F&quot;&amp;Id&amp;&quot;%3Fnoredirect%3D1?noredirect=1&quot;,&quot;Edit&quot;,&quot;_blank&quot;)
 &amp;&quot;  |  &quot;&amp;
-HYPERLINK(&quot;https://asu.my.salesforce.com/servlet/servlet.su?oid=00DK000000W40oT&amp;suorgadminid=&quot;&amp;Id&amp;&quot;&amp;retURL=%&quot;&amp;Id&amp;&quot;%3Fnoredirect%3D1&amp;targetURL=%2Fhome%2Fhome.jsp&quot;,&quot;Login&quot;,&quot;_blank&quot;)</formula>
+HYPERLINK(&quot;https://asu.my.salesforce.com/servlet/servlet.su?oid=00DJ0000003Ke5h&amp;suorgadminid=&quot;&amp;Id&amp;&quot;&amp;retURL=%&quot;&amp;Id&amp;&quot;%3Fnoredirect%3D1&amp;targetURL=%2Fhome%2Fhome.jsp&quot;,&quot;Login&quot;,&quot;_blank&quot;)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Can be used in Reports to give an admin the ability to View, Edit or Login as the User.</inlineHelpText>
         <label>View  |  Edit  |  Login</label>
         <required>false</required>
         <type>Text</type>
@@ -178,9 +180,9 @@ HYPERLINK(&quot;https://asu.my.salesforce.com/servlet/servlet.su?oid=00DK000000W
         <columns>FULL_NAME</columns>
         <columns>CORE.USERS.ALIAS</columns>
         <columns>CORE.USERS.USERNAME</columns>
-        <columns>CORE.USERS.LAST_LOGIN</columns>
         <columns>CORE.PROFILE.NAME</columns>
         <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>CORE.USERS.ACTIVE</field>
@@ -262,11 +264,12 @@ HYPERLINK(&quot;https://asu.my.salesforce.com/servlet/servlet.su?oid=00DK000000W
         <columns>FULL_NAME</columns>
         <columns>CORE.USERS.ALIAS</columns>
         <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.SAML_SUBJECT</columns>
         <columns>CREATED_DATE</columns>
         <columns>CORE.USERS.LAST_LOGIN</columns>
         <columns>CORE.USER_ROLE.NAME</columns>
-        <columns>CORE.USERS.ACTIVE</columns>
         <columns>CORE.PROFILE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
         <filterScope>Everything</filterScope>
         <label>All Users</label>
     </listViews>
@@ -392,7 +395,7 @@ HYPERLINK(&quot;https://asu.my.salesforce.com/servlet/servlet.su?oid=00DK000000W
         <label>Recruitment Users - Active</label>
     </listViews>
     <listViews>
-        <fullName>RecruitmentUsersGRHS</fullName>
+        <fullName>RecruitmentUsersCollege</fullName>
         <columns>FULL_NAME</columns>
         <columns>CORE.USERS.ALIAS</columns>
         <columns>CORE.USERS.USERNAME</columns>
@@ -410,14 +413,36 @@ HYPERLINK(&quot;https://asu.my.salesforce.com/servlet/servlet.su?oid=00DK000000W
         <filters>
             <field>CORE.USER_ROLE.NAME</field>
             <operation>equals</operation>
-            <value>ES Health Solutions</value>
+            <value>ES Liberal Arts &amp; Sciences</value>
         </filters>
         <filters>
             <field>CORE.USERS.ACTIVE</field>
             <operation>equals</operation>
             <value>1</value>
         </filters>
-        <label>Recruitment Users - GRHS</label>
+        <label>Recruitment Users - College</label>
+    </listViews>
+    <listViews>
+        <fullName>TODAY</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>MANAGER</columns>
+        <columns>CREATED_BY_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>TODAY</label>
+        <sharedTo>
+            <group>UTO_Administration</group>
+        </sharedTo>
     </listViews>
     <searchLayouts>
         <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>

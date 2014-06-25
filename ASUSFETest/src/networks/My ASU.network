@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <branding>
+        <loginFooterText>Arizona State University</loginFooterText>
+        <primaryColor>#990033</primaryColor>
+        <primaryComplementColor>#FFFFFF</primaryComplementColor>
+        <quaternaryColor>#CCCCCC</quaternaryColor>
+        <quaternaryComplementColor>#222222</quaternaryComplementColor>
+        <secondaryColor>#990033</secondaryColor>
+        <tertiaryColor>#FFFFFF</tertiaryColor>
+        <tertiaryComplementColor>#222222</tertiaryComplementColor>
+        <zeronaryColor>#FFCB66</zeronaryColor>
+        <zeronaryComplementColor>#222222</zeronaryComplementColor>
+    </branding>
+    <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <emailSenderAddress>service@asu.edu</emailSenderAddress>
+    <emailSenderName>My ASU</emailSenderName>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <networkMemberGroups>
+        <profile>admin</profile>
+        <profile>asu community cap</profile>
+        <profile>asu community</profile>
+    </networkMemberGroups>
+    <picassoSite>My_ASU1</picassoSite>
+    <selfRegistration>false</selfRegistration>
+    <sendWelcomeEmail>false</sendWelcomeEmail>
+    <site>My_ASU</site>
+    <status>Live</status>
+    <tabs>
+        <customTab>Service_Center</customTab>
+        <defaultTab>01rd0000000ex5A</defaultTab>
+    </tabs>
+    <welcomeTemplate>unfiled$public/CommunityWelcomeEmailTemplate</welcomeTemplate>
+</Network>

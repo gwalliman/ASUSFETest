@@ -5,5 +5,6 @@
     <description>SBS Student Business Services Manager</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>SBS Student Business Services Manager</name>
-    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>S_Service</parentRole>
 </Role>

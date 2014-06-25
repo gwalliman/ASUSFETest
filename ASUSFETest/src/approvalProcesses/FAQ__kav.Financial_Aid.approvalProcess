@@ -5,6 +5,10 @@
     <allowedSubmitters>
         <type>creator</type>
     </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Knowledge_Financial_Aid</submitter>
+        <type>group</type>
+    </allowedSubmitters>
     <approvalPageFields>
         <field>Title</field>
         <field>Functional_Group__c</field>

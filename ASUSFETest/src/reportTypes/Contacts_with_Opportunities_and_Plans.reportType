@@ -227,16 +227,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>OtherLatitude</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>OtherLongitude</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>OtherPhone</field>
             <table>Contact</table>
         </columns>
@@ -282,21 +272,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Undergraduate_GPA__c</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Undergraduate_GPA_Scale__c</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Undergraduate_Major__c</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Visa_Type__c</field>
             <table>Contact</table>
         </columns>
@@ -308,6 +283,31 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Account</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Email_Change_Reason__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Email_Change_Date__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CAP__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CAP_Student_Group_Count__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CAP_Possible__c</field>
             <table>Contact</table>
         </columns>
         <masterLabel>Contacts</masterLabel>
@@ -447,6 +447,11 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Contact__c</field>
+            <table>Contact.Opportunities__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>IsClosed</field>
             <table>Contact.Opportunities__r</table>
         </columns>
         <columns>
@@ -620,6 +625,11 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Academic_Plan__c.Name</field>
+            <table>Contact.Opportunities__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Academic_Plan_Associated_College__c</field>
             <table>Contact.Opportunities__r</table>
         </columns>
         <masterLabel>Program and Plan Details</masterLabel>

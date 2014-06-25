@@ -32,6 +32,16 @@
         <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Contact_Update_Do_Not_Call_If_Deceased</fullName>
+        <description>Update Do Not Call field to TRUE when Deceased = TRUE</description>
+        <field>DoNotCall</field>
+        <literalValue>1</literalValue>
+        <name>Contact: Update Do Not Call If Deceased</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Email_Change_Reason_Directory_Change</fullName>
         <field>Email_Change_Reason__c</field>
         <formula>&quot;Directory Email changed&quot;</formula>
@@ -157,7 +167,11 @@
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
-        <fullName>Contact%3A Update Opt Out If Deceased</fullName>
+        <fullName>Contact%3A Update Communication If Deceased</fullName>
+        <actions>
+            <name>Contact_Update_Do_Not_Call_If_Deceased</name>
+            <type>FieldUpdate</type>
+        </actions>
         <actions>
             <name>Opt_Out_If_Deceased</name>
             <type>FieldUpdate</type>
@@ -168,7 +182,8 @@
             <operation>equals</operation>
             <value>True</value>
         </criteriaItems>
-        <description>Opt Out = True if the Contact field Deceased = True</description>
+        <description>Opt Out = True if the Contact field Deceased = True
+Do Not Call = True if the Contact field Deceased = True</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
@@ -217,7 +232,7 @@
         </actions>
         <active>true</active>
         <description>If the Directory Email changes (indicating a new Directory Email for the Contact from PeopleSoft), set the Email to the value in Directory Email.</description>
-        <formula>ISCHANGED(ASU_Email__c) &amp;&amp; NOT(ASU_Email__c = Email)</formula>
+        <formula>ISCHANGED(ASU_Email__c) &amp;&amp; NOT(ISBLANK (ASU_Email__c)) &amp;&amp; NOT(ASU_Email__c = Email)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -255,7 +270,7 @@
         </actions>
         <active>true</active>
         <description>If the Lead Email changes (indicating a new Lead Email for the Contact from web form submission), set the Email to the value in Lead Email.</description>
-        <formula>NOT(ISCHANGED(ASU_Email__c)) &amp;&amp; NOT(Lead_Email__c = Email) &amp;&amp; ISCHANGED(Lead_Email__c)</formula>
+        <formula>NOT(ISCHANGED(ASU_Email__c)) &amp;&amp; NOT(Lead_Email__c = Email) &amp;&amp; ISCHANGED(Lead_Email__c) &amp;&amp; NOT(ISBLANK(Lead_Email__c))</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -291,7 +306,7 @@
             <name>Email_Set_to_Preferred_Email</name>
             <type>FieldUpdate</type>
         </actions>
-        <active>true</active>
+        <active>false</active>
         <description>If a new record is created, with a Preferred Email and no Directory Email and no Email, the Email will be set to the Preferred Email.</description>
         <formula>NOT(ISBLANK(Preferred_Email__c)) &amp;&amp; ISBLANK(ASU_Email__c) &amp;&amp; ISBLANK(Email)</formula>
         <triggerType>onCreateOnly</triggerType>

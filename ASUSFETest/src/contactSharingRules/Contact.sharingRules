@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContactSharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <criteriaBasedRules>
+        <fullName>Share_Read_Write_for_SF_Mastered</fullName>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SF Mastered</value>
+        </criteriaItems>
+        <contactAccessLevel>Edit</contactAccessLevel>
+        <description>Share Read/Write for SF Mastered</description>
+        <name>Share Read/Write for SF Mastered</name>
+    </criteriaBasedRules>
+    <criteriaBasedRules>
+        <fullName>Share_Read_Write_to_External_Mastered_with_ES</fullName>
+        <sharedTo>
+            <group>ES_Enrollment_Services_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>External Mastered</value>
+        </criteriaItems>
+        <contactAccessLevel>Edit</contactAccessLevel>
+        <description>Share Read Write to External Mastered Contacts with Members of the Enrollment Services Group.</description>
+        <name>Share Read Write to External Mastered with ES</name>
+    </criteriaBasedRules>
+    <criteriaBasedRules>
+        <fullName>Share_Read_Write_to_External_Mastered_with_Service</fullName>
+        <sharedTo>
+            <roleAndSubordinatesInternal>S_Service</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>External Mastered</value>
+        </criteriaItems>
+        <contactAccessLevel>Edit</contactAccessLevel>
+        <description>Share Read Write to External Mastered Contacts with Members of the Service Roles.</description>
+        <name>Share Read Write to External Mastered with Service</name>
+    </criteriaBasedRules>
+</ContactSharingRules>

@@ -4,6 +4,7 @@
     <name>MaryLouFulton Teachers College</name>
     <publicFolderAccess>ReadOnly</publicFolderAccess>
     <sharedTo>
-        <roleAndSubordinates>ES_Teachers_College</roleAndSubordinates>
+        <role>ES_Enrollment_Services_Communication</role>
+        <role>ES_Teachers_College</role>
     </sharedTo>
 </EmailFolder>

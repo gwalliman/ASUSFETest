@@ -5,5 +5,10 @@
         <sharedTo>AllInternalUsers</sharedTo>
         <sharedToType>Organization</sharedToType>
     </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>UTO_University_Technology_Office</sharedTo>
+        <sharedToType>Role</sharedToType>
+    </folderShares>
     <name>Knowledge Reports</name>
 </ReportFolder>

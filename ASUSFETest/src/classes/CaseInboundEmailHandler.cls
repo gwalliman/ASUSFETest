@@ -73,12 +73,15 @@ global class CaseInboundEmailHandler
 		if (caseId == null)
 		 	caseId = extractIdRefNew(email.htmlBody);
 		if (caseId == null)
-		 	caseId = extractIdRefNew(email.subject);	 	
+		 	caseId = extractIdRefNew(email.subject);
+		// Last resort look for the pattern Case Number ######## in the subject
+		if (caseId == null)
+			caseId = extractIdFromCaseNumber(email.subject);	 	
 		 	
 		if(caseId != null)
 		{  
 			if(TRACE)system.debug(Logginglevel.ERROR,'CaseEmailInBoundUtilities.  extracted case id: "' + caseId + '"');
-			Case[] caseSearch = [SELECT Id, ContactId, Subject, Description, Status, ClosedDate FROM Case WHERE Id = :caseId];
+			Case[] caseSearch = [SELECT Id, ContactId, Subject, Description, Status, ClosedDate, Initial_Request_Sent_To_Addresses__c FROM Case WHERE Id = :caseId];
 			if (caseSearch.size() > 0) {
 				Integer iReopenClosedCaseThreshold;
 				string reopenClosedCaseThreshold = getConfigurationSetting('Reopen Closed Case Threshold');
@@ -90,7 +93,17 @@ global class CaseInboundEmailHandler
 			  	if (caseSearch[0].Status != null && (!caseSearch[0].Status.startsWith('Closed') || (iReopenClosedCaseThreshold != 0 && caseSearch[0].Status.startsWith('Closed') && caseSearch[0].ClosedDate != null && caseSearch[0].ClosedDate > DateTime.Now().addDays(iReopenClosedCaseThreshold)))) {
 				  	this.theCase = caseSearch[0];
 				  	if (this.theCase.Status.startsWith('Closed')) {
-				  		this.theCase.Status = 'In Progress';
+				  		this.theCase.Status = 'Re-Opened';
+				  		// Find the original recipient list and look up the associated Case Assignment Rule
+				  		// to set the Owner back to the original Queue
+				  		system.debug('GRF Initial_Request_Sent_To_Addresses__c: ' + theCase.Initial_Request_Sent_To_Addresses__c);
+				  		List<String> originalToList = theCase.Initial_Request_Sent_To_Addresses__c.split(',',0);
+				  		system.debug('GRF originalToList: ' + originalToList);
+						if (originalToList.size() > 0) {
+							setCaseAssignmentRule(originalToList, new List<String>());
+							if (queueId != null)
+								theCase.OwnerId = queueId;
+						}
 						updateSObject(this.theCase);		  		
 				  	}
 				}
@@ -127,7 +140,13 @@ global class CaseInboundEmailHandler
 			theCase.SuppliedName = fname + ' ' + lname;
 			theCase.Status = 'New';
 			theCase.Priority = 'Normal';
-			theCase.OwnerId = queueId;
+			// The Queue ID should be set as long as a Cse Assignment Rule was found; just in case, adding
+			// and else clause to be sure the Owner is not set to null, which would prevent the insert
+			//
+			if (queueId != null)
+				theCase.OwnerId = queueId;
+			else
+				theCase.OwnerId = UserInfo.getUserId();
 			system.debug('GRF theCase.OwnerId: ' + theCase.OwnerId);
 			theCase.Origin = 'Email';
 			theCase.Subject = email.Subject;
@@ -231,6 +250,8 @@ global class CaseInboundEmailHandler
 			
 		createEmailMessage(theCase,email);
 		handleAttachments(theCase, emailContact, email);
+		system.debug('GRF template: ' + templateId);
+//		if (sendAutoReply && templateId != null && String.valueOf(templateId) != '') {
 		if (sendAutoReply && templateId != null) {
 			sendAutoReply(theCase, emailContact, templateId);
 		}
@@ -506,7 +527,6 @@ global class CaseInboundEmailHandler
 		if (searchtext==null)
 			return null;
 		
-	 	String itemRef = null;
 	 	String patternString;
 
 	  	if (searchText.indexOf(':ref') > searchText.indexOf('ref:')) {
@@ -520,6 +540,28 @@ global class CaseInboundEmailHandler
 			system.debug('GRF no caseId extracted from ' + searchText);
 	 		return null;
 	 	}
+	}
+	
+	private String extractIdFromCaseNumber(String searchText)
+	{
+		if (searchText==null)
+			return null;
+		
+		string caseNumber;
+		
+		string patternString = '.*Case Number [;:=]?\\s*([0-9]+).*';
+		Pattern thePattern = Pattern.compile(patternString);
+	  	Matcher matcher = thePattern.matcher(searchText);
+	  
+	  	if (matcher.matches()) {
+	   		caseNumber = matcher.group(1);
+	   		List<Case> caseCheck = new List<Case>([SELECT Id FROM Case WHERE CaseNumber = :caseNumber]);
+	   		
+	   		if (caseCheck.size() > 0)
+	   			return String.valueOf(caseCheck[0].Id);
+	  	}
+	  	
+		return null;
 	}
 
 /*	
@@ -665,26 +707,34 @@ global class CaseInboundEmailHandler
 	}
 	
 	private void setCaseAssignmentRule(String[] toEmailAddresses, String[] ccEmailAddresses) {
-		Case_Assignment_Rule__c[] assignmentRuleList = [SELECT Id, Name, Category__c, Email_Address__c, Customer_Notice_Email_From_Name__c, Email_Template_ID__c, Functional_Group__c, Priority__c, Queue_ID__c FROM Case_Assignment_Rule__c WHERE Email_Address__c IN :toEmailAddresses ORDER BY Priority__c];
+		Case_Assignment_Rule__c[] assignmentRuleList = [SELECT Id, Name, Category__c, Email_Address__c, Reply_To_Email_Address__c, Customer_Notice_Email_From_Name__c, Email_Template_ID__c, Functional_Group__c, Priority__c, Queue_ID__c FROM Case_Assignment_Rule__c WHERE Email_Address__c IN :toEmailAddresses ORDER BY Priority__c];
 		if (assignmentRuleList.size() > 0) {
 			categoryName = assignmentRuleList[0].Category__c;
 			functionalGroup = assignmentRuleList[0].Functional_Group__c;
 			queueId = ID.valueOf(assignmentRuleList[0].Queue_ID__c);
-			templateId = ID.valueOf(assignmentRuleList[0].Email_Template_ID__c);
-			replyToAddress = assignmentRuleList[0].Email_Address__c;
+			if (assignmentRuleList[0].Email_Template_ID__c != null && assignmentRuleList[0].Email_Template_ID__c != '')
+				templateId = ID.valueOf(assignmentRuleList[0].Email_Template_ID__c);
+				if (assignmentRuleList[0].Reply_To_Email_Address__c != null && assignmentRuleList[0].Reply_To_Email_Address__c != '')
+					replyToAddress = assignmentRuleList[0].Reply_To_Email_Address__c;
+				else				
+					replyToAddress = assignmentRuleList[0].Email_Address__c;
 			emailFromName = assignmentRuleList[0].Customer_Notice_Email_From_Name__c;
 				
 			system.debug('GRF queueID: ' + queueId);
 			system.debug('GRF CAR__c: ' + assignmentRuleList[0]);
 		} 
 		else {
-			assignmentRuleList = [SELECT Id, Name, Category__c, Email_Address__c, Customer_Notice_Email_From_Name__c, Email_Template_ID__c, Functional_Group__c, Priority__c, Queue_ID__c FROM Case_Assignment_Rule__c WHERE Email_Address__c IN :ccEmailAddresses ORDER BY Priority__c];
+			assignmentRuleList = [SELECT Id, Name, Category__c, Email_Address__c, Reply_To_Email_Address__c, Customer_Notice_Email_From_Name__c, Email_Template_ID__c, Functional_Group__c, Priority__c, Queue_ID__c FROM Case_Assignment_Rule__c WHERE Email_Address__c IN :ccEmailAddresses ORDER BY Priority__c];
 			if (assignmentRuleList.size() > 0) {
 				categoryName = assignmentRuleList[0].Category__c;
 				functionalGroup = assignmentRuleList[0].Functional_Group__c;
 				queueId = ID.valueOf(assignmentRuleList[0].Queue_ID__c);
-				templateId = ID.valueOf(assignmentRuleList[0].Email_Template_ID__c);
-				replyToAddress = assignmentRuleList[0].Email_Address__c;
+				if (assignmentRuleList[0].Email_Template_ID__c != null && assignmentRuleList[0].Email_Template_ID__c != '')
+					templateId = ID.valueOf(assignmentRuleList[0].Email_Template_ID__c);
+				if (assignmentRuleList[0].Reply_To_Email_Address__c != null && assignmentRuleList[0].Reply_To_Email_Address__c != '')
+					replyToAddress = assignmentRuleList[0].Reply_To_Email_Address__c;
+				else				
+					replyToAddress = assignmentRuleList[0].Email_Address__c;
 				emailFromName = assignmentRuleList[0].Customer_Notice_Email_From_Name__c;
 					
 				system.debug('GRF queueID: ' + queueId);
@@ -696,14 +746,18 @@ global class CaseInboundEmailHandler
 			string defaultEmailAddress = getConfigurationSetting('Default Org Wide Email Address');
 			Case_Assignment_Rule__c[] assignmentRuleListDefault;
 			if (defaultEmailAddress != null && defaultEmailAddress != '') {
-				assignmentRuleListDefault = [SELECT Id, Name, Category__c, Email_Address__c, Customer_Notice_Email_From_Name__c, Email_Template_ID__c, Functional_Group__c, Priority__c, Queue_ID__c FROM Case_Assignment_Rule__c WHERE Email_Address__c = :defaultEmailAddress];
+				assignmentRuleListDefault = [SELECT Id, Name, Category__c, Email_Address__c, Reply_To_Email_Address__c, Customer_Notice_Email_From_Name__c, Email_Template_ID__c, Functional_Group__c, Priority__c, Queue_ID__c FROM Case_Assignment_Rule__c WHERE Email_Address__c = :defaultEmailAddress];
 			}
 			if (assignmentRuleListDefault != null && assignmentRuleListDefault.size() > 0) {
 				categoryName = assignmentRuleListDefault[0].Category__c;
 				functionalGroup = assignmentRuleListDefault[0].Functional_Group__c;
 				queueId = ID.valueOf(assignmentRuleListDefault[0].Queue_ID__c);
-				templateId = ID.valueOf(assignmentRuleListDefault[0].Email_Template_ID__c);
-				replyToAddress = assignmentRuleListDefault[0].Email_Address__c;
+				if (assignmentRuleListDefault[0].Email_Template_ID__c != null && assignmentRuleListDefault[0].Email_Template_ID__c != '')
+					templateId = ID.valueOf(assignmentRuleListDefault[0].Email_Template_ID__c);
+				if (assignmentRuleListDefault[0].Reply_To_Email_Address__c != null && assignmentRuleListDefault[0].Reply_To_Email_Address__c != '')
+					replyToAddress = assignmentRuleListDefault[0].Reply_To_Email_Address__c;
+				else				
+					replyToAddress = assignmentRuleListDefault[0].Email_Address__c;
 				emailFromName = assignmentRuleListDefault[0].Customer_Notice_Email_From_Name__c;
 				
 				defaultOrgWideEmailAddress = getDefaultOrgWideEmailAddress();
@@ -736,18 +790,15 @@ global class CaseInboundEmailHandler
 			mail.setSenderDisplayName(emailFromName);
 			mail.setReplyTo(replyToAddress);
 		}
-		Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });	
-		
-		/*
-		EmailMessage emToInsert = new EmailMessage();
-		emToInsert.toAddress = emailContact.email;
-		emToInsert.Subject = mail.Subject;
-		emToInsert.HTMLBody = mail.HtmlBody;
-		//additional fields to map over
-		//....
-		emToInsert.ParentId = mail.WhatId;
-		//insert emToInsert;
-		*/	
+		try {
+			Messaging.reserveSingleEmailCapacity(1); 
+			Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });	
+		}
+		catch (Exception e) {
+			//Most likely SINGLE_EMAIL_LIMIT_EXCEEDED; catching so the transaction will continue
+			//
+		}
+
 	}
 
 

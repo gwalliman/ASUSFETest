@@ -22,18 +22,11 @@
         <summaryAxisRange>Auto</summaryAxisRange>
         <textColor>#000000</textColor>
         <textSize>12</textSize>
-        <title>Closed Case Status</title>
+        <title>Closed Case Status Past 90 Days</title>
         <titleColor>#000000</titleColor>
         <titleSize>18</titleSize>
     </chart>
     <description>How were cases resolved?</description>
-    <filter>
-        <criteriaItems>
-            <column>CLOSED</column>
-            <operator>equals</operator>
-            <value>1</value>
-        </criteriaItems>
-    </filter>
     <format>Matrix</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
@@ -53,7 +46,7 @@
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>
-        <dateColumn>CREATED_DATEONLY</dateColumn>
-        <interval>INTERVAL_CUSTOM</interval>
+        <dateColumn>CLOSED_DATEONLY</dateColumn>
+        <interval>INTERVAL_LAST90</interval>
     </timeFrameFilter>
 </Report>

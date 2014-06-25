@@ -5,6 +5,6 @@
     <description>REG Registrar Staff</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>REG Registrar Staff</name>
-    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
     <parentRole>REG_Registrar_Manager</parentRole>
 </Role>

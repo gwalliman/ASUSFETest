@@ -27,9 +27,6 @@
         <titleSize>18</titleSize>
     </chart>
     <columns>
-        <field>OWNER</field>
-    </columns>
-    <columns>
         <field>CASE_NUMBER</field>
     </columns>
     <columns>
@@ -46,6 +43,11 @@
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
         <field>Case.Functional_Group__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OWNER</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Total Closed Cases</name>

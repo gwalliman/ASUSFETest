@@ -35,6 +35,10 @@
                 <behavior>Edit</behavior>
                 <field>Category__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Reply_To_Email_Address__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

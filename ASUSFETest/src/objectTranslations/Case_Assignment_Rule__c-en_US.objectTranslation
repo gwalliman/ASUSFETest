@@ -55,6 +55,11 @@
         <label><!-- Queue or User URL --></label>
         <name>Queue_URL__c</name>
     </fields>
+    <fields>
+        <help><!-- This Email Address is used as the &quot;Reply To&quot; address for the email that is sent to the customer when a Case has been created. If not specified, the &quot;Email Address&quot; field is used. --></help>
+        <label><!-- Reply To Email Address --></label>
+        <name>Reply_To_Email_Address__c</name>
+    </fields>
     <layouts>
         <layout>Case Assignment Rule Layout</layout>
         <sections>

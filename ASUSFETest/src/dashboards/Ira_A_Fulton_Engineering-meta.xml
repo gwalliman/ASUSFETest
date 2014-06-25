@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DashboardFolder xmlns="http://soap.sforce.com/2006/04/metadata">
     <folderShares>
-        <accessLevel>View</accessLevel>
+        <accessLevel>EditAllContents</accessLevel>
         <sharedTo>ES_Enrollment_Services</sharedTo>
         <sharedToType>Role</sharedToType>
     </folderShares>
@@ -24,6 +24,11 @@
         <accessLevel>View</accessLevel>
         <sharedTo>UTO_University_Technology_Office</sharedTo>
         <sharedToType>Role</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>ES_Ira_A_Fulton_Engineering_Group</sharedTo>
+        <sharedToType>Group</sharedToType>
     </folderShares>
     <name>Ira A Fulton Engineering</name>
 </DashboardFolder>

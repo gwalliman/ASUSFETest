@@ -53,9 +53,9 @@
     <description>What is the average time it takes a user to close a case?</description>
     <filter>
         <criteriaItems>
-            <column>CLOSED</column>
+            <column>STATUS</column>
             <operator>equals</operator>
-            <value>1</value>
+            <value>Closed: Resolved</value>
         </criteriaItems>
     </filter>
     <format>Matrix</format>

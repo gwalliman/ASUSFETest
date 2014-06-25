@@ -36,13 +36,14 @@
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
             <expandOthers>false</expandOthers>
-            <header>Upcoming Article Expiration Dates: FAQ</header>
+            <header>Upcoming Article Expiration Dates</header>
             <legendPosition>Bottom</legendPosition>
             <maxValuesDisplayed>10</maxValuesDisplayed>
             <report>Knowledge_Reports/Article_Expiration_Report_FAQ</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
+            <title>FAQ Articles</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
@@ -54,13 +55,13 @@
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
             <expandOthers>false</expandOthers>
-            <header>Upcoming Article Expiration Dates: How To</header>
             <legendPosition>Bottom</legendPosition>
             <maxValuesDisplayed>10</maxValuesDisplayed>
             <report>Knowledge_Reports/Article_Expiration_Report_How_To</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
+            <title>How To Articles</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
@@ -72,35 +73,68 @@
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>false</enableHover>
             <expandOthers>false</expandOthers>
-            <header>Upcoming Article Expiration Dates: Informational</header>
             <legendPosition>Bottom</legendPosition>
             <maxValuesDisplayed>10</maxValuesDisplayed>
             <report>Knowledge_Reports/Article_Expiration_Report_Informational</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
+            <title>Informational Articles</title>
             <useReportChart>false</useReportChart>
         </components>
     </leftSection>
     <middleSection>
         <columnSize>Wide</columnSize>
         <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartSummary>
+                <aggregate>Sum</aggregate>
+                <axisBinding>y</axisBinding>
+                <column>KnowledgeArticle.ViewStats$ViewCount</column>
+            </chartSummary>
             <componentType>Gauge</componentType>
-            <displayUnits>Auto</displayUnits>
+            <displayUnits>Integer</displayUnits>
             <footer>Combined total of all article views, highlighting most popular.</footer>
-            <gaugeMax>500000.0</gaugeMax>
+            <gaugeMax>1000000.0</gaugeMax>
             <gaugeMin>1.0</gaugeMin>
-            <header>Total Article Views (Goal: 500,000 views)</header>
+            <header>Total Article Views (Goal: 1,000,000 views)</header>
             <indicatorBreakpoint1>100000.0</indicatorBreakpoint1>
-            <indicatorBreakpoint2>350000.0</indicatorBreakpoint2>
-            <indicatorHighColor>#C25454</indicatorHighColor>
+            <indicatorBreakpoint2>500000.0</indicatorBreakpoint2>
+            <indicatorHighColor>#54C254</indicatorHighColor>
             <indicatorLowColor>#AAAAAA</indicatorLowColor>
-            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <indicatorMiddleColor>#5454C2</indicatorMiddleColor>
             <report>Knowledge_Reports/Total_of_Article_Views</report>
             <showPercentage>false</showPercentage>
             <showTotal>true</showTotal>
             <showValues>false</showValues>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartSummary>
+                <aggregate>Sum</aggregate>
+                <column>KnowledgeArticle.ViewStats$ViewCount</column>
+            </chartSummary>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Total Article Views - Public Knowledge Base</metricLabel>
+            <report>Knowledge_Reports/Article_Views</report>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartSummary>
+                <aggregate>Sum</aggregate>
+                <column>KnowledgeArticle.ViewStats$ViewCount</column>
+            </chartSummary>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Total Article Views - Customer Channel</metricLabel>
+            <report>Knowledge_Reports/Article_Views_Customer_Channel</report>
         </components>
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>

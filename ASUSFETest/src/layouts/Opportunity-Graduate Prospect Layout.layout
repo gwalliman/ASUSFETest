@@ -53,17 +53,25 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Prospect_Qualifier__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>College__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Academic_Plan__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Prospect_Qualifier__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Prospect_Qualifier_Date__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Prospect_Qualifier_Decision_Factor__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -169,6 +177,15 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
+    <miniLayout>
+        <fields>StageName</fields>
+        <fields>CloseDate</fields>
+        <fields>Probability</fields>
+        <fields>College__c</fields>
+        <fields>Academic_Plan__c</fields>
+        <fields>AccountId</fields>
+        <fields>Name</fields>
+    </miniLayout>
     <relatedContent>
         <relatedContentItems>
             <layoutItem>

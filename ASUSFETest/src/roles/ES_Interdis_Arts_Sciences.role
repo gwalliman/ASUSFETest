@@ -5,6 +5,6 @@
     <description>New Interdis Arts &amp; Sciences</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>ES New Interdis Arts &amp; Sciences</name>
-    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
     <parentRole>ES_Enrollment_Services</parentRole>
 </Role>

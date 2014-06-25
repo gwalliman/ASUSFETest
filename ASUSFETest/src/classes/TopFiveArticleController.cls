@@ -9,8 +9,8 @@ global class TopFiveArticleController {
 
     @HttpGet
     global static List<ArticleInfo> getTopFiveArticles() {
-       	//string urlPrefix = 'http://utocomm-uto.cs10.force.com/pkb/articles/FAQ/';
-       	string urlPrefix = 'http://asu.secure.force.com/kb/articles/FAQ/';
+       	string urlPrefix = 'http://utocomm-uto.cs10.force.com/pkb/articles/FAQ/';
+       	//string urlPrefix = 'http://asu.secure.force.com/kb/articles/FAQ/';
        	//string urlPrefix = getPkbSiteUrl();
         List<KnowledgeArticleViewStat> articleViewStatList = [SELECT Id, ParentId FROM KnowledgeArticleViewStat ORDER BY ViewCount DESC LIMIT 5];
         Set<Id> articleIds = new Set<Id>();
@@ -54,7 +54,14 @@ global class TopFiveArticleController {
 		string kavQuery = 'SELECT Id, KnowledgeArticleId FROM KnowledgeArticleVersion WHERE PublishStatus=\'Online\' AND language =\'en_US\' AND isVisibleInPkb = true';
 		string dataCategory = '';
 		string dcGroup;
-		if (listName == 'Classes') {
+		system.debug('GRF listname: ' + listName);
+		if (listName.indexOf('\\') > 0 && listName.indexOf('\\') < listName.length()) {
+			Integer slashPosition = listName.indexOf('\\');
+			dcGroup = listName.substring(0, slashPosition);
+			dataCategory = listName.substring(slashPosition + 1);
+			system.debug('GRF backslash found: ' + dcGroup + ' \\ ' + dataCategory);	
+		}
+		else if (listName == 'Classes') {
 			dcGroup = 'Academics__c';
 			dataCategory = 'My_ASU_Classes__c';
 		}
@@ -99,11 +106,16 @@ global class TopFiveArticleController {
     		ArticleInfo ai = new ArticleInfo();
     		ai.rank = articleRank;
     		ai.title = kav.Title;
-    		//ai.title = testParm;
     		ai.url = getArticleUrl(kav);
     		articles.add(ai);
 		}
+		//ArticleInfo ai = new ArticleInfo();
+		//ai.rank = 0;
+		//ai.title = 'More Articles';
+		//ai.url = getMoreArticlesUrl(dcGroup, dataCategory);
+		//articles.add(ai);
         system.debug('GRF2: ' + articles);
+        system.debug('GRF 3:' + System.URL.getSalesforceBaseURL().getHost());
         return articles;
     }    
 
@@ -128,8 +140,11 @@ global class TopFiveArticleController {
 */
 	
 	global static string getArticleUrl(KnowledgeArticleVersion kav) {
-       	//string urlPrefix = 'http://utocomm-uto.cs10.force.com/pkb/articles/';
- 		string urlPrefix = 'https://asu.secure.force.com/kb/articles/';
+       	string urlPrefix;
+       	if (isSandbox())
+       		urlPrefix = 'http://utocomm-uto.cs10.force.com/pkb/articles/';
+ 		else
+ 			urlPrefix = 'https://asu.secure.force.com/kb/articles/';
        	string articleTypeString;
        	string articleIdPrefix = String.valueOf(kav.Id).substring(0,3);
        	if (articleIdPrefix == 'ka1') 
@@ -142,4 +157,49 @@ global class TopFiveArticleController {
  			articleTypeString = articleIdPrefix;
  		return urlPrefix + articleTypeString + kav.UrlName;
 	}
+	
+	global static string getMoreArticlesUrl(string dcGroup, string dataCategory) {
+		string url;
+		if (isSandbox())
+			url = 'http://utocomm-uto.cs10.force.com/pkb/pkb_Home?l=en_US&c=';
+		else
+			url = 'https://asu.secure.force.com/kb/pkb_Home?l=en_US&c=';
+			
+       	url += dcGroup.replace('__c', '') + '%3A' + dataCategory.replace('__c','');
+       	return url;
+	}
+	
+	global static Boolean isSandbox() {
+    	String host = URL.getSalesforceBaseUrl().getHost();
+        String server = host.substring(0,host.indexOf('.'));
+
+        // It's easiest to check for 'my domain' sandboxes first 
+        // even though that will be rare
+        if(server.contains('--'))
+            return true;
+
+        // tapp0 is a unique "non-cs" server so we check it now
+        if(server == 'tapp0')
+            return true;
+
+        // If server is 'cs' followed by a number it's a sandbox
+        if(server.length()>2){
+            if(server.substring(0,2)=='cs'){
+                try{
+                    Integer.valueOf(server.substring(2,server.length()));
+                }
+                catch(exception e){
+                    //started with cs, but not followed by a number
+                    return false;
+                }
+
+                //cs followed by a number, that's a hit
+                return true;
+            }
+        }
+
+        // If we made it here it's a production box
+        return false;
+    }
+	
 }

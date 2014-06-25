@@ -8,9 +8,9 @@
     <loginUrl>https://shibboleth2.asu.edu/idp/profile/SAML2/Redirect/SSO</loginUrl>
     <logoutUrl>https://weblogin.asu.edu/cas/logout?eventSource=salesforce</logoutUrl>
     <name>ASURITE Login</name>
-    <oauthTokenEndpoint>https://asu--anthony.cs9.my.salesforce.com/services/oauth2/token?so=00DK000000W40oT</oauthTokenEndpoint>
+    <oauthTokenEndpoint>https://asu--babyDev.cs10.my.salesforce.com/services/oauth2/token?so=00DJ0000003Ke5h</oauthTokenEndpoint>
     <redirectBinding>true</redirectBinding>
-    <salesforceLoginUrl>https://asu--anthony.cs9.my.salesforce.com?so=00DK000000W40oT</salesforceLoginUrl>
+    <salesforceLoginUrl>https://asu--babyDev.cs10.my.salesforce.com?so=00DJ0000003Ke5h</salesforceLoginUrl>
     <samlEntityId>https://asu.my.salesforce.com</samlEntityId>
     <samlVersion>SAML2_0</samlVersion>
     <userProvisioning>false</userProvisioning>

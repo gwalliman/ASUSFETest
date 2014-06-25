@@ -3305,7 +3305,7 @@
         </countries>
         <countries>
             <active>true</active>
-            <integrationValue>Myanmar</integrationValue>
+            <integrationValue>Burma</integrationValue>
             <isoCode>MM</isoCode>
             <label>Myanmar</label>
             <orgDefault>false</orgDefault>

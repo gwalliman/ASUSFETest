@@ -6,6 +6,11 @@
         <sharedToType>Role</sharedToType>
     </folderShares>
     <folderShares>
+        <accessLevel>EditAllContents</accessLevel>
+        <sharedTo>ES_Enrollment_Services</sharedTo>
+        <sharedToType>Role</sharedToType>
+    </folderShares>
+    <folderShares>
         <accessLevel>View</accessLevel>
         <sharedTo>ES_Enrollment_Services_Communication</sharedTo>
         <sharedToType>Role</sharedToType>
@@ -19,6 +24,11 @@
         <accessLevel>View</accessLevel>
         <sharedTo>UTO_University_Technology_Office</sharedTo>
         <sharedToType>Role</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>ES_Ira_A_Fulton_Engineering_Group</sharedTo>
+        <sharedToType>Group</sharedToType>
     </folderShares>
     <name>Coll Technology &amp; Innovation</name>
 </ReportFolder>

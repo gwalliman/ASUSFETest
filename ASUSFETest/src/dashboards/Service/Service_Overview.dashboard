@@ -97,6 +97,54 @@
             <title>Open Cases by Status</title>
             <useReportChart>false</useReportChart>
         </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>RowCount</column>
+            </chartSummary>
+            <componentType>Donut</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>true</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Total number of students with CAP status.</footer>
+            <groupingColumn>CREATED_DATE</groupingColumn>
+            <legendPosition>Bottom</legendPosition>
+            <report>Service/CAP_Students</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>true</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>CAP Student Count</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>RowCount</column>
+            </chartSummary>
+            <componentType>Donut</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>true</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <footer>Current open cases from CAP students.</footer>
+            <groupingColumn>Case.Functional_Group__c</groupingColumn>
+            <legendPosition>Bottom</legendPosition>
+            <report>Service/Open_Cases_CAP_Students</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>true</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Open Cases: CAP Students</title>
+            <useReportChart>false</useReportChart>
+        </components>
     </leftSection>
     <middleSection>
         <columnSize>Medium</columnSize>
@@ -127,28 +175,6 @@
         </components>
         <components>
             <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
-            <chartSummary>
-                <axisBinding>y</axisBinding>
-                <column>FORMULA1</column>
-            </chartSummary>
-            <componentType>Gauge</componentType>
-            <displayUnits>Auto</displayUnits>
-            <footer>How many days does it take to resolve case?</footer>
-            <gaugeMax>5.0</gaugeMax>
-            <gaugeMin>0.0</gaugeMin>
-            <indicatorBreakpoint1>1.0</indicatorBreakpoint1>
-            <indicatorBreakpoint2>3.0</indicatorBreakpoint2>
-            <indicatorHighColor>#C25454</indicatorHighColor>
-            <indicatorLowColor>#54C254</indicatorLowColor>
-            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
-            <report>Service/Resolution_Time</report>
-            <showPercentage>true</showPercentage>
-            <showTotal>true</showTotal>
-            <showValues>false</showValues>
-            <title>Average Resolution Time</title>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
             <chartAxisRange>Auto</chartAxisRange>
             <chartSummary>
                 <axisBinding>y</axisBinding>
@@ -160,6 +186,7 @@
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
             <expandOthers>true</expandOthers>
+            <footer>How were cases closed?</footer>
             <groupingColumn>STATUS</groupingColumn>
             <legendPosition>Bottom</legendPosition>
             <report>Service/Closed_Cases_by_Status</report>
@@ -167,8 +194,30 @@
             <showTotal>true</showTotal>
             <showValues>false</showValues>
             <sortBy>RowValueAscending</sortBy>
-            <title>Closed Case Status</title>
+            <title>Closed Case Status Past 90 Days</title>
             <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>FORMULA1</column>
+            </chartSummary>
+            <componentType>Gauge</componentType>
+            <displayUnits>Auto</displayUnits>
+            <footer>How many days does it take to resolve case as Closed: Resolved?</footer>
+            <gaugeMax>9.0</gaugeMax>
+            <gaugeMin>0.0</gaugeMin>
+            <indicatorBreakpoint1>3.0</indicatorBreakpoint1>
+            <indicatorBreakpoint2>6.0</indicatorBreakpoint2>
+            <indicatorHighColor>#C25454</indicatorHighColor>
+            <indicatorLowColor>#54C254</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>Service/Resolution_Time</report>
+            <showPercentage>true</showPercentage>
+            <showTotal>true</showTotal>
+            <showValues>false</showValues>
+            <title>Average Resolution Time</title>
         </components>
         <components>
             <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
@@ -213,6 +262,30 @@
             <title>Closed Cases With Articles</title>
             <useReportChart>false</useReportChart>
         </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>RowCount</column>
+            </chartSummary>
+            <componentType>Donut</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>true</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <footer>Total closed cases from CAP students.</footer>
+            <groupingColumn>Case.Functional_Group__c</groupingColumn>
+            <legendPosition>Bottom</legendPosition>
+            <report>Service/Closed_CAP_Cases_Past_90_Days</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>true</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Closed Cases: CAP Students</title>
+            <useReportChart>false</useReportChart>
+        </components>
     </middleSection>
     <rightSection>
         <columnSize>Medium</columnSize>
@@ -231,6 +304,52 @@
             <expandOthers>true</expandOthers>
             <groupingColumn>Case.Category__c</groupingColumn>
             <header>FUNCTIONAL GROUPS</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Service/Open_Cases_ASU_Online</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>true</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Open Cases: ASU Online</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>RowCount</column>
+            </chartSummary>
+            <componentType>Donut</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>true</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <groupingColumn>Case.Category__c</groupingColumn>
+            <legendPosition>Bottom</legendPosition>
+            <report>Service/Open_Cases_ESM_Online</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>true</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Open Cases: ESM Online</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>RowCount</column>
+            </chartSummary>
+            <componentType>Donut</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>true</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <groupingColumn>Case.Category__c</groupingColumn>
             <legendPosition>Bottom</legendPosition>
             <report>Service/Open_Cases_Financial_Aid</report>
             <showPercentage>false</showPercentage>
@@ -261,6 +380,29 @@
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
             <title>Open Cases: Graduate</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>RowCount</column>
+            </chartSummary>
+            <componentType>Donut</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>true</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>true</expandOthers>
+            <groupingColumn>Case.Category__c</groupingColumn>
+            <legendPosition>Bottom</legendPosition>
+            <report>Service/Open_Cases_Help_Desk</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>true</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Open Cases: Help Desk</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>

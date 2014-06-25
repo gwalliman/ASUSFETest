@@ -5,5 +5,5 @@
     <description>Office of Graduate Education</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>GE Graduate Education</name>
-    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
 </Role>

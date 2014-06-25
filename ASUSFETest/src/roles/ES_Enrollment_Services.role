@@ -5,5 +5,5 @@
     <description>Enrollment Services</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>ES Enrollment Services</name>
-    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
 </Role>

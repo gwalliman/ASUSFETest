@@ -231,6 +231,7 @@
         </filters>
         <label>ASU UG Campaigns</label>
         <sharedTo>
+            <role>ES_Enrollment_Services</role>
             <role>ES_Enrollment_Services_Communication</role>
         </sharedTo>
     </listViews>
@@ -256,6 +257,7 @@
         </filters>
         <label>Admit Campaigns</label>
         <sharedTo>
+            <role>ES_Enrollment_Services</role>
             <role>ES_Enrollment_Services_Communication</role>
         </sharedTo>
     </listViews>
@@ -315,6 +317,7 @@
         </filters>
         <label>Active - No Tests or GRTE Info</label>
         <sharedTo>
+            <role>ES_Enrollment_Services</role>
             <role>ES_Enrollment_Services_Communication</role>
         </sharedTo>
     </listViews>
@@ -329,19 +332,14 @@
         <columns>CAMPAIGN.NUM_CONTACTS</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>CAMPAIGN.ACTIVE</field>
+            <field>CAMPAIGN.STATUS</field>
             <operation>equals</operation>
-            <value>1</value>
+            <value>Completed</value>
         </filters>
         <filters>
             <field>Test_Record__c</field>
             <operation>equals</operation>
             <value>0</value>
-        </filters>
-        <filters>
-            <field>CAMPAIGN.STATUS</field>
-            <operation>equals</operation>
-            <value>Completed</value>
         </filters>
         <label>Completed Status</label>
         <sharedTo>
@@ -552,6 +550,7 @@
         </filters>
         <label>Incomplete App Campaigns</label>
         <sharedTo>
+            <role>ES_Enrollment_Services</role>
             <role>ES_Enrollment_Services_Communication</role>
         </sharedTo>
     </listViews>
@@ -597,6 +596,7 @@
         </filters>
         <label>Planned Status</label>
         <sharedTo>
+            <role>ES_Enrollment_Services</role>
             <role>ES_Enrollment_Services_Communication</role>
         </sharedTo>
     </listViews>
@@ -622,6 +622,7 @@
         </filters>
         <label>Prospect Campaigns</label>
         <sharedTo>
+            <role>ES_Enrollment_Services</role>
             <role>ES_Enrollment_Services_Communication</role>
         </sharedTo>
     </listViews>

@@ -166,6 +166,26 @@
         <name>Athletic_Participation__c</name>
     </fields>
     <fields>
+        <help><!-- A count of the total Student Group records where Status is True and PeopleSoft Code is CP03. Used to determine if this Contact should be flagged as a currently ineligible College Achievement Plan participant. --></help>
+        <label><!-- CAP Ineligible Student Group Count --></label>
+        <name>CAP_Ineligible_Student_Group_Count__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates possible CAP student --></help>
+        <label><!-- CAP Possible --></label>
+        <name>CAP_Possible__c</name>
+    </fields>
+    <fields>
+        <help><!-- A count of the total Student Group records where Status is True and PeopleSoft Code is CP00, CP01, or CP02. Used to determine if this Contact should be flagged as a College Achievement Plan participant. --></help>
+        <label><!-- CAP Student Group Count --></label>
+        <name>CAP_Student_Group_Count__c</name>
+    </fields>
+    <fields>
+        <help><!-- Displays a green icon for a College Achievement Plan participant. Automatically set when the Contact has one or more Student Group records where Status is True and PeopleSoft Code is CP00, CP01, or CP02. --></help>
+        <label><!-- CAP --></label>
+        <name>CAP__c</name>
+    </fields>
+    <fields>
         <label><!-- Contact Preference --></label>
         <name>Contact_Preference__c</name>
         <picklistValues>
@@ -298,6 +318,10 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Geomarket Code --></label>
+        <name>Geomarket_Code__c</name>
+    </fields>
+    <fields>
         <label><!-- Graduate GPA Scale --></label>
         <name>Graduate_GPA_Scale__c</name>
         <relationshipLabel><!-- Contacts (Graduate GPA Scale) --></relationshipLabel>
@@ -319,6 +343,16 @@
         <help><!-- The email this Contact last used when sending a message to an ASU address that is processed by Salesforce. --></help>
         <label><!-- Last Case Email Used --></label>
         <name>Last_Case_Email_Used__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last College Attended --></label>
+        <name>Last_College_Attended__c</name>
+        <relationshipLabel><!-- Contacts (Last College Attended) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Last High School Attended --></label>
+        <name>Last_HS_Attended__c</name>
+        <relationshipLabel><!-- Contacts (Last High School Attended) --></relationshipLabel>
     </fields>
     <fields>
         <name>LeadSource</name>
@@ -393,6 +427,10 @@
         <picklistValues>
             <masterLabel>ASU Online</masterLabel>
             <translation><!-- ASU Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ASU Online Rover</masterLabel>
+            <translation><!-- ASU Online Rover --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>CA Diversity</masterLabel>
@@ -941,6 +979,10 @@
             <masterLabel>WT</masterLabel>
             <translation><!-- WT --></translation>
         </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Work Phone --></label>
+        <name>Work_Phone__c</name>
     </fields>
     <fields>
         <label><!-- CRMI Modified Date --></label>

@@ -4,6 +4,7 @@
     <name>Sustainability</name>
     <publicFolderAccess>ReadOnly</publicFolderAccess>
     <sharedTo>
-        <roleAndSubordinates>ES_Sustainability</roleAndSubordinates>
+        <role>ES_Enrollment_Services_Communication</role>
+        <role>ES_Sustainability</role>
     </sharedTo>
 </EmailFolder>

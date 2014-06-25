@@ -118,6 +118,48 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Affiliation__c</fullName>
+        <description>Affiliation of contact for the new case for FASS.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Affiliation of contact for the new case for FASS.</inlineHelpText>
+        <label>Affiliation</label>
+        <picklist>
+            <picklistValues>
+                <fullName>General Inquiry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other ASU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outside source</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Parent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Third party sponsor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VIP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>AssetId</fullName>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
@@ -130,6 +172,18 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>CAP__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact.CAP__c</formula>
+        <inlineHelpText>Displays a green icon for a College Achievement Plan participant (yellow for possible). Automatically set when the Contact has one or more Student Group records where Status is True and PeopleSoft Code is CP00, CP01, or CP02. (or if possible is checked)</inlineHelpText>
+        <label>CAP</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Category__c</fullName>
         <externalId>false</externalId>
         <label>Category</label>
@@ -138,6 +192,26 @@
             <picklistValues>
                 <fullName>1098-T</fullName>
                 <controllingFieldValues>Student Business Services</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Admissions</fullName>
+                <controllingFieldValues>ASU Online</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising</fullName>
+                <controllingFieldValues>ASU Online</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Blackboard LMS - Tier 1</fullName>
+                <controllingFieldValues>Help Desk</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Blackboard LMS - Tier 2</fullName>
+                <controllingFieldValues>Help Desk</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
@@ -166,6 +240,15 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+                <fullName>ESM Online</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>General Help Desk</fullName>
+                <controllingFieldValues>Help Desk</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
                 <fullName>Graduate Applicant Services</fullName>
                 <default>false</default>
             </picklistValues>
@@ -185,7 +268,7 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
-                <fullName>Loan Research</fullName>
+                <fullName>Loans</fullName>
                 <controllingFieldValues>Financial Aid</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
@@ -201,6 +284,7 @@
             </picklistValues>
             <picklistValues>
                 <fullName>Online Student</fullName>
+                <controllingFieldValues>Financial Aid</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
@@ -222,7 +306,7 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
-                <fullName>QA Research</fullName>
+                <fullName>QA</fullName>
                 <controllingFieldValues>Financial Aid</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
@@ -242,12 +326,7 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
-                <fullName>Returned Mail</fullName>
-                <controllingFieldValues>Financial Aid</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Scholarship Research</fullName>
+                <fullName>Scholarships</fullName>
                 <controllingFieldValues>Financial Aid</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
@@ -277,6 +356,21 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+                <fullName>Student Services - Tier 1</fullName>
+                <controllingFieldValues>Help Desk</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Student Services - Tier 2</fullName>
+                <controllingFieldValues>Help Desk</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical</fullName>
+                <controllingFieldValues>ASU Online</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
                 <fullName>Tempe Cashiering</fullName>
                 <controllingFieldValues>Student Business Services</controllingFieldValues>
                 <default>false</default>
@@ -292,6 +386,11 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+                <fullName>Tuition Waiver</fullName>
+                <controllingFieldValues>Student Business Services</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
                 <fullName>VA Billing</fullName>
                 <controllingFieldValues>Student Business Services</controllingFieldValues>
                 <default>false</default>
@@ -299,6 +398,10 @@
             <picklistValues>
                 <fullName>VIP</fullName>
                 <controllingFieldValues>Financial Aid</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CAP</fullName>
                 <default>false</default>
             </picklistValues>
             <sorted>false</sorted>
@@ -353,6 +456,19 @@
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Created_By_Name__c</fullName>
+        <description>Displays the First and Last Name of the individual who Created this Case. Used for Templates and Visualforce pages.</description>
+        <externalId>false</externalId>
+        <formula>CreatedBy.FirstName &amp; &quot; &quot; &amp; CreatedBy.LastName</formula>
+        <inlineHelpText>Displays the First and Last Name of the individual who Created this Case. Used for Templates and Visualforce pages.</inlineHelpText>
+        <label>Created By Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Customer_emoticon__c</fullName>
@@ -575,10 +691,52 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
                 <fullName>Admission Services - Graduate</fullName>
                 <controllingFieldValues>Closed: Customer Self-Resolved</controllingFieldValues>
                 <controllingFieldValues>Closed: Customer Unresponsive</controllingFieldValues>
+                <controllingFieldValues>Closed: Duplicate</controllingFieldValues>
                 <controllingFieldValues>Closed: Resolved</controllingFieldValues>
                 <controllingFieldValues>Closed: SPAM</controllingFieldValues>
                 <controllingFieldValues>In Progress</controllingFieldValues>
                 <controllingFieldValues>New</controllingFieldValues>
+                <controllingFieldValues>Re-Opened</controllingFieldValues>
+                <controllingFieldValues>Waiting on Customer</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ASU Online</fullName>
+                <controllingFieldValues>Closed: Customer Self-Resolved</controllingFieldValues>
+                <controllingFieldValues>Closed: Customer Unresponsive</controllingFieldValues>
+                <controllingFieldValues>Closed: Duplicate</controllingFieldValues>
+                <controllingFieldValues>Closed: Resolved</controllingFieldValues>
+                <controllingFieldValues>Closed: SPAM</controllingFieldValues>
+                <controllingFieldValues>In Progress</controllingFieldValues>
+                <controllingFieldValues>New</controllingFieldValues>
+                <controllingFieldValues>Re-Opened</controllingFieldValues>
+                <controllingFieldValues>Waiting on Customer</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ESM Online</fullName>
+                <controllingFieldValues>Closed: Customer Self-Resolved</controllingFieldValues>
+                <controllingFieldValues>Closed: Customer Unresponsive</controllingFieldValues>
+                <controllingFieldValues>Closed: Duplicate</controllingFieldValues>
+                <controllingFieldValues>Closed: Resolved</controllingFieldValues>
+                <controllingFieldValues>Closed: SPAM</controllingFieldValues>
+                <controllingFieldValues>In Progress</controllingFieldValues>
+                <controllingFieldValues>New</controllingFieldValues>
+                <controllingFieldValues>Re-Opened</controllingFieldValues>
+                <controllingFieldValues>Waiting on Customer</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>External Unit</fullName>
+                <controllingFieldValues>Closed: Customer Self-Resolved</controllingFieldValues>
+                <controllingFieldValues>Closed: Customer Unresponsive</controllingFieldValues>
+                <controllingFieldValues>Closed: Duplicate</controllingFieldValues>
+                <controllingFieldValues>Closed: Forwarded</controllingFieldValues>
+                <controllingFieldValues>Closed: Resolved</controllingFieldValues>
+                <controllingFieldValues>Closed: SPAM</controllingFieldValues>
+                <controllingFieldValues>In Progress</controllingFieldValues>
+                <controllingFieldValues>New</controllingFieldValues>
+                <controllingFieldValues>Re-Opened</controllingFieldValues>
                 <controllingFieldValues>Waiting on Customer</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
@@ -586,10 +744,25 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
                 <fullName>Financial Aid</fullName>
                 <controllingFieldValues>Closed: Customer Self-Resolved</controllingFieldValues>
                 <controllingFieldValues>Closed: Customer Unresponsive</controllingFieldValues>
+                <controllingFieldValues>Closed: Duplicate</controllingFieldValues>
                 <controllingFieldValues>Closed: Resolved</controllingFieldValues>
                 <controllingFieldValues>Closed: SPAM</controllingFieldValues>
                 <controllingFieldValues>In Progress</controllingFieldValues>
                 <controllingFieldValues>New</controllingFieldValues>
+                <controllingFieldValues>Re-Opened</controllingFieldValues>
+                <controllingFieldValues>Waiting on Customer</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Help Desk</fullName>
+                <controllingFieldValues>Closed: Customer Self-Resolved</controllingFieldValues>
+                <controllingFieldValues>Closed: Customer Unresponsive</controllingFieldValues>
+                <controllingFieldValues>Closed: Duplicate</controllingFieldValues>
+                <controllingFieldValues>Closed: Resolved</controllingFieldValues>
+                <controllingFieldValues>Closed: SPAM</controllingFieldValues>
+                <controllingFieldValues>In Progress</controllingFieldValues>
+                <controllingFieldValues>New</controllingFieldValues>
+                <controllingFieldValues>Re-Opened</controllingFieldValues>
                 <controllingFieldValues>Waiting on Customer</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
@@ -597,10 +770,12 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
                 <fullName>Registrar</fullName>
                 <controllingFieldValues>Closed: Customer Self-Resolved</controllingFieldValues>
                 <controllingFieldValues>Closed: Customer Unresponsive</controllingFieldValues>
+                <controllingFieldValues>Closed: Duplicate</controllingFieldValues>
                 <controllingFieldValues>Closed: Resolved</controllingFieldValues>
                 <controllingFieldValues>Closed: SPAM</controllingFieldValues>
                 <controllingFieldValues>In Progress</controllingFieldValues>
                 <controllingFieldValues>New</controllingFieldValues>
+                <controllingFieldValues>Re-Opened</controllingFieldValues>
                 <controllingFieldValues>Waiting on Customer</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
@@ -608,16 +783,13 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
                 <fullName>Student Business Services</fullName>
                 <controllingFieldValues>Closed: Customer Self-Resolved</controllingFieldValues>
                 <controllingFieldValues>Closed: Customer Unresponsive</controllingFieldValues>
+                <controllingFieldValues>Closed: Duplicate</controllingFieldValues>
                 <controllingFieldValues>Closed: Resolved</controllingFieldValues>
                 <controllingFieldValues>Closed: SPAM</controllingFieldValues>
                 <controllingFieldValues>In Progress</controllingFieldValues>
                 <controllingFieldValues>New</controllingFieldValues>
+                <controllingFieldValues>Re-Opened</controllingFieldValues>
                 <controllingFieldValues>Waiting on Customer</controllingFieldValues>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>External Unit</fullName>
-                <controllingFieldValues>Closed: Forwarded</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <sorted>false</sorted>
@@ -652,6 +824,7 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
     </fields>
     <fields>
         <fullName>Origin</fullName>
+        <inlineHelpText>Field Not Used. ASU utilizes custom Origin field dependent on functional group.</inlineHelpText>
         <picklist>
             <picklistValues>
                 <fullName>Email</fullName>
@@ -668,6 +841,86 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
             <sorted>false</sorted>
         </picklist>
         <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Origin__c</fullName>
+        <description>Where was this Case initiated? Dependant on Functional Group.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Where was this Case initiated?</inlineHelpText>
+        <label>Origin</label>
+        <picklist>
+            <controllingField>Functional_Group__c</controllingField>
+            <picklistValues>
+                <fullName>Advising Community</fullName>
+                <controllingFieldValues>Financial Aid</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BBSS</fullName>
+                <controllingFieldValues>Financial Aid</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <controllingFieldValues>ASU Online</controllingFieldValues>
+                <controllingFieldValues>Admission Services - Graduate</controllingFieldValues>
+                <controllingFieldValues>ESM Online</controllingFieldValues>
+                <controllingFieldValues>External Unit</controllingFieldValues>
+                <controllingFieldValues>Financial Aid</controllingFieldValues>
+                <controllingFieldValues>Help Desk</controllingFieldValues>
+                <controllingFieldValues>Registrar</controllingFieldValues>
+                <controllingFieldValues>Student Business Services</controllingFieldValues>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Incoming Call</fullName>
+                <controllingFieldValues>ASU Online</controllingFieldValues>
+                <controllingFieldValues>Admission Services - Graduate</controllingFieldValues>
+                <controllingFieldValues>ESM Online</controllingFieldValues>
+                <controllingFieldValues>External Unit</controllingFieldValues>
+                <controllingFieldValues>Financial Aid</controllingFieldValues>
+                <controllingFieldValues>Help Desk</controllingFieldValues>
+                <controllingFieldValues>Registrar</controllingFieldValues>
+                <controllingFieldValues>Student Business Services</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Person</fullName>
+                <controllingFieldValues>ASU Online</controllingFieldValues>
+                <controllingFieldValues>Admission Services - Graduate</controllingFieldValues>
+                <controllingFieldValues>ESM Online</controllingFieldValues>
+                <controllingFieldValues>External Unit</controllingFieldValues>
+                <controllingFieldValues>Financial Aid</controllingFieldValues>
+                <controllingFieldValues>Help Desk</controllingFieldValues>
+                <controllingFieldValues>Registrar</controllingFieldValues>
+                <controllingFieldValues>Student Business Services</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>My ASU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Orientation</fullName>
+                <controllingFieldValues>Financial Aid</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outgoing Call</fullName>
+                <controllingFieldValues>Financial Aid</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Web</fullName>
+                <controllingFieldValues>Financial Aid</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
@@ -701,6 +954,32 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Private_Note_ASU_Online__c</fullName>
+        <description>Private notes are visible only to ASU Online team members and any other user who has been given explicit permission to view.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Private notes are visible only to ASU Online team members and any other user who has been given explicit permission to view.</inlineHelpText>
+        <label>Private Note - ASU Online</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Private_Note_ESM_Online__c</fullName>
+        <description>Private notes are visible only to ESM Online team members and any other user who has been given explicit permission to view.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Private notes are visible only to ESM Online team members and any other user who has been given explicit permission to view.</inlineHelpText>
+        <label>Private Note - ESM Online</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
         <fullName>Private_Note_Financial_Aid__c</fullName>
         <description>Private notes are visible only to Financial Aid team members and any other user who has been given explicit permission to view.</description>
         <externalId>false</externalId>
@@ -720,6 +999,19 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
         <inlineHelpText>Private notes are visible only to Graduate Admissions team members and any other user who has been given explicit permission to view.</inlineHelpText>
         <label>Private Note - Graduate Admissions</label>
         <length>5000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Private_Note_Help_Desk__c</fullName>
+        <description>Private notes are visible only to Help Desk team members and any other user who has been given explicit permission to view.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Private notes are visible only to Help Desk team members and any other user who has been given explicit permission to view.</inlineHelpText>
+        <label>Private Note - Help Desk</label>
+        <length>32768</length>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -834,8 +1126,194 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
                 <closed>true</closed>
                 <default>false</default>
             </picklistValues>
+            <picklistValues>
+                <fullName>Re-Opened</fullName>
+                <closed>false</closed>
+                <default>false</default>
+            </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sub_Category_del__c</fullName>
+        <externalId>false</externalId>
+        <label>Sub-Category</label>
+        <picklist>
+            <controllingField>Category__c</controllingField>
+            <picklistValues>
+                <fullName>Admissions</fullName>
+                <controllingFieldValues>General Help Desk</controllingFieldValues>
+                <controllingFieldValues>Student Services - Tier 1</controllingFieldValues>
+                <controllingFieldValues>Student Services - Tier 2</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CHS</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CLAS - English</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CLAS - Hugh Downs</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CLAS - Politics &amp; Global Studies</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CLAS - Sanford School</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CLAS - SHPRS</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CLAS - SILC</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CLAS - Social Transform</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CNHI - Nutrition and Health</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CPP</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cronkite</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CTI</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Directory</fullName>
+                <controllingFieldValues>General Help Desk</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <controllingFieldValues>Student Services - Tier 1</controllingFieldValues>
+                <controllingFieldValues>Student Services - Tier 2</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ENG - CIDSE</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ENG - SECEE</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Event Information</fullName>
+                <controllingFieldValues>General Help Desk</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Financial Aid</fullName>
+                <controllingFieldValues>General Help Desk</controllingFieldValues>
+                <controllingFieldValues>Student Services - Tier 1</controllingFieldValues>
+                <controllingFieldValues>Student Services - Tier 2</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Guest Access</fullName>
+                <controllingFieldValues>General Help Desk</controllingFieldValues>
+                <controllingFieldValues>Student Services - Tier 1</controllingFieldValues>
+                <controllingFieldValues>Student Services - Tier 2</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Herberger</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Media</fullName>
+                <controllingFieldValues>General Help Desk</controllingFieldValues>
+                <controllingFieldValues>Student Services - Tier 1</controllingFieldValues>
+                <controllingFieldValues>Student Services - Tier 2</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MLFTC</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New College</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Online Learning</fullName>
+                <controllingFieldValues>General Help Desk</controllingFieldValues>
+                <controllingFieldValues>Student Services - Tier 1</controllingFieldValues>
+                <controllingFieldValues>Student Services - Tier 2</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <controllingFieldValues>General Help Desk</controllingFieldValues>
+                <controllingFieldValues>Student Services - Tier 1</controllingFieldValues>
+                <controllingFieldValues>Student Services - Tier 2</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Registrar</fullName>
+                <controllingFieldValues>General Help Desk</controllingFieldValues>
+                <controllingFieldValues>Student Services - Tier 1</controllingFieldValues>
+                <controllingFieldValues>Student Services - Tier 2</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SLS</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Software</fullName>
+                <controllingFieldValues>General Help Desk</controllingFieldValues>
+                <controllingFieldValues>Student Services - Tier 1</controllingFieldValues>
+                <controllingFieldValues>Student Services - Tier 2</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WPC</fullName>
+                <controllingFieldValues>Advising</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
@@ -862,6 +1340,20 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Web_Submission__c</fullName>
+        <description>When a Case is created via a webform submission, that form can pass a hidden identifier to this text field. This is then used to correctly assign the Case (via Workflow or Apex).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When a Case is created via a webform submission, that form can pass a hidden identifier to this text field. This is then used to correctly assign the Case (via Workflow or Apex).</inlineHelpText>
+        <label>Web Submission</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>pkbgeolocalization__c</fullName>
         <description>Store the geolocalization of the customer on case creation from mobile.</description>
         <displayLocationInDecimal>false</displayLocationInDecimal>
@@ -876,38 +1368,18 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
         <type>Location</type>
     </fields>
     <listViews>
-        <fullName>ALL_ASU_EMAIL_SERVICE_CASES</fullName>
-        <columns>CASES.CASE_NUMBER</columns>
-        <columns>Category__c</columns>
-        <columns>Functional_Group__c</columns>
-        <columns>NAME</columns>
-        <columns>CASES.SUBJECT</columns>
-        <columns>CASES.STATUS</columns>
-        <columns>CASES.PRIORITY</columns>
-        <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>CORE.USERS.ALIAS</field>
-            <operation>equals</operation>
-            <value>asuemail</value>
-        </filters>
-        <label>ALL ASU EMAIL SERVICE CASES</label>
-        <sharedTo>
-            <roleAndSubordinates>UTO_University_Technology_Office</roleAndSubordinates>
-        </sharedTo>
-    </listViews>
-    <listViews>
         <fullName>ALL_OPEN_CASES</fullName>
+        <columns>CAP__c</columns>
+        <columns>Functional_Group__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>Category__c</columns>
-        <columns>Functional_Group__c</columns>
+        <columns>Sub_Category_del__c</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>CASES.CLOSED</field>
@@ -921,21 +1393,80 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
         </filters>
         <label>ALL OPEN CASES</label>
         <sharedTo>
-            <roleAndSubordinates>UTO_University_Technology_Office</roleAndSubordinates>
+            <group>UTO_Administration</group>
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>All_Open_Financial_Aid</fullName>
+        <fullName>All_Open_ASU_Online</fullName>
+        <columns>CAP__c</columns>
         <columns>Category__c</columns>
+        <columns>Sub_Category_del__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
-        <columns>CASES.ORIGIN</columns>
+        <columns>OWNER_NAME</columns>
         <columns>CASES.CREATED_DATE</columns>
         <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Functional_Group__c</field>
+            <operation>equals</operation>
+            <value>ASU Online</value>
+        </filters>
+        <label>All Open - ASU Online</label>
+        <sharedTo>
+            <group>ASU_Online_Case</group>
+            <group>UTO_Administration</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_ESM_Online</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CAP__c</columns>
+        <columns>Category__c</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>OWNER_NAME</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Functional_Group__c</field>
+            <operation>equals</operation>
+            <value>ESM Online</value>
+        </filters>
+        <label>All Open - ESM Online</label>
+        <sharedTo>
+            <group>ESM_Online_Case</group>
+            <group>UTO_Administration</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_Financial_Aid</fullName>
+        <columns>CAP__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Category__c</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
         <columns>ChangeCaseOwner__Case_Owner2__c</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.LAST_UPDATE</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>CASES.CLOSED</field>
@@ -955,15 +1486,16 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
     </listViews>
     <listViews>
         <fullName>All_Open_Graduate_Admission_Services</fullName>
-        <columns>Category__c</columns>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
+        <columns>Category__c</columns>
         <columns>NAME</columns>
-        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
-        <columns>CASES.ORIGIN</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
         <columns>CASES.LAST_UPDATE</columns>
-        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>CASES.CLOSED</field>
@@ -982,15 +1514,47 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>All_Open_Registrar</fullName>
-        <columns>Category__c</columns>
+        <fullName>All_Open_Help_Desk</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
+        <columns>Category__c</columns>
+        <columns>Sub_Category_del__c</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>OWNER_NAME</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Functional_Group__c</field>
+            <operation>equals</operation>
+            <value>Help Desk</value>
+        </filters>
+        <label>All Open - Help Desk</label>
+        <sharedTo>
+            <group>Help_Desk_Case</group>
+            <group>UTO_Administration</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_Registrar</fullName>
+        <columns>CAP__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Category__c</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.LAST_UPDATE</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>CASES.CLOSED</field>
@@ -1010,14 +1574,16 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
     </listViews>
     <listViews>
         <fullName>All_Open_Student_Business_Services</fullName>
-        <columns>Category__c</columns>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
+        <columns>Category__c</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CASES.LAST_UPDATE</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>CASES.CLOSED</field>
@@ -1032,6 +1598,114 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
         <label>All Open - Student Business Services</label>
         <sharedTo>
             <group>Student_Business_Services_Case</group>
+            <group>UTO_Administration</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>CAP</fullName>
+        <columns>CAP__c</columns>
+        <columns>Category__c</columns>
+        <columns>Functional_Group__c</columns>
+        <columns>Sub_Category_del__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAP__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>CAP</label>
+    </listViews>
+    <listViews>
+        <fullName>Closed_ASU_Online</fullName>
+        <columns>CAP__c</columns>
+        <columns>Category__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Functional_Group__c</field>
+            <operation>equals</operation>
+            <value>ASU Online</value>
+        </filters>
+        <label>Closed - ASU Online</label>
+        <sharedTo>
+            <group>ASU_Online_Case</group>
+            <group>UTO_Administration</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Closed_CAP</fullName>
+        <columns>CAP__c</columns>
+        <columns>Category__c</columns>
+        <columns>Functional_Group__c</columns>
+        <columns>Sub_Category_del__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAP__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Closed: CAP</label>
+    </listViews>
+    <listViews>
+        <fullName>Closed_ESM_Online</fullName>
+        <columns>CAP__c</columns>
+        <columns>Category__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Functional_Group__c</field>
+            <operation>equals</operation>
+            <value>ESM Online</value>
+        </filters>
+        <label>Closed - ESM Online</label>
+        <sharedTo>
+            <group>ESM_Online_Case</group>
             <group>UTO_Administration</group>
         </sharedTo>
     </listViews>
@@ -1088,6 +1762,34 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
         </sharedTo>
     </listViews>
     <listViews>
+        <fullName>Closed_Help_Desk</fullName>
+        <columns>CAP__c</columns>
+        <columns>Category__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Functional_Group__c</field>
+            <operation>equals</operation>
+            <value>Help Desk</value>
+        </filters>
+        <label>Closed - Help Desk</label>
+        <sharedTo>
+            <group>Help_Desk_Case</group>
+            <group>UTO_Administration</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
         <fullName>Closed_Registrar</fullName>
         <columns>Category__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
@@ -1141,14 +1843,16 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
     </listViews>
     <listViews>
         <fullName>Collections_Student_Business_Services</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Queue</filterScope>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>Category__c</field>
             <operation>equals</operation>
@@ -1160,20 +1864,21 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
             <value>1</value>
         </filters>
         <label>SBS Collections</label>
-        <queue>Student_Business_Services_Case</queue>
         <sharedTo>
             <group>Student_Business_Services_Case</group>
         </sharedTo>
     </listViews>
     <listViews>
         <fullName>Downtown_Campus_Registrar</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CASES.LAST_UPDATE</columns>
         <filterScope>Queue</filterScope>
         <filters>
             <field>Category__c</field>
@@ -1193,14 +1898,16 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
     </listViews>
     <listViews>
         <fullName>FA_Counselor_Financial_Aid</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Queue</filterScope>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>Category__c</field>
             <operation>equals</operation>
@@ -1212,21 +1919,22 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
             <value>1</value>
         </filters>
         <label>FA Counselor</label>
-        <queue>Financial_Aid_Case</queue>
         <sharedTo>
             <group>Student_Financial_Assistance_Case</group>
         </sharedTo>
     </listViews>
     <listViews>
         <fullName>FA_VIP</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Queue</filterScope>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>Category__c</field>
             <operation>equals</operation>
@@ -1238,20 +1946,21 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
             <value>1</value>
         </filters>
         <label>FA VIP</label>
-        <queue>Financial_Aid_Case</queue>
         <sharedTo>
             <group>Student_Financial_Assistance_Case</group>
         </sharedTo>
     </listViews>
     <listViews>
         <fullName>Graduation_Registrar</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CASES.LAST_UPDATE</columns>
         <filterScope>Queue</filterScope>
         <filters>
             <field>Category__c</field>
@@ -1270,15 +1979,160 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>Late_Fee_Appeals_Student_Business_Serv</fullName>
+        <fullName>HD_Blackboard_LMS_Tier_1</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Queue</filterScope>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Blackboard LMS - Tier 1</value>
+        </filters>
+        <label>HD Blackboard LMS - Tier 1</label>
+        <sharedTo>
+            <group>Help_Desk_Case</group>
+            <group>UTO_Administration</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>HD_Blackboard_LMS_Tier_2</fullName>
+        <columns>CAP__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Blackboard LMS - Tier 2</value>
+        </filters>
+        <label>HD Blackboard LMS - Tier 2</label>
+        <sharedTo>
+            <group>Help_Desk_Case</group>
+            <group>UTO_Administration</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>HD_General</fullName>
+        <columns>CAP__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Sub_Category_del__c</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>General Help Desk</value>
+        </filters>
+        <label>HD General</label>
+        <sharedTo>
+            <group>Help_Desk_Case</group>
+            <group>UTO_Administration</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>HD_Student_Services_Tier_1</fullName>
+        <columns>CAP__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Sub_Category_del__c</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Student Services - Tier 1</value>
+        </filters>
+        <label>HD Student Services - Tier 1</label>
+        <sharedTo>
+            <group>Help_Desk_Case</group>
+            <group>UTO_Administration</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>HD_Student_Services_Tier_2</fullName>
+        <columns>CAP__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Sub_Category_del__c</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Student Services - Tier 2</value>
+        </filters>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>HD Student Services - Tier 2</label>
+        <sharedTo>
+            <group>Help_Desk_Case</group>
+            <group>UTO_Administration</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Late_Fee_Appeals_Student_Business_Serv</fullName>
+        <columns>CAP__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>Category__c</field>
             <operation>equals</operation>
@@ -1290,33 +2144,33 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
             <value>1</value>
         </filters>
         <label>SBS Late Fee Appeals</label>
-        <queue>Student_Business_Services_Case</queue>
         <sharedTo>
             <group>Student_Business_Services_Case</group>
         </sharedTo>
     </listViews>
     <listViews>
         <fullName>Loan_Research_Financial_Aid</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Queue</filterScope>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>Category__c</field>
             <operation>equals</operation>
-            <value>Loan Research</value>
+            <value>Loans</value>
         </filters>
         <filters>
             <field>CASES.CLOSED</field>
             <operation>notEqual</operation>
             <value>1</value>
         </filters>
-        <label>FA Loan Research</label>
-        <queue>Financial_Aid_Case</queue>
+        <label>FA Loans</label>
         <sharedTo>
             <group>Student_Financial_Assistance_Case</group>
         </sharedTo>
@@ -1337,15 +2191,102 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
         <label>My Open Cases</label>
     </listViews>
     <listViews>
-        <fullName>Office_Specialist_Financial_Aid</fullName>
+        <fullName>OL_ASU_Admissions</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Queue</filterScope>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Admissions</value>
+        </filters>
+        <label>OL ASU Admissions</label>
+        <sharedTo>
+            <group>ASU_Online_Case</group>
+            <group>UTO_Administration</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>OL_ASU_Advising</fullName>
+        <columns>CAP__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>Sub_Category_del__c</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Advising</value>
+        </filters>
+        <label>OL ASU Advising</label>
+        <sharedTo>
+            <group>ASU_Online_Case</group>
+            <group>UTO_Administration</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>OL_ASU_Technical</fullName>
+        <columns>CAP__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Technical</value>
+        </filters>
+        <label>OL ASU Technical</label>
+        <sharedTo>
+            <group>ASU_Online_Case</group>
+            <group>UTO_Administration</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Office_Specialist_Financial_Aid</fullName>
+        <columns>CAP__c</columns>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>Category__c</field>
             <operation>equals</operation>
@@ -1357,21 +2298,22 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
             <value>1</value>
         </filters>
         <label>FA Office Specialist</label>
-        <queue>Financial_Aid_Case</queue>
         <sharedTo>
             <group>Student_Financial_Assistance_Case</group>
         </sharedTo>
     </listViews>
     <listViews>
         <fullName>Online_Student_Financial_Aid</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Queue</filterScope>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>Category__c</field>
             <operation>equals</operation>
@@ -1383,20 +2325,21 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
             <value>1</value>
         </filters>
         <label>FA Online Student</label>
-        <queue>Financial_Aid_Case</queue>
         <sharedTo>
             <group>Student_Financial_Assistance_Case</group>
         </sharedTo>
     </listViews>
     <listViews>
         <fullName>Outgoing_Transcripts_Registrar</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CASES.LAST_UPDATE</columns>
         <filterScope>Queue</filterScope>
         <filters>
             <field>Category__c</field>
@@ -1416,13 +2359,15 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
     </listViews>
     <listViews>
         <fullName>Poly_Campus_Registrar</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CASES.LAST_UPDATE</columns>
         <filterScope>Queue</filterScope>
         <filters>
             <field>Category__c</field>
@@ -1442,40 +2387,42 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
     </listViews>
     <listViews>
         <fullName>QA_Research_Financial_Aid</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Queue</filterScope>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>Category__c</field>
             <operation>equals</operation>
-            <value>QA Research</value>
+            <value>QA</value>
         </filters>
         <filters>
             <field>CASES.CLOSED</field>
             <operation>notEqual</operation>
             <value>1</value>
         </filters>
-        <label>FA QA Research</label>
-        <queue>Financial_Aid_Case</queue>
+        <label>FA QA</label>
         <sharedTo>
             <group>Student_Financial_Assistance_Case</group>
         </sharedTo>
     </listViews>
     <listViews>
         <fullName>REG_Open_Assigned</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>Category__c</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
-        <columns>CASES.CREATED_DATE</columns>
         <columns>ChangeCaseOwner__Case_Owner2__c</columns>
-        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CASES.LAST_UPDATE</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>Functional_Group__c</field>
@@ -1499,13 +2446,15 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
     </listViews>
     <listViews>
         <fullName>RegTech_Registrar</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CASES.LAST_UPDATE</columns>
         <filterScope>Queue</filterScope>
         <filters>
             <field>Category__c</field>
@@ -1525,13 +2474,15 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
     </listViews>
     <listViews>
         <fullName>Registrar_Registrar</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CASES.LAST_UPDATE</columns>
         <filterScope>Queue</filterScope>
         <filters>
             <field>Category__c</field>
@@ -1551,13 +2502,15 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
     </listViews>
     <listViews>
         <fullName>Residency_Registrar</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CASES.LAST_UPDATE</columns>
         <filterScope>Queue</filterScope>
         <filters>
             <field>Category__c</field>
@@ -1576,62 +2529,44 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>Returned_Mail</fullName>
+        <fullName>Scholarship_Research_Financial_Aid</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Queue</filterScope>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>Category__c</field>
             <operation>equals</operation>
-            <value>Returned Mail</value>
+            <value>Scholarships</value>
         </filters>
         <filters>
             <field>CASES.CLOSED</field>
             <operation>notEqual</operation>
             <value>1</value>
         </filters>
-        <label>FA Returned Mail</label>
-        <queue>Financial_Aid_Case</queue>
-        <sharedTo>
-            <group>Student_Financial_Assistance_Case</group>
-        </sharedTo>
-    </listViews>
-    <listViews>
-        <fullName>Scholarship_Research_Financial_Aid</fullName>
-        <columns>CASES.CASE_NUMBER</columns>
-        <columns>NAME</columns>
-        <columns>CASES.SUBJECT</columns>
-        <columns>CASES.STATUS</columns>
-        <columns>CASES.PRIORITY</columns>
-        <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Queue</filterScope>
-        <filters>
-            <field>Category__c</field>
-            <operation>equals</operation>
-            <value>Scholarship Research</value>
-        </filters>
-        <label>FA Scholarship Research</label>
-        <queue>Financial_Aid_Case</queue>
+        <label>FA Scholarships</label>
         <sharedTo>
             <group>Student_Financial_Assistance_Case</group>
         </sharedTo>
     </listViews>
     <listViews>
         <fullName>Sponsor_Billings_Student_Business_Serv</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Queue</filterScope>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>Category__c</field>
             <operation>equals</operation>
@@ -1643,21 +2578,22 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
             <value>1</value>
         </filters>
         <label>SBS Sponsor Billings</label>
-        <queue>Student_Business_Services_Case</queue>
         <sharedTo>
             <group>Student_Business_Services_Case</group>
         </sharedTo>
     </listViews>
     <listViews>
         <fullName>Student_Accounts_Student_Business_Serv</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Queue</filterScope>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>Category__c</field>
             <operation>equals</operation>
@@ -1669,21 +2605,22 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
             <value>1</value>
         </filters>
         <label>SBS Student Accounts</label>
-        <queue>Student_Business_Services_Case</queue>
         <sharedTo>
             <group>Student_Business_Services_Case</group>
         </sharedTo>
     </listViews>
     <listViews>
         <fullName>Student_Business_Services</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Queue</filterScope>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>Category__c</field>
             <operation>equals</operation>
@@ -1695,21 +2632,22 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
             <value>1</value>
         </filters>
         <label>SBS Student Business Services</label>
-        <queue>Student_Business_Services_Case</queue>
         <sharedTo>
             <group>Student_Business_Services_Case</group>
         </sharedTo>
     </listViews>
     <listViews>
         <fullName>Student_Employment_Financial_Aid</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Queue</filterScope>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>Category__c</field>
             <operation>equals</operation>
@@ -1721,21 +2659,22 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
             <value>1</value>
         </filters>
         <label>FA Student Employment</label>
-        <queue>Financial_Aid_Case</queue>
         <sharedTo>
             <group>Student_Financial_Assistance_Case</group>
         </sharedTo>
     </listViews>
     <listViews>
         <fullName>TIP_Late_Reg_Student_Business_Serv</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Queue</filterScope>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>Category__c</field>
             <operation>equals</operation>
@@ -1747,21 +2686,22 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
             <value>1</value>
         </filters>
         <label>SBS TIP Late Registration Appeals</label>
-        <queue>Student_Business_Services_Case</queue>
         <sharedTo>
             <group>Student_Business_Services_Case</group>
         </sharedTo>
     </listViews>
     <listViews>
         <fullName>Tempe_Cashiering_Student_Business_Serv</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Queue</filterScope>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>Category__c</field>
             <operation>equals</operation>
@@ -1773,21 +2713,22 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
             <value>1</value>
         </filters>
         <label>SBS Tempe Cashiering</label>
-        <queue>Student_Business_Services_Case</queue>
         <sharedTo>
             <group>Student_Business_Services_Case</group>
         </sharedTo>
     </listViews>
     <listViews>
         <fullName>Tuition_Issues_Student_Business_Serv</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Queue</filterScope>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>Category__c</field>
             <operation>equals</operation>
@@ -1799,21 +2740,22 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
             <value>1</value>
         </filters>
         <label>SBS Tuition Issues</label>
-        <queue>Student_Business_Services_Case</queue>
         <sharedTo>
             <group>Student_Business_Services_Case</group>
         </sharedTo>
     </listViews>
     <listViews>
         <fullName>VA_Billing_Student_Business_Serv</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Queue</filterScope>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>Category__c</field>
             <operation>equals</operation>
@@ -1825,21 +2767,22 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
             <value>1</value>
         </filters>
         <label>SBS VA Billing</label>
-        <queue>Student_Business_Services_Case</queue>
         <sharedTo>
             <group>Student_Business_Services_Case</group>
         </sharedTo>
     </listViews>
     <listViews>
         <fullName>X1098_T_Student_Business_Services</fullName>
+        <columns>CAP__c</columns>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
         <columns>CASES.SUBJECT</columns>
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
+        <columns>ChangeCaseOwner__Case_Owner2__c</columns>
         <columns>CASES.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Queue</filterScope>
+        <columns>CASES.LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>Category__c</field>
             <operation>equals</operation>
@@ -1851,7 +2794,6 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
             <value>1</value>
         </filters>
         <label>SBS 1098-T</label>
-        <queue>Student_Business_Services_Case</queue>
         <sharedTo>
             <group>Student_Business_Services_Case</group>
         </sharedTo>
@@ -1864,9 +2806,60 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
         <businessProcess>ASU Service</businessProcess>
         <label>ASU Service</label>
         <picklistValues>
+            <picklist>Affiliation__c</picklist>
+            <values>
+                <fullName>General Inquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other ASU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outside source</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Third party sponsor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Category__c</picklist>
             <values>
                 <fullName>1098-T</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Admissions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advising</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Blackboard LMS - Tier 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Blackboard LMS - Tier 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAP</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1890,6 +2883,14 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
                 <default>false</default>
             </values>
             <values>
+                <fullName>ESM Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Help Desk</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Graduate Applicant Services</fullName>
                 <default>false</default>
             </values>
@@ -1906,7 +2907,7 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
                 <default>false</default>
             </values>
             <values>
-                <fullName>Loan Research</fullName>
+                <fullName>Loans</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1934,7 +2935,7 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
                 <default>false</default>
             </values>
             <values>
-                <fullName>QA Research</fullName>
+                <fullName>QA</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1950,11 +2951,7 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
                 <default>false</default>
             </values>
             <values>
-                <fullName>Returned Mail</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Scholarship Research</fullName>
+                <fullName>Scholarships</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1978,7 +2975,19 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
                 <default>false</default>
             </values>
             <values>
+                <fullName>Student Services - Tier 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student Services - Tier 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>TIP Late Registration Appeals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1987,6 +2996,10 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
             </values>
             <values>
                 <fullName>Tuition Calculation Issues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tuition Waiver</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -2139,7 +3152,15 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
         <picklistValues>
             <picklist>Functional_Group__c</picklist>
             <values>
+                <fullName>ASU Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Admission Services - Graduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ESM Online</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -2148,6 +3169,10 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
             </values>
             <values>
                 <fullName>Financial Aid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Help Desk</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -2175,6 +3200,41 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Origin__c</picklist>
+            <values>
+                <fullName>Advising Community</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BBSS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Person</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incoming Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Orientation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outgoing Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Priority</picklist>
             <values>
                 <fullName>High</fullName>
@@ -2188,36 +3248,135 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
         <picklistValues>
             <picklist>Reason</picklist>
             <values>
-                <fullName>Complex functionality</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Existing problem</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Instructions not clear</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>New problem</fullName>
                 <default>false</default>
             </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_Category_del__c</picklist>
             <values>
-                <fullName>User didn%27t attend training</fullName>
+                <fullName>Admissions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CHS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLAS - English</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLAS - Hugh Downs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLAS - Politics %26 Global Studies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLAS - SHPRS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLAS - SILC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLAS - Sanford School</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLAS - Social Transform</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CNHI - Nutrition and Health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CPP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CTI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cronkite</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Directory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ENG - CIDSE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ENG - SECEE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial Aid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Guest Access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Herberger</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MLFTC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New College</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online Learning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Registrar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SLS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Software</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WPC</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
         <picklistValues>
             <picklist>Type</picklist>
-            <values>
-                <fullName>Feature Request</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Problem</fullName>
-                <default>false</default>
-            </values>
             <values>
                 <fullName>Question</fullName>
                 <default>false</default>
@@ -2229,6 +3388,8 @@ LEN(TEXT(Forward_To_Unit__c)) - FIND(&quot;(&quot;,TEXT(Forward_To_Unit__c))-1)
         <customTabListAdditionalFields>CASES.SUBJECT</customTabListAdditionalFields>
         <customTabListAdditionalFields>CASES.CREATED_DATE</customTabListAdditionalFields>
         <customTabListAdditionalFields>CASES.PRIORITY</customTabListAdditionalFields>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <listViewButtons>takeownership__Take_Ownership_Multi</listViewButtons>
         <lookupDialogsAdditionalFields>CASES.CASE_NUMBER</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>CASES.SUBJECT</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>

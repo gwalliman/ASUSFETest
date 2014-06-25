@@ -4,6 +4,7 @@
     <name>College of Liberal Arts &amp; Science</name>
     <publicFolderAccess>ReadWrite</publicFolderAccess>
     <sharedTo>
+        <role>ES_Enrollment_Services_Communication</role>
         <role>ES_Liberal_Arts_Sciences</role>
     </sharedTo>
 </EmailFolder>

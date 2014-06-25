@@ -4,6 +4,7 @@
     <name>Coll Technology &amp; Innovation</name>
     <publicFolderAccess>ReadOnly</publicFolderAccess>
     <sharedTo>
-        <roleAndSubordinates>Coll_Tech_Innovation</roleAndSubordinates>
+        <role>Coll_Tech_Innovation</role>
+        <role>ES_Enrollment_Services_Communication</role>
     </sharedTo>
 </EmailFolder>

@@ -55,6 +55,15 @@
         <template>Case_Management/Forward_Case_to_External_Unit_Default</template>
     </alerts>
     <fieldUpdates>
+        <fullName>Set_Category_to_General_Help_Desk</fullName>
+        <field>Category__c</field>
+        <literalValue>General Help Desk</literalValue>
+        <name>Set Category to General Help Desk</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Set_Category_to_NULL</fullName>
         <field>Category__c</field>
         <name>Set Category to NULL</name>
@@ -82,10 +91,28 @@
         <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Set_Functional_Group_to_ASU_Online</fullName>
+        <field>Functional_Group__c</field>
+        <literalValue>ASU Online</literalValue>
+        <name>Set Functional Group to ASU Online</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Set_Functional_Group_to_Admision_Service</fullName>
         <field>Functional_Group__c</field>
         <literalValue>Admission Services - Graduate</literalValue>
         <name>Set Functional Group to Admision Service</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Functional_Group_to_ESM_Online</fullName>
+        <field>Functional_Group__c</field>
+        <literalValue>ESM Online</literalValue>
+        <name>Set Functional Group to ESM Online</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
@@ -96,6 +123,15 @@
         <field>Functional_Group__c</field>
         <literalValue>Financial Aid</literalValue>
         <name>Set Functional Group to Financial Aid</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Functional_Group_to_Help_Desk</fullName>
+        <field>Functional_Group__c</field>
+        <literalValue>Help Desk</literalValue>
+        <name>Set Functional Group to Help Desk</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
@@ -116,6 +152,33 @@
         <field>Functional_Group__c</field>
         <literalValue>Student Business Services</literalValue>
         <name>Set Functional Group to SBS</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Origin_to_My_ASU</fullName>
+        <field>Origin__c</field>
+        <literalValue>My ASU</literalValue>
+        <name>Set Origin to My ASU</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Owner_to_Help_Desk_Queue</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Help_Desk_Case</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Set Owner to Help Desk Queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Sub_Category_to_null</fullName>
+        <field>Sub_Category_del__c</field>
+        <name>Set Sub-Category to NULL</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
@@ -154,6 +217,38 @@
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
+        <fullName>Set Fields for My ASU Submission</fullName>
+        <actions>
+            <name>Set_Category_to_General_Help_Desk</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Functional_Group_to_Help_Desk</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Origin_to_My_ASU</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Owner_to_Help_Desk_Queue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Web_Submission__c</field>
+            <operation>equals</operation>
+            <value>My ASU Standard</value>
+        </criteriaItems>
+        <description>When a case is created with &quot;My ASU Standard&quot; passed into the Web Submission field, the following other field values are set -
+
+Case Origin: My ASU
+Functional Group: Help Desk
+Category: General Help Desk
+Owner: Help Desk Queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
         <fullName>Set Forward Case To Email</fullName>
         <actions>
             <name>Set_Forward_Case_To_Email</name>
@@ -189,6 +284,25 @@
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
+        <fullName>Transfer Case to ASU Online %28Case%29</fullName>
+        <actions>
+            <name>Set_Category_to_NULL</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Functional_Group_to_ASU_Online</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Sub_Category_to_null</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Rule for a Case being Transferred to the &quot;ASU Online (Case)&quot; Queue.  Clears the Category and sets the Functional Group to &quot;ASU Online&quot;.</description>
+        <formula>ISCHANGED(OwnerId)  &amp;&amp;  Owner:Queue.QueueName = &quot;ASU Online (Case)&quot; &amp;&amp; NOT(BEGINS($User.Username,&quot;asuemailservice@asu.edu&quot;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
         <fullName>Transfer Case to Admission Services %28Case%29</fullName>
         <actions>
             <name>Set_Category_to_NULL</name>
@@ -198,9 +312,32 @@
             <name>Set_Functional_Group_to_Admision_Service</name>
             <type>FieldUpdate</type>
         </actions>
+        <actions>
+            <name>Set_Sub_Category_to_null</name>
+            <type>FieldUpdate</type>
+        </actions>
         <active>true</active>
         <description>Rule for a Case being Transferred to the &quot;Admission Services - Graduate (Case)&quot; Queue. Clears the Category and sets the Functional Group to &quot;Admission Services&quot;</description>
-        <formula>ISCHANGED(OwnerId)   &amp;&amp;   Owner:Queue.QueueName = &quot;Admission Services - Graduate (Case)&quot;</formula>
+        <formula>ISCHANGED(OwnerId)   &amp;&amp;   Owner:Queue.QueueName = &quot;Admission Services - Graduate (Case)&quot; &amp;&amp; NOT(BEGINS($User.Username,&quot;asuemailservice@asu.edu&quot;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Transfer Case to ESM Online %28Case%29</fullName>
+        <actions>
+            <name>Set_Category_to_NULL</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Functional_Group_to_ESM_Online</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Sub_Category_to_null</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Rule for a Case being Transferred to the &quot;ESM Online (Case)&quot; Queue.  Clears the Category and sets the Functional Group to &quot;ESM Online&quot;.</description>
+        <formula>ISCHANGED(OwnerId)  &amp;&amp;  Owner:Queue.QueueName = &quot;ESM Online (Case)&quot; &amp;&amp; NOT(BEGINS($User.Username,&quot;asuemailservice@asu.edu&quot;))</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -213,9 +350,32 @@
             <name>Set_Functional_Group_to_Financial_Aid</name>
             <type>FieldUpdate</type>
         </actions>
+        <actions>
+            <name>Set_Sub_Category_to_null</name>
+            <type>FieldUpdate</type>
+        </actions>
         <active>true</active>
         <description>Rule for a Case being Transferred to the &quot;Financial Aid General (Case)&quot; Queue.  Clears the Category and sets the Functional Group to &quot;Financial Aid&quot;.</description>
-        <formula>ISCHANGED(OwnerId) &amp;&amp; Owner:Queue.QueueName = &quot;Financial Aid (Case)&quot;</formula>
+        <formula>ISCHANGED(OwnerId) &amp;&amp; Owner:Queue.QueueName = &quot;Financial Aid (Case)&quot; &amp;&amp; NOT(BEGINS($User.Username,&quot;asuemailservice@asu.edu&quot;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Transfer Case to Help Desk %28Case%29</fullName>
+        <actions>
+            <name>Set_Category_to_NULL</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Functional_Group_to_Help_Desk</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Sub_Category_to_null</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Rule for a Case being Transferred to the &quot;Help Desk (Case)&quot; Queue.  Clears the Category and sets the Functional Group to &quot;Help Desk&quot;.</description>
+        <formula>ISCHANGED(OwnerId)  &amp;&amp;  Owner:Queue.QueueName = &quot;Help Desk (Case)&quot; &amp;&amp; NOT(BEGINS($User.Username,&quot;asuemailservice@asu.edu&quot;))</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -228,9 +388,13 @@
             <name>Set_Functional_Group_to_SBS</name>
             <type>FieldUpdate</type>
         </actions>
+        <actions>
+            <name>Set_Sub_Category_to_null</name>
+            <type>FieldUpdate</type>
+        </actions>
         <active>true</active>
         <description>Rule for a Case being Transferred to the &quot;Student Business Services (Case)&quot; Queue. Clears the Category and sets the Functional Group to &quot;Student Business Services&quot;.</description>
-        <formula>ISCHANGED(OwnerId)  &amp;&amp;  Owner:Queue.QueueName = &quot;Student Business Services (Case)&quot;</formula>
+        <formula>ISCHANGED(OwnerId)  &amp;&amp;  Owner:Queue.QueueName = &quot;Student Business Services (Case)&quot; &amp;&amp; NOT(BEGINS($User.Username,&quot;asuemailservice@asu.edu&quot;))</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -243,9 +407,13 @@
             <name>Set_Functional_Group_to_Registrar</name>
             <type>FieldUpdate</type>
         </actions>
+        <actions>
+            <name>Set_Sub_Category_to_null</name>
+            <type>FieldUpdate</type>
+        </actions>
         <active>true</active>
         <description>Rule for a Case being Transferred to the &quot;University Registrar Services (Case)&quot; Queue.  Clears the Category and sets the Functional Group to &quot;Registrar&quot;.</description>
-        <formula>ISCHANGED(OwnerId)  &amp;&amp;  Owner:Queue.QueueName = &quot;University Registrar Services (Case)&quot;</formula>
+        <formula>ISCHANGED(OwnerId)  &amp;&amp;  Owner:Queue.QueueName = &quot;University Registrar Services (Case)&quot; &amp;&amp; NOT(BEGINS($User.Username,&quot;asuemailservice@asu.edu&quot;))</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
 </Workflow>

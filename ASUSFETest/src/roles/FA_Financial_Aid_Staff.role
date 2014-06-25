@@ -5,6 +5,6 @@
     <description>FA Financial Aid Staff</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>FA Financial Aid Staff</name>
-    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
     <parentRole>FA_Financial_Aid_Manager</parentRole>
 </Role>

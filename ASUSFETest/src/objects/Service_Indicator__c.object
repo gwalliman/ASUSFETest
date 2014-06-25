@@ -1,0 +1,1399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>SI_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Code</label>
+        <picklist>
+            <picklistValues>
+                <fullName>A10</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A11</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A12</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A13</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A14</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A15</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A16</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AA1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AD1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AD2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AD3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AD4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AD5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AD6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AD7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AD8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AD9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CC1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CC2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F01</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F02</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F03</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F04</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F05</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F06</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F07</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F08</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F09</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F10</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F11</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F12</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F13</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F14</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F15</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F16</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F17</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F18</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F19</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F20</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F21</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F22</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FSS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FST</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HR1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HR2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HR3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LW1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S01</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S02</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S03</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S04</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S05</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S06</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S07</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S08</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S09</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S10</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S11</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S12</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S13</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S14</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S15</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S16</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S17</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S18</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S19</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S20</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S21</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S22</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S23</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S24</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S25</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S26</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S27</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S28</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S29</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S30</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S31</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S32</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S33</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S34</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S35</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S36</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S37</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S38</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S39</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S40</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S41</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S42</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S43</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S44</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S45</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S46</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S47</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S48</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S49</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S50</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S51</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S52</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S53</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S54</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S55</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S56</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S57</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S58</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S59</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S60</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S61</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S62</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S63</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S64</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S65</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S66</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S67</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S68</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S70</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S71</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S72</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S73</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S74</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S75</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S76</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S77</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S78</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S79</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S80</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S81</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S82</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S83</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S84</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S85</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S86</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S87</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S88</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S89</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>S90</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SF1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SF2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFG</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFH</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFQ</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFV</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFW</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFX</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFZ</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SI_Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Service Indicators</relationshipLabel>
+        <relationshipName>Service_Indicators_Contact</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>SI_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Academic Administrative Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Admin Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Administrative Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Admissions Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Admissions Hold 1 Semester</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Admissions VIP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Applied Arts &amp; Sci</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Design</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising EITP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Global Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Graduate College</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Health Solutions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Herberger</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Honors</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Human Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Journalism</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Law</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Letter and Sciences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Liberal Arts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Liberal Arts Online</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising New College</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Nursing and Health</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Public Programs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Sustainability</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Teacher Education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Technology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Univ College at West</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Univ College DPC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising Univ College Poly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advising University College</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AECP std - interested in ASU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AECP Student Restrictions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AZ Universities Network</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Citizenship Verification Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Collection Agency Pmt Verified</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cond Admit-Need Transcripts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Consent for Access</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Converted Pre-SIS Record</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Departmental Misc Holds</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Disqualified</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dual Career Enrollment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>eAdvisor - 2x Off Info Only</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>eAdvisor Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ECSI AR Assignments</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Employee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Engineering Cont Probation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Enrollment Deposit Reg Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Exclude From Billing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>F1 non-degree permission req</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Federal Aid Issues Pending</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>File Complete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>File Declaration of Graduation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>First Time Freshman</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Graduate Education Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Graduate GPA Warning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Graduate Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Graduate Provisional Admit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Graduation Check</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Graduation Extension</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Graduation hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disb:  AZ Grants</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disb: Citizenship Verif</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disb: F1/JI Student Visa</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disb: Final Transcript</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disb: Ineligible Fed Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disb: On-line Campus</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disb: Pell 2 Progression</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disb: Pell Flag</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disb: Pell Origination</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disb: Prior Degree</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disb: Reject ISIR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disb: Summer 1 Enrollment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disb: Summer 2 Enrollment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disb: Summer 8 Wk Enrollm</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disb: Summer Dyn</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disb: Verify PLUS Consent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disb: WUE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disb:Insufficient Enrllmt</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disb:Pending ISIR Correct</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold Disbursement: TEACH GPA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hold sub &amp; unsub</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Honors Student</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Human Resources Hold 01</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Human Resources Hold 02</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Human Resources Hold 03</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ID Check</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inelig - Contact Your Advisor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In-House Payment Plan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Junior Advising Check-in</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kinesiology Acad Standg Review</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lake Havasu Student</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Max Hour Violation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Measles Immunization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Med/Comp W/D</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Military Activation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Military/Veteran Related</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Miscellaneous Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MMR Immunization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Music Academic Issue/Director</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Must change Academic Plan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Must change plan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Need New English Proficiency</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Need to complete GPS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Needs Advising/Advisor Placed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Needs Readmissions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No releasable ASU transcript</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not in use F1/J1 fulltime stat</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nursing Academic Probation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Official College Transcript</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Official Transcript Required</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pace Rate Violation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Parking Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Past Due Balance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Past Due Student Acct Charges</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PRC Pre-SIS Record</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Program of Study</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Readmissions policy update</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reapply for Graduation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Registration Restriction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Report to ISSO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rhodes Scholar</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAP Violation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Seek advising to change major</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SF Between Collection Agencies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SF Collection&apos;s Office</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SF Default</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SF Follow-Up Activity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SF Miscellaneous Holds</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SF Parking</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SF Past Due</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SF Perkins Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SF Refund Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SF Write Off</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sponsor Billing Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Student Affairs at Downtown</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Student Affairs at Polytechnic</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Student Affairs at Tempe</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Student Affairs at West</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Student Life - Limited Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Student Requested Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Student-Athlete: Info only</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Submit official test scores</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Summer only admit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Traveling Scholar</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Undergrad Academic Standing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Univ Testing Req</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VA: Inactive Military</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VA: Inactive Military Depen</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VA: Inactive Nat Grd/Resv</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WPC Adm Response &amp; Enroll Auth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WPC Deposit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WPC Matriculation Fee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WPC Policy Acknowledgement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SI_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SI_End_Term__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>End Term</label>
+        <referenceTo>Term__c</referenceTo>
+        <relationshipLabel>Service Indicators (End Term)</relationshipLabel>
+        <relationshipName>Service_Indicators_End_Term</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SI_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SI_Start_Term__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Start Term</label>
+        <referenceTo>Term__c</referenceTo>
+        <relationshipLabel>Service Indicators</relationshipLabel>
+        <relationshipName>Service_Indicators_Start_Term</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Service Indicator</label>
+    <nameField>
+        <displayFormat>{YYYY}{MM}{DD}-{0000}</displayFormat>
+        <label>Service Indicator Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Service Indicators</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

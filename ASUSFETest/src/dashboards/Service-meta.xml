@@ -17,17 +17,32 @@
     </folderShares>
     <folderShares>
         <accessLevel>View</accessLevel>
+        <sharedTo>HD_Help_Desk_Manager</sharedTo>
+        <sharedToType>Role</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>OL_ASU_Online_Manager</sharedTo>
+        <sharedToType>Role</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>OL_ESM_Online_Manager</sharedTo>
+        <sharedToType>Role</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
         <sharedTo>REG_Registrar_Manager</sharedTo>
         <sharedToType>Role</sharedToType>
     </folderShares>
     <folderShares>
         <accessLevel>View</accessLevel>
-        <sharedTo>SBS_Manager</sharedTo>
+        <sharedTo>S_Service</sharedTo>
         <sharedToType>Role</sharedToType>
     </folderShares>
     <folderShares>
         <accessLevel>View</accessLevel>
-        <sharedTo>UTO_University_Technology_Office</sharedTo>
+        <sharedTo>SBS_Manager</sharedTo>
         <sharedToType>Role</sharedToType>
     </folderShares>
     <folderShares>

@@ -5,5 +5,6 @@
     <description>REG Registrar Manager</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>REG Registrar Manager</name>
-    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>S_Service</parentRole>
 </Role>

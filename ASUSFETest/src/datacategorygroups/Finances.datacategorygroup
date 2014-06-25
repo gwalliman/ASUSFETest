@@ -14,10 +14,6 @@
             <label>My ASU Financial Aid and Scholarships</label>
             <name>My_ASU_Financial_Aid</name>
         </dataCategory>
-        <dataCategory>
-            <label>Exclusive College Achievement Program</label>
-            <name>Exclusive_College_Achievement_Program</name>
-        </dataCategory>
         <label>All</label>
         <name>All</name>
     </dataCategory>

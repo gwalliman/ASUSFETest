@@ -24,7 +24,7 @@
         <unauthorizedSenderAction>Discard</unauthorizedSenderAction>
     </emailToCase>
     <enableCaseFeed>true</enableCaseFeed>
-    <enableDraftEmails>false</enableDraftEmails>
+    <enableDraftEmails>true</enableDraftEmails>
     <enableEarlyEscalationRuleTriggers>false</enableEarlyEscalationRuleTriggers>
     <enableNewEmailDefaultTemplate>false</enableNewEmailDefaultTemplate>
     <enableSuggestedArticlesApplication>false</enableSuggestedArticlesApplication>
