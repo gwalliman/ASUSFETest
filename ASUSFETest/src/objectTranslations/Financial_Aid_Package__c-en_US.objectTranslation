@@ -274,12 +274,5 @@
             <translation><!-- Obama --></translation>
         </picklistValues>
     </fields>
-    <layouts>
-        <layout>Financial Aid Package Layout</layout>
-        <sections>
-            <label><!-- Custom Links --></label>
-            <section>Custom Links</section>
-        </sections>
-    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

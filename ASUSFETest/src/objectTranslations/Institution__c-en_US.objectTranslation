@@ -40,16 +40,5 @@
         <label><!-- Institution Zip Code --></label>
         <name>Institution_Zip_Code__c</name>
     </fields>
-    <layouts>
-        <layout>Institution Layout</layout>
-        <sections>
-            <label><!-- Custom Links --></label>
-            <section>Custom Links</section>
-        </sections>
-        <sections>
-            <label><!-- Location Information --></label>
-            <section>Location Information</section>
-        </sections>
-    </layouts>
     <startsWith>Vowel</startsWith>
 </CustomObjectTranslation>

@@ -1778,40 +1778,6 @@
             <translation><!-- Not Used --></translation>
         </picklistValues>
     </fields>
-    <layouts>
-        <layout>Admin Layout</layout>
-        <sections>
-            <label><!-- Academic History --></label>
-            <section>Academic History</section>
-        </sections>
-        <sections>
-            <label><!-- Contact Insight --></label>
-            <section>Contact Insight</section>
-        </sections>
-        <sections>
-            <label><!-- Conversion Data --></label>
-            <section>Conversion Data</section>
-        </sections>
-        <sections>
-            <label><!-- Silverpop --></label>
-            <section>Silverpop</section>
-        </sections>
-    </layouts>
-    <layouts>
-        <layout>Lead Layout</layout>
-        <sections>
-            <label><!-- Academic History --></label>
-            <section>Academic History</section>
-        </sections>
-        <sections>
-            <label><!-- Contact Insight --></label>
-            <section>Contact Insight</section>
-        </sections>
-        <sections>
-            <label><!-- Description Information --></label>
-            <section>Description Information</section>
-        </sections>
-    </layouts>
     <recordTypes>
         <label><!-- Processing --></label>
         <name>Processing</name>
