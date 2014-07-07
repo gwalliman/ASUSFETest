@@ -118,12 +118,59 @@
             <default>false</default>
         </values>
     </businessProcesses>
+    <businessProcesses>
+        <fullName>Undergraduate Application</fullName>
+        <description>Process for the lifecycle of an undergraduate application</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Admitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Admitted - Conditional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applicant - Incomplete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enrolled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enrolled - 21st Day</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Undergraduate Prospect</fullName>
+        <description>Opportunity process for prospective undergraduate students</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect - Opt Out</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>true</enableFeeds>
     <enableHistory>true</enableHistory>
     <fields>
         <fullName>Academic_Interest__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
+        <description>Generic interest a prospective student is interested in</description>
         <externalId>false</externalId>
         <label>Academic Interest</label>
         <referenceTo>Academic_Interest__c</referenceTo>
@@ -150,8 +197,9 @@
     <fields>
         <fullName>Academic_Plan__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>
-        <description>Plan Code</description>
+        <description>Academic plan a prospective student is interested in or a student has applied to.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Program student will be enrolling</inlineHelpText>
         <label>Academic Plan</label>
         <referenceTo>Plan__c</referenceTo>
         <relationshipLabel>Opportunities</relationshipLabel>
@@ -169,7 +217,337 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Admit_Qualifier_Date__c</fullName>
+        <description>Date the qualifier was captured for a prospective student in the Admit stage.</description>
+        <externalId>false</externalId>
+        <label>Admit Qualifier Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Admit_Qualifier_Decision__c</fullName>
+        <description>Decision of a prospective student in the Admit stage</description>
+        <externalId>false</externalId>
+        <label>Admit Qualifier Decision</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1st Choice Program unavailable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BHC Admission</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Continuing at 2 yr institution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course Availability</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Distance from Home</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Going to 4 yr institution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Housing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>I-20 issued by another University</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Major not offered at preferred campus</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Military</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mission</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not admitted to 1st choice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Playing Athletics elsewhere</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reputation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Response time</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Size (too big)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Size (too small)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Starting at 2 yr institution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting on decision elsewhere</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Admit_Qualifier__c</fullName>
+        <description>Response from a prospective student in the Admit stage</description>
+        <externalId>false</externalId>
+        <label>Admit Qualifier</label>
+        <picklist>
+            <picklistValues>
+                <fullName>I plan to attend</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>I&apos;m still considering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>I&apos;m not interested</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Admitted_Date__c</fullName>
+        <description>Date that the student was admitted into program. This date is generated in PeopleSoft.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date that the student was admitted. This date is generated in PeopleSoft.</inlineHelpText>
+        <label>Admitted Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Admitted_Location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Location where the student will attend for the admitted plan.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Location where the student will attend for the admitted plan.</inlineHelpText>
+        <label>Admitted Location</label>
+        <referenceTo>Location__c</referenceTo>
+        <relationshipLabel>Opportunities (Admitted Location)</relationshipLabel>
+        <relationshipName>Opportunities_AdmittedLocation</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Admitted_Plan__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Academic plan the student was admitted</inlineHelpText>
+        <label>Admitted Plan</label>
+        <referenceTo>Plan__c</referenceTo>
+        <relationshipLabel>Opportunities (Admitted Plan)</relationshipLabel>
+        <relationshipName>Opportunities_AdmittedPlan</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Admitted_Session__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Session the admitted student will be starting.</inlineHelpText>
+        <label>Admitted Session</label>
+        <picklist>
+            <picklistValues>
+                <fullName>A/C</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Applicant_Qualifier_Date__c</fullName>
+        <description>Date the qualifier was captured for a prospective student in the Application stage.</description>
+        <externalId>false</externalId>
+        <label>Applicant Qualifer Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Applicant_Qualifier_Decision__c</fullName>
+        <description>Decision factor received when a prospective student is in the Applicant stage</description>
+        <externalId>false</externalId>
+        <label>Applicant Qualifier Decision</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1st Choice Program unavailable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BHC Admission</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Continuing at 2 yr institution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course Availability</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Distance from Home</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Going to 4 yr institution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Housing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>I-20 issued by another University</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Major not offered at preferred campus</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Military</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mission</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not admitted to 1st choice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Playing Athletics elsewhere</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reputation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Response time</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Size (too big)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Size (too small)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Starting at 2 yr institution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting on decision elsewhere</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Applicant_Qualifier__c</fullName>
+        <externalId>false</externalId>
+        <label>Applicant Qualifier</label>
+        <picklist>
+            <picklistValues>
+                <fullName>I plan to attend</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>I&apos;m still considering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>I&apos;m not interested</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>Application_Date__c</fullName>
+        <description>Undergraduate Admissions Application Date</description>
         <externalId>false</externalId>
         <label>Application Date</label>
         <required>false</required>
@@ -191,10 +569,146 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Barrett_Application_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Barrett Application Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Barrett_Application_Decision__c</fullName>
+        <externalId>false</externalId>
+        <label>Barrett Application Decision</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Barrett_Application_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>Barrett Application ID</label>
+        <length>11</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Barrett_Application_Status__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Complete when test scores and letters of rec are received and ASU admitted.</inlineHelpText>
+        <label>Barrett Application Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Applicant - Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Applicant - Complete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Applicant - In Review</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Decision Rendered</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled - Pre-Review</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled - Pre-Submit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled - In Review</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled - Purge</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Barrett_Decision_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Barrett Decision Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CI_Score__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Calculated Index Score</inlineHelpText>
+        <label>CI Score</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>CampaignId</fullName>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Career__c</fullName>
+        <externalId>false</externalId>
+        <label>Career</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Undergraduate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Graduate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Law</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
     </fields>
     <fields>
         <fullName>College__c</fullName>
@@ -256,6 +770,10 @@
         <label>Degree Type</label>
         <picklist>
             <picklistValues>
+                <fullName>Bachelors</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
                 <fullName>Masters</fullName>
                 <default>false</default>
             </picklistValues>
@@ -283,6 +801,107 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Do_Not_Call__c</fullName>
+        <description>Formula field that copies over the value of the Contact__r.DoNotCall field to display on the opportunity record.</description>
+        <externalId>false</externalId>
+        <formula>Contact__r.DoNotCall</formula>
+        <label>Do Not Call</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Email_Opt_Out__c</fullName>
+        <description>Formula field that copies over the value of the Contact__r.HasOptedOutOfEmail field to display on the opportunity record.</description>
+        <externalId>false</externalId>
+        <formula>Contact__r.HasOptedOutOfEmail</formula>
+        <label>Email Opt Out</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Enroll_Dep_Eligible_for_Defer__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>The student is eligible for the enrollment deposit to be differed.</inlineHelpText>
+        <label>Eligible for Deposit Deferment</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Enroll_Dep_Late_Pay_App_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Lists the day when the late payment was approved.</inlineHelpText>
+        <label>Late Payment Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Enroll_Dep_Late_Pay_App__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, the student is eligible to delay the enrollment deposit.</inlineHelpText>
+        <label>Late Payment Approved</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Enroll_Dep_Status_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The last time the enrollment deposit status was updated.</inlineHelpText>
+        <label>Enrollment Deposit Status Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Enroll_Dep_Status__c</fullName>
+        <description>Value to display the status of the enrollment deposit.</description>
+        <externalId>false</externalId>
+        <label>Enrollment Deposit Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Admin Defer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Defer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Paid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partial</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Refund</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>External_Application_Number__c</fullName>
         <externalId>false</externalId>
         <label>External Application Number</label>
@@ -295,6 +914,52 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>First_Generation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Student is a first generation college student</inlineHelpText>
+        <label>First Generation</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Housing_Status_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The last date the status was updated.</inlineHelpText>
+        <label>Housing Status Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Housing_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Housing Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Applied</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Exception</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Confirm</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>I_20_Sent_Date__c</fullName>
         <description>Date I-20 was mailed to the admitted student</description>
         <externalId>false</externalId>
@@ -305,6 +970,157 @@
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Intent_Confirm_Enroll_Qualifier_Date__c</fullName>
+        <description>Date the qualifier was captured for a prospective student in the Enrolled status.</description>
+        <externalId>false</externalId>
+        <label>Intent/Confirm Enroll Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Intent_Confirm_Enroll_Qualifier_Decision__c</fullName>
+        <externalId>false</externalId>
+        <label>Intent/Confirm Enroll Decision Factor</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1st Choice Program unavailable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BHC Admission</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Continuing at 2 yr institution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course Availability</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Distance from Home</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Going to 4 yr institution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Housing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>I-20 issued by another University</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Major not offered at preferred campus</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Military</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mission</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not admitted to 1st choice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Playing Athletics elsewhere</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reputation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Response time</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Size (too big)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Size (too small)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Starting at 2 yr institution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting on decision elsewhere</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Intent_Confirm_Enroll_Qualifier__c</fullName>
+        <externalId>false</externalId>
+        <label>Intent/Confirm Enroll Qualifier</label>
+        <picklist>
+            <picklistValues>
+                <fullName>I plan to attend</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>I&apos;m still considering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>I&apos;m not interested</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>International_Baccalaureate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>International Baccalaureate</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>International_Student__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>International Student</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>LeadSource</fullName>
@@ -563,6 +1379,10 @@
                 <controllingFieldValues>Web Form</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
+            <picklistValues>
+                <fullName>ASU Online Rover</fullName>
+                <default>false</default>
+            </picklistValues>
             <sorted>false</sorted>
         </picklist>
         <trackFeedHistory>false</trackFeedHistory>
@@ -585,6 +1405,117 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>MMR_on_file__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>MMR on file</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Math_Test_Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Math Placement Test Score</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Military_Benefits__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>From the Supplemental App in PeopleSoft</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The student has indicated an interest in applying for military educational benefits.</inlineHelpText>
+        <label>Military Benefits</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Military_Branch__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Military branch indicated on the application. The data has not been confirmed.</inlineHelpText>
+        <label>Military Branch</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Air Force</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Army</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Coast Guard</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marines</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Navy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Military_Status__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Military status indicated on the application. It has not been confirmed.</inlineHelpText>
+        <label>Military Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Active Duty</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Armed Forces Reserve</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>National Guard</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Spouse/Dependent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Veteran</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>National_Hispanic_Scholar__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>National Hispanic Scholar</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Online_Degree__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -597,7 +1528,7 @@
     <fields>
         <fullName>Opportunity_Key__c</fullName>
         <caseSensitive>false</caseSensitive>
-        <externalId>true</externalId>
+        <externalId>false</externalId>
         <label>Opportunity Key</label>
         <length>30</length>
         <required>false</required>
@@ -608,10 +1539,193 @@
         <unique>true</unique>
     </fields>
     <fields>
+        <fullName>Orientation_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date student will be attending orientation.</inlineHelpText>
+        <label>Orientation Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Orientation_Location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Orientation Location</label>
+        <referenceTo>Location__c</referenceTo>
+        <relationshipLabel>Opportunities (Orientation Location)</relationshipLabel>
+        <relationshipName>Opportunities_Orientation_Location</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Orientation_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Orientation Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Registered</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Attended</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Show</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>OwnerId</fullName>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Potential_National_Scholar__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Potential National Scholar</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Priority_Applicant__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Student qualified to participate in the program.</inlineHelpText>
+        <label>Priority Applicant</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Prospect_Qualifier_Date__c</fullName>
+        <description>Date the qualifier was captured for a prospective student in the Prospect status.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the date the information was received.</inlineHelpText>
+        <label>Prospect Qualifer Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Prospect_Qualifier_Decision_Factor__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Provide a reason for the qualifier listed.</inlineHelpText>
+        <label>Prospect Decision Factor</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1st Choice Program unavailable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BHC Admission</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Continuing at 2 yr institution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Course Availability</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Distance from Home</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Going to 4 yr institution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Housing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>I-20 issued by another University</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Major not offered at preferred campus</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Military</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mission</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not admitted to 1st choice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Playing Athletics elsewhere</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reputation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Response time</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Size (too big)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Size (too small)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Starting at 2 yr institution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting on decision elsewhere</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
     </fields>
     <fields>
         <fullName>Prospect_Qualifier__c</fullName>
@@ -671,6 +1785,34 @@
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Search_Segment__c</fullName>
+        <externalId>false</externalId>
+        <label>Search Segment</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Admissible</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Barrett Eligible</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Scholar</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Under Admissible</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
     </fields>
     <fields>
         <fullName>Session__c</fullName>
@@ -896,6 +2038,31 @@ Evaluation Status = SI - Service Indicator</description>
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Student_Visa__c</fullName>
+        <description>Formula field that displays whether or not the Contact__r.Visa_Type__c contains F1 or J1 visa types.</description>
+        <externalId>false</externalId>
+        <formula>IF(INCLUDES( Contact__r.Visa_Type__c, &quot;F1&quot;), &quot;F1&quot; + BR(), NULL)+
+IF(INCLUDES( Contact__r.Visa_Type__c, &quot;J1&quot;), &quot;J1&quot;, NULL)</formula>
+        <label>Student Visa</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Talisma_Lead__c</fullName>
+        <externalId>true</externalId>
+        <label>Talisma Lead</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Term__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>
         <externalId>false</externalId>
@@ -906,6 +2073,164 @@ Evaluation Status = SI - Service Indicator</description>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Trans_Path_2nd_Plan__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>TP: Secondary Plan</label>
+        <referenceTo>Plan__c</referenceTo>
+        <relationshipLabel>Opportunities (Secondary Plan)</relationshipLabel>
+        <relationshipName>Opportunities_TransPath2ndPlan</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Trans_Path_AA_Degree__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Transfer Pathway Associates degree</description>
+        <externalId>false</externalId>
+        <label>TP: AA Degree</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Trans_Path_AGEC_Degree__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Arizona General Education Curriculum</inlineHelpText>
+        <label>TP: AGEC Degree</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Trans_Path_Active_Date__c</fullName>
+        <description>Transfer Pathway active date</description>
+        <externalId>false</externalId>
+        <label>TP: Active Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Trans_Path_Agreement_Term__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Transfer Pathway Agreement Term</description>
+        <externalId>false</externalId>
+        <label>TP: Agreement Term</label>
+        <referenceTo>Term__c</referenceTo>
+        <relationshipLabel>Opportunities (Agreement Term)</relationshipLabel>
+        <relationshipName>Opportunities_TransPathTerm</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Trans_Path_Agreement_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>TP: Agreement Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>MAPP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TAG</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RBSN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GPA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Trans_Path_Completion_Term__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>TP: Completion Term</label>
+        <referenceTo>Term__c</referenceTo>
+        <relationshipLabel>Opportunities (Completion Term)</relationshipLabel>
+        <relationshipName>Opportunities_TransPathCompTerm</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Trans_Path_Credit_Hours__c</fullName>
+        <externalId>false</externalId>
+        <label>TP: Credit Hours</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Trans_Path_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>TP: Details</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Trans_Path_Institution__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Lookup field to the Account object for External Orgs (schools)</description>
+        <externalId>false</externalId>
+        <label>TP: Institution</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities_Account</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Trans_Path_Plan__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>TP: Plan</label>
+        <referenceTo>Plan__c</referenceTo>
+        <relationshipLabel>Opportunities (Plan)</relationshipLabel>
+        <relationshipName>Opportunities_TransPathPlan</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -1061,6 +2386,7 @@ Evaluation Status = SI - Service Indicator</description>
         <filterScope>Mine</filterScope>
         <label>My Opportunities</label>
         <sharedTo>
+            <group>ES_Enrollment_Services_Group</group>
             <roleAndSubordinates>ES_Enrollment_Services</roleAndSubordinates>
         </sharedTo>
     </listViews>
@@ -1112,6 +2438,37 @@ Evaluation Status = SI - Service Indicator</description>
             <value>Prospect</value>
         </filters>
         <label>New This Week - Prospects</label>
+        <sharedTo>
+            <group>QA_Testing_Group</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>NewThisWeekProspectsMLF</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>Contact__c</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>Term__c</columns>
+        <columns>Academic_Interest__c</columns>
+        <columns>College__c</columns>
+        <columns>Academic_Plan__c</columns>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.STAGE_NAME</field>
+            <operation>equals</operation>
+            <value>Prospect</value>
+        </filters>
+        <filters>
+            <field>Lead_Source_Subtype__c</field>
+            <operation>equals</operation>
+            <value>MaryLouFulton Teachers College</value>
+        </filters>
+        <label>New This Week - Prospects MLF</label>
         <sharedTo>
             <group>QA_Testing_Group</group>
         </sharedTo>
@@ -1261,6 +2618,145 @@ Evaluation Status = SI - Service Indicator</description>
         <description>Process for graduate applications</description>
         <label>Graduate Application</label>
         <picklistValues>
+            <picklist>Admit_Qualifier_Decision__c</picklist>
+            <values>
+                <fullName>Course Availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distance from Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I-20 issued by another University</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Military</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Response time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too big%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too small%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on decision elsewhere</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Admit_Qualifier__c</picklist>
+            <values>
+                <fullName>I plan to attend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m not interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m still considering</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Applicant_Qualifier_Decision__c</picklist>
+            <values>
+                <fullName>Course Availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distance from Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Military</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Response time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too big%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too small%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on decision elsewhere</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Applicant_Qualifier__c</picklist>
+            <values>
+                <fullName>I plan to attend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m not interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m still considering</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Career__c</picklist>
+            <values>
+                <fullName>Graduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Law</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Degree_Type__c</picklist>
             <values>
                 <fullName>Certificate</fullName>
@@ -1303,6 +2799,1225 @@ Evaluation Status = SI - Service Indicator</description>
             </values>
             <values>
                 <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Intent_Confirm_Enroll_Qualifier_Decision__c</picklist>
+            <values>
+                <fullName>Course Availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distance from Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I-20 issued by another University</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Military</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Response time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too big%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too small%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on decision elsewhere</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Intent_Confirm_Enroll_Qualifier__c</picklist>
+            <values>
+                <fullName>I plan to attend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m not interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m still considering</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>ASU UG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College Fair - Int</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College Fair - US</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partial App</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PeopleSoft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Scores</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Walk-in</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web Form</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Source_Subtype__c</picklist>
+            <values>
+                <fullName>ASU Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASU Online Rover</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CA Diversity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coll Technology %26 Innovation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College of Public Programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cronkite School-Journ%2FMassComm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Degree Search</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EGSS Applying</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EGSS Financing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EGSS GRE Prep</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EGSS Personal Statement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRE Subject</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduate Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health Solutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Herberger Institute</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Idealist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Import</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Info Session - Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Info Session - Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ira A Fulton Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Liberal Arts %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MaryLouFulton Teachers College</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NAU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NNE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Interdis Arts %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nursing %26 Health Innovation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>O%27Connor College of Law</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Letters %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Sustainability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TOEFL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>USA Today</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>W%2EP%2E Carey School of Business</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Military_Branch__c</picklist>
+            <values>
+                <fullName>Air Force</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Army</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coast Guard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marines</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Navy</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Military_Status__c</picklist>
+            <values>
+                <fullName>Active Duty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Armed Forces Reserve</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Guard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spouse%2FDependent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Veteran</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Prospect_Qualifier_Decision_Factor__c</picklist>
+            <values>
+                <fullName>Course Availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distance from Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Military</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Response time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too big%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too small%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on decision elsewhere</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Prospect_Qualifier__c</picklist>
+            <values>
+                <fullName>I plan to attend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m not interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m still considering</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Qualifying__c</picklist>
+            <values>
+                <fullName>Interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Longer Interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undecided</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Session__c</picklist>
+            <values>
+                <fullName>A%2FC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Graduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Law</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Graduate_Prospect</fullName>
+        <active>true</active>
+        <businessProcess>Graduate Prospect</businessProcess>
+        <description>Process for recruiting to graduate students</description>
+        <label>Graduate Prospect</label>
+        <picklistValues>
+            <picklist>Career__c</picklist>
+            <values>
+                <fullName>Graduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Law</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Degree_Type__c</picklist>
+            <values>
+                <fullName>Certificate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctoral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Juris Doctor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Masters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Degree</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>College Fair - Int</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College Fair - US</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Scores</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Walk-in</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web Form</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Source_Subtype__c</picklist>
+            <values>
+                <fullName>ASU Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASU Online Rover</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coll Technology %26 Innovation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College of Public Programs</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cronkite School-Journ%2FMassComm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Degree Search</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EGSS Applying</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EGSS Financing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EGSS GRE Prep</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EGSS Personal Statement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GRE Subject</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Graduate Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health Solutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Herberger Institute</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Idealist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Info Session - Campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Info Session - Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ira A Fulton Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Liberal Arts %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MaryLouFulton Teachers College</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NAU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Interdis Arts %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nursing %26 Health Innovation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>O%27Connor College of Law</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Letters %26 Sciences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School of Sustainability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>USA Today</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>W%2EP%2E Carey School of Business</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Prospect_Qualifier_Decision_Factor__c</picklist>
+            <values>
+                <fullName>Course Availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distance from Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I-20 issued by another University</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Military</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Response time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too big%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too small%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on decision elsewhere</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Prospect_Qualifier__c</picklist>
+            <values>
+                <fullName>I plan to attend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m not interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m still considering</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Qualifying__c</picklist>
+            <values>
+                <fullName>Interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Longer Interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undecided</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Session__c</picklist>
+            <values>
+                <fullName>A%2FC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Graduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Law</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Undergraduate_Application</fullName>
+        <active>true</active>
+        <businessProcess>Undergraduate Application</businessProcess>
+        <description>Application record for Undergraduate Admissions process</description>
+        <label>Undergraduate Application</label>
+        <picklistValues>
+            <picklist>Admit_Qualifier_Decision__c</picklist>
+            <values>
+                <fullName>1st Choice Program unavailable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BHC Admission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Continuing at 2 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distance from Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Going to 4 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I-20 issued by another University</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major not offered at preferred campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Military</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not admitted to 1st choice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Playing Athletics elsewhere</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Response time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too big%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too small%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starting at 2 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on decision elsewhere</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Admit_Qualifier__c</picklist>
+            <values>
+                <fullName>I plan to attend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m not interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m still considering</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Admitted_Session__c</picklist>
+            <values>
+                <fullName>A%2FC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Applicant_Qualifier_Decision__c</picklist>
+            <values>
+                <fullName>1st Choice Program unavailable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BHC Admission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Continuing at 2 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distance from Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Going to 4 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I-20 issued by another University</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major not offered at preferred campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Military</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not admitted to 1st choice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Playing Athletics elsewhere</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Response time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too big%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too small%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starting at 2 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on decision elsewhere</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Applicant_Qualifier__c</picklist>
+            <values>
+                <fullName>I plan to attend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m not interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m still considering</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Barrett_Application_Decision__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Barrett_Application_Status__c</picklist>
+            <values>
+                <fullName>Applicant - Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applicant - In Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applicant - Submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled - In Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled - Pre-Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled - Pre-Submit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled - Purge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decision Rendered</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Career__c</picklist>
+            <values>
+                <fullName>Graduate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Law</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Undergraduate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Degree_Type__c</picklist>
+            <values>
+                <fullName>Bachelors</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Certificate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctoral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Masters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Degree</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Enroll_Dep_Status__c</picklist>
+            <values>
+                <fullName>Admin Defer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Defer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refund</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Housing_Status__c</picklist>
+            <values>
+                <fullName>Applied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Intent_Confirm_Enroll_Qualifier_Decision__c</picklist>
+            <values>
+                <fullName>1st Choice Program unavailable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BHC Admission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Continuing at 2 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distance from Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Going to 4 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I-20 issued by another University</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major not offered at preferred campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Military</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not admitted to 1st choice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Playing Athletics elsewhere</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Response time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too big%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too small%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starting at 2 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on decision elsewhere</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Intent_Confirm_Enroll_Qualifier__c</picklist>
+            <values>
+                <fullName>I plan to attend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m not interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m still considering</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1501,6 +4216,158 @@ Evaluation Status = SI - Service Indicator</description>
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Military_Branch__c</picklist>
+            <values>
+                <fullName>Air Force</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Army</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coast Guard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marines</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Navy</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Military_Status__c</picklist>
+            <values>
+                <fullName>Active Duty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Armed Forces Reserve</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Guard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spouse%2FDependent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Veteran</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Orientation_Status__c</picklist>
+            <values>
+                <fullName>Attended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Registered</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Prospect_Qualifier_Decision_Factor__c</picklist>
+            <values>
+                <fullName>1st Choice Program unavailable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BHC Admission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Continuing at 2 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distance from Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Going to 4 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I-20 issued by another University</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major not offered at preferred campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Military</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not admitted to 1st choice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Playing Athletics elsewhere</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Response time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too big%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too small%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starting at 2 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on decision elsewhere</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Prospect_Qualifier__c</picklist>
             <values>
                 <fullName>I plan to attend</fullName>
@@ -1531,6 +4398,25 @@ Evaluation Status = SI - Service Indicator</description>
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Search_Segment__c</picklist>
+            <values>
+                <fullName>Admissible</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Barrett Eligible</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scholar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under Admissible</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Session__c</picklist>
             <values>
                 <fullName>A%2FC</fullName>
@@ -1542,7 +4428,294 @@ Evaluation Status = SI - Service Indicator</description>
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Type</picklist>
+            <picklist>Trans_Path_Agreement_Type__c</picklist>
+            <values>
+                <fullName>GPA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MAPP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RBSN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TAG</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Undergraduate_Prospect</fullName>
+        <active>true</active>
+        <businessProcess>Undergraduate Prospect</businessProcess>
+        <description>Prospective student for an undergraduate program.</description>
+        <label>Undergraduate Prospect</label>
+        <picklistValues>
+            <picklist>Admit_Qualifier_Decision__c</picklist>
+            <values>
+                <fullName>1st Choice Program unavailable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BHC Admission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Continuing at 2 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distance from Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Going to 4 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I-20 issued by another University</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major not offered at preferred campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Military</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not admitted to 1st choice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Playing Athletics elsewhere</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Response time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too big%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too small%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starting at 2 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on decision elsewhere</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Admit_Qualifier__c</picklist>
+            <values>
+                <fullName>I plan to attend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m not interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m still considering</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Admitted_Session__c</picklist>
+            <values>
+                <fullName>A%2FC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Applicant_Qualifier_Decision__c</picklist>
+            <values>
+                <fullName>1st Choice Program unavailable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BHC Admission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Continuing at 2 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distance from Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Going to 4 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I-20 issued by another University</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major not offered at preferred campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Military</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not admitted to 1st choice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Playing Athletics elsewhere</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Response time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too big%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too small%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starting at 2 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on decision elsewhere</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Applicant_Qualifier__c</picklist>
+            <values>
+                <fullName>I plan to attend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m not interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m still considering</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Barrett_Application_Decision__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Barrett_Application_Status__c</picklist>
+            <values>
+                <fullName>Applicant - Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applicant - In Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applicant - Submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled - In Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled - Pre-Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled - Pre-Submit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled - Purge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decision Rendered</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Career__c</picklist>
             <values>
                 <fullName>Graduate</fullName>
                 <default>false</default>
@@ -1551,34 +4724,46 @@ Evaluation Status = SI - Service Indicator</description>
                 <fullName>Law</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>Undergraduate</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Graduate_Prospect</fullName>
-        <active>true</active>
-        <businessProcess>Graduate Prospect</businessProcess>
-        <description>Process for recruiting to graduate students</description>
-        <label>Graduate Prospect</label>
         <picklistValues>
             <picklist>Degree_Type__c</picklist>
+            <values>
+                <fullName>Bachelors</fullName>
+                <default>false</default>
+            </values>
             <values>
                 <fullName>Certificate</fullName>
                 <default>false</default>
             </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Enroll_Dep_Status__c</picklist>
             <values>
-                <fullName>Doctoral</fullName>
+                <fullName>Admin Defer</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Juris Doctor</fullName>
+                <fullName>Cancel</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Masters</fullName>
+                <fullName>Defer</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Non-Degree</fullName>
+                <fullName>Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refund</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1606,7 +4791,132 @@ Evaluation Status = SI - Service Indicator</description>
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Housing_Status__c</picklist>
+            <values>
+                <fullName>Applied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exception</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Intent_Confirm_Enroll_Qualifier_Decision__c</picklist>
+            <values>
+                <fullName>1st Choice Program unavailable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BHC Admission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Continuing at 2 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distance from Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Going to 4 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I-20 issued by another University</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major not offered at preferred campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Military</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not admitted to 1st choice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Playing Athletics elsewhere</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Response time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too big%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too small%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starting at 2 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on decision elsewhere</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Intent_Confirm_Enroll_Qualifier__c</picklist>
+            <values>
+                <fullName>I plan to attend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m not interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I%27m still considering</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>LeadSource</picklist>
+            <values>
+                <fullName>ASU UG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
             <values>
                 <fullName>College Fair - Int</fullName>
                 <default>false</default>
@@ -1628,7 +4938,19 @@ Evaluation Status = SI - Service Indicator</description>
                 <default>false</default>
             </values>
             <values>
+                <fullName>Partial App</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PeopleSoft</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1715,6 +5037,10 @@ Evaluation Status = SI - Service Indicator</description>
                 <default>false</default>
             </values>
             <values>
+                <fullName>Import</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Info Session - Campus</fullName>
                 <default>false</default>
             </values>
@@ -1763,11 +5089,167 @@ Evaluation Status = SI - Service Indicator</description>
                 <default>false</default>
             </values>
             <values>
+                <fullName>TOEFL</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>USA Today</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>W%2EP%2E Carey School of Business</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Military_Branch__c</picklist>
+            <values>
+                <fullName>Air Force</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Army</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coast Guard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marines</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Navy</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Military_Status__c</picklist>
+            <values>
+                <fullName>Active Duty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Armed Forces Reserve</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National Guard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spouse%2FDependent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Veteran</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Orientation_Status__c</picklist>
+            <values>
+                <fullName>Attended</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Registered</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Prospect_Qualifier_Decision_Factor__c</picklist>
+            <values>
+                <fullName>1st Choice Program unavailable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BHC Admission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Continuing at 2 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Course Availability</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distance from Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Going to 4 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I-20 issued by another University</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Major not offered at preferred campus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Military</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mission</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not admitted to 1st choice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Playing Athletics elsewhere</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Response time</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too big%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size %28too small%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starting at 2 yr institution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on decision elsewhere</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1802,6 +5284,25 @@ Evaluation Status = SI - Service Indicator</description>
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Search_Segment__c</picklist>
+            <values>
+                <fullName>Admissible</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Barrett Eligible</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scholar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under Admissible</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Session__c</picklist>
             <values>
                 <fullName>A%2FC</fullName>
@@ -1813,13 +5314,21 @@ Evaluation Status = SI - Service Indicator</description>
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Type</picklist>
+            <picklist>Trans_Path_Agreement_Type__c</picklist>
             <values>
-                <fullName>Graduate</fullName>
+                <fullName>GPA</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Law</fullName>
+                <fullName>MAPP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RBSN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TAG</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1827,34 +5336,46 @@ Evaluation Status = SI - Service Indicator</description>
     <searchLayouts>
         <customTabListAdditionalFields>OPPORTUNITY.NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>Contact__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OPPORTUNITY.STAGE_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Term__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>College__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Academic_Plan__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>Application_Date__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>Application_Number__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Academic_Plan__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Term__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Location__c</customTabListAdditionalFields>
         <excludedStandardButtons>New</excludedStandardButtons>
         <lookupDialogsAdditionalFields>OPPORTUNITY.NAME</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Contact__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OPPORTUNITY.STAGE_NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Term__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>College__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Academic_Plan__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Application_Date__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Application_Number__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>Academic_Plan__c</lookupDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>OPPORTUNITY.NAME</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>Contact__c</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>Application_Number__c</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>Application_Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OPPORTUNITY.STAGE_NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Term__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>College__c</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>Academic_Plan__c</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>Location__c</lookupPhoneDialogsAdditionalFields>
-        <searchFilterFields>Application_Number__c</searchFilterFields>
+        <lookupPhoneDialogsAdditionalFields>Application_Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Application_Number__c</lookupPhoneDialogsAdditionalFields>
         <searchFilterFields>Contact__c</searchFilterFields>
+        <searchFilterFields>OPPORTUNITY.STAGE_NAME</searchFilterFields>
+        <searchFilterFields>Term__c</searchFilterFields>
+        <searchFilterFields>College__c</searchFilterFields>
+        <searchFilterFields>Academic_Plan__c</searchFilterFields>
+        <searchFilterFields>Application_Date__c</searchFilterFields>
+        <searchFilterFields>Application_Number__c</searchFilterFields>
         <searchResultsAdditionalFields>OPPORTUNITY.NAME</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Application_Date__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Academic_Plan__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Contact__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>OPPORTUNITY.STAGE_NAME</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Term__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>OPPORTUNITY.CLOSE_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>College__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Academic_Plan__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Application_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Application_Number__c</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Read</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
     <webLinks>
         <fullName>Mass_Delete</fullName>
         <availability>online</availability>

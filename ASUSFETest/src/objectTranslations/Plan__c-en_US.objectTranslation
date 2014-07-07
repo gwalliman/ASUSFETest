@@ -140,12 +140,5 @@
         <name>Program__c</name>
         <relationshipLabel><!-- Plans --></relationshipLabel>
     </fields>
-    <layouts>
-        <layout>Plan Layout</layout>
-        <sections>
-            <label><!-- Custom Links --></label>
-            <section>Custom Links</section>
-        </sections>
-    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

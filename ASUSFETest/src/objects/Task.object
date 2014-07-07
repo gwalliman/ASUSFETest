@@ -1595,6 +1595,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>LAAPBAMS</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>LAAPMMAP</fullName>
                 <default>false</default>
             </values>
@@ -2051,6 +2055,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>LALTSGRCT</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>LAMATHMA</fullName>
                 <default>false</default>
             </values>
@@ -2116,6 +2124,10 @@
             </values>
             <values>
                 <fullName>LANATSCIMN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LANWPGRCT</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -2639,6 +2651,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>PPEMHSMA</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>PPGRNONDGR</fullName>
                 <default>false</default>
             </values>
@@ -2663,11 +2679,19 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>PPPAFEMPA</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>PPPAFUMPA</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>PPPAURBPHD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PPPGEMS</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -2691,11 +2715,19 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>PPPUPEPMPP</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>PPPUPGRCT</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>PPPUPPIMPP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PPPUPSTMPP</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -2783,6 +2815,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>TEABAGRCT</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>TEABAMED</fullName>
                 <default>false</default>
             </values>
@@ -2827,7 +2863,15 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>TEESLGRCT</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>TEESLMED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TEGEDGRCT</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -3068,6 +3112,10 @@
             <picklist>Task_Source_Subtype__c</picklist>
             <values>
                 <fullName>ASU Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASU Online Rover</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -4607,6 +4655,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>LAAPBAMS</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>LAAPMMAP</fullName>
                 <default>false</default>
             </values>
@@ -5063,6 +5115,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>LALTSGRCT</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>LAMATHMA</fullName>
                 <default>false</default>
             </values>
@@ -5128,6 +5184,10 @@
             </values>
             <values>
                 <fullName>LANATSCIMN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LANWPGRCT</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -5651,6 +5711,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>PPEMHSMA</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>PPGRNONDGR</fullName>
                 <default>false</default>
             </values>
@@ -5675,11 +5739,19 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>PPPAFEMPA</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>PPPAFUMPA</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>PPPAURBPHD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PPPGEMS</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -5703,11 +5775,19 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>PPPUPEPMPP</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>PPPUPGRCT</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>PPPUPPIMPP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PPPUPSTMPP</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -5795,6 +5875,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>TEABAGRCT</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>TEABAMED</fullName>
                 <default>false</default>
             </values>
@@ -5839,7 +5923,15 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>TEESLGRCT</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>TEESLMED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TEGEDGRCT</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -6078,6 +6170,10 @@
         </picklistValues>
         <picklistValues>
             <picklist>Task_Source_Subtype__c</picklist>
+            <values>
+                <fullName>ASU Online Rover</fullName>
+                <default>false</default>
+            </values>
             <values>
                 <fullName>Degree Search</fullName>
                 <default>false</default>
