@@ -151,6 +151,15 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Geomarket_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Geomarket Code</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Industry</fullName>
         <picklist>
             <picklistValues>
@@ -286,6 +295,63 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Institution_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Institution Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>2YR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4YR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>COL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>K8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NTL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SCD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UKN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UNV</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VOC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>OwnerId</fullName>
         <type>Lookup</type>
     </fields>
@@ -344,6 +410,17 @@
             <sorted>false</sorted>
         </picklist>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Territory_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>The user assigned as the current Territory Manager for this Institution.</inlineHelpText>
+        <label>Territory Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Accounts</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Type</fullName>

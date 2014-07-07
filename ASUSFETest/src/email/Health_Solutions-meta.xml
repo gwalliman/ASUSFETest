@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<EmailFolder xmlns="http://soap.sforce.com/2006/04/metadata">
-    <accessType>Shared</accessType>
-    <name>Health Solutions</name>
-    <publicFolderAccess>ReadOnly</publicFolderAccess>
-    <sharedTo>
-        <roleAndSubordinates>ES_Health_Solutions</roleAndSubordinates>
-    </sharedTo>
-</EmailFolder>

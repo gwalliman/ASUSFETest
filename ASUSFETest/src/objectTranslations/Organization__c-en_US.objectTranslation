@@ -21,12 +21,5 @@
         <name>Program__c</name>
         <relationshipLabel><!-- Organizations --></relationshipLabel>
     </fields>
-    <layouts>
-        <layout>Organization Layout</layout>
-        <sections>
-            <label><!-- Custom Links --></label>
-            <section>Custom Links</section>
-        </sections>
-    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

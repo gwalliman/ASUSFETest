@@ -2884,6 +2884,50 @@
                 <fullName>TSSYMSTECH</fullName>
                 <default>false</default>
             </picklistValues>
+            <picklistValues>
+                <fullName>TEABAGRCT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LAAPBAMS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PPEMHSMA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TEESLGRCT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TEGEDGRCT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LALTSGRCT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LANWPGRCT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PPPGEMS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PPPAFEMPA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PPPUPEPMPP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PPPUPSTMPP</fullName>
+                <default>false</default>
+            </picklistValues>
             <sorted>false</sorted>
         </picklist>
         <type>Picklist</type>
@@ -2919,6 +2963,10 @@
             </picklistValues>
             <picklistValues>
                 <fullName>Graduate College</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ASU Online Rover</fullName>
                 <default>false</default>
             </picklistValues>
             <sorted>false</sorted>

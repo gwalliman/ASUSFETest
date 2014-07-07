@@ -265,6 +265,72 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>CAP_Ineligible_Student_Group_Count__c</fullName>
+        <description>A count of the total Student Group records where Status is True and PeopleSoft Code is CP03. Used to determine if this Contact should be flagged as a currently ineligible College Achievement Plan participant.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A count of the total Student Group records where Status is True and PeopleSoft Code is CP03. Used to determine if this Contact should be flagged as a currently ineligible College Achievement Plan participant.</inlineHelpText>
+        <label>CAP Ineligible Student Group Count</label>
+        <summaryFilterItems>
+            <field>Student_Group__c.SG_Status__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>Student_Group__c.SG_PeopleSoft_Code__c</field>
+            <operation>equals</operation>
+            <value>CP03</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Student_Group__c.SG_Contact__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CAP_Possible__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates possible CAP student</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates possible CAP student</inlineHelpText>
+        <label>CAP Possible</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CAP_Student_Group_Count__c</fullName>
+        <description>A count of the total Student Group records where Status is True and PeopleSoft Code is CP00, CP01, or CP02. Used to determine if this Contact should be flagged as a College Achievement Plan participant.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A count of the total Student Group records where Status is True and PeopleSoft Code is CP00, CP01, or CP02. Used to determine if this Contact should be flagged as a College Achievement Plan participant.</inlineHelpText>
+        <label>CAP Student Group Count</label>
+        <summaryFilterItems>
+            <field>Student_Group__c.SG_Status__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>Student_Group__c.SG_PeopleSoft_Code__c</field>
+            <operation>equals</operation>
+            <value>CP00, CP01, CP02</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Student_Group__c.SG_Contact__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CAP__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(CAP_Student_Group_Count__c &gt; 0, 
+IMAGE(&quot;/servlet/servlet.ImageServer?id=015d0000003Poog&amp;oid=&quot;&amp;$Organization.Id,&quot;CAP Participant&quot;,20,20), 
+IF(CAP_Ineligible_Student_Group_Count__c &gt; 0, 
+IMAGE(&quot;/servlet/servlet.ImageServer?id=015d0000003QCEg&amp;oid=&quot;&amp;$Organization.Id,&quot;CAP Ineligible&quot;,20,20), 
+IF(CAP_Possible__c, 
+IMAGE(&quot;/servlet/servlet.ImageServer?id=015d0000003Q7J2&amp;oid=&quot;&amp;$Organization.Id,&quot;CAP Possible&quot;,20,20), 
+&quot;&quot;)))</formula>
+        <inlineHelpText>Displays a green icon for a College Achievement Plan participant. Automatically set when the Contact has one or more Student Group records where Status is True and PeopleSoft Code is CP00, CP01, or CP02.</inlineHelpText>
+        <label>CAP</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Contact_Preference__c</fullName>
         <externalId>false</externalId>
         <label>Contact Preference</label>
@@ -479,6 +545,16 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Geomarket_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Geomarket Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Graduate_GPA_Scale__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
@@ -533,6 +609,30 @@
         <trackFeedHistory>false</trackFeedHistory>
         <type>Email</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_College_Attended__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Last College Attended</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Contacts (Last College Attended)</relationshipLabel>
+        <relationshipName>Contacts_HS</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Last_HS_Attended__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Last High School Attended</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Contacts (Last High School Attended)</relationshipLabel>
+        <relationshipName>Contacts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>LeadSource</fullName>
@@ -799,6 +899,11 @@
                 <fullName>Import</fullName>
                 <controllingFieldValues>ASU UG</controllingFieldValues>
                 <controllingFieldValues>PeopleSoft</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ASU Online Rover</fullName>
+                <controllingFieldValues>Web Form</controllingFieldValues>
                 <default>false</default>
             </picklistValues>
             <sorted>false</sorted>
@@ -1339,6 +1444,14 @@ SR1D	Self-Identified Veteran or Dependent</description>
         <visibleLines>5</visibleLines>
     </fields>
     <fields>
+        <fullName>Work_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Work Phone</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Phone</type>
+    </fields>
+    <fields>
         <fullName>silverpop__CRMI_Modified_Date__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -1500,6 +1613,8 @@ SR1D	Self-Identified Veteran or Dependent</description>
     </listViews>
     <listViews>
         <fullName>CreatedThisWeek</fullName>
+        <columns>CAP__c</columns>
+        <columns>CAP_Possible__c</columns>
         <columns>FULL_NAME</columns>
         <columns>CONTACT.EMAIL</columns>
         <columns>CONTACT.LEAD_SOURCE</columns>
@@ -1521,6 +1636,7 @@ SR1D	Self-Identified Veteran or Dependent</description>
     </listViews>
     <listViews>
         <fullName>CreatedThisWeekEMPLID</fullName>
+        <columns>CAP__c</columns>
         <columns>FULL_NAME</columns>
         <columns>EMPLID__c</columns>
         <columns>CONTACT.EMAIL</columns>
@@ -1573,6 +1689,7 @@ SR1D	Self-Identified Veteran or Dependent</description>
     </listViews>
     <listViews>
         <fullName>CreatedThisWeekwoEMPLID</fullName>
+        <columns>CAP__c</columns>
         <columns>FULL_NAME</columns>
         <columns>CONTACT.EMAIL</columns>
         <columns>CONTACT.LEAD_SOURCE</columns>
@@ -1598,44 +1715,6 @@ SR1D	Self-Identified Veteran or Dependent</description>
         <sharedTo>
             <group>QA_Testing_Group</group>
         </sharedTo>
-    </listViews>
-    <listViews>
-        <fullName>Not_Provided_Erros</fullName>
-        <columns>CONTACT.LAST_NAME</columns>
-        <columns>CONTACT.BIRTHDATE</columns>
-        <columns>CONTACT.LEAD_SOURCE</columns>
-        <columns>Lead_Source_Subtype__c</columns>
-        <columns>CONTACT.RECORDTYPE</columns>
-        <columns>CREATEDBY_USER.ALIAS</columns>
-        <columns>CONTACT.CREATED_DATE</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>CONTACT.LAST_NAME</field>
-            <operation>equals</operation>
-            <value>[not provided]</value>
-        </filters>
-        <label>Not Provided Errors</label>
-        <sharedTo/>
-    </listViews>
-    <listViews>
-        <fullName>Recently_Imported_Converted</fullName>
-        <columns>FULL_NAME</columns>
-        <columns>CONTACT.LEAD_SOURCE</columns>
-        <columns>ACCOUNT.NAME</columns>
-        <columns>CONTACT.CREATED_DATE</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>CONTACT.CREATED_DATE</field>
-            <operation>equals</operation>
-            <value>LAST_N_DAYS:14</value>
-        </filters>
-        <filters>
-            <field>CONTACT.LEAD_SOURCE</field>
-            <operation>notEqual</operation>
-            <value>PeopleSoft</value>
-        </filters>
-        <label>Recently Imported (Converted)</label>
-        <sharedTo/>
     </listViews>
     <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
     <recordTypes>
@@ -1863,6 +1942,10 @@ SR1D	Self-Identified Veteran or Dependent</description>
             <picklist>Lead_Source_Subtype__c</picklist>
             <values>
                 <fullName>ASU Online</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASU Online Rover</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -2519,6 +2602,10 @@ SR1D	Self-Identified Veteran or Dependent</description>
                 <default>false</default>
             </values>
             <values>
+                <fullName>ASU Online Rover</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>CA Diversity</fullName>
                 <default>false</default>
             </values>
@@ -2858,7 +2945,6 @@ SR1D	Self-Identified Veteran or Dependent</description>
         <customTabListAdditionalFields>FULL_NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>CONTACT.PHONE1</customTabListAdditionalFields>
-        <listViewButtons>Mass_Delete</listViewButtons>
         <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>ACCOUNT.SITE</lookupDialogsAdditionalFields>
@@ -2873,6 +2959,7 @@ SR1D	Self-Identified Veteran or Dependent</description>
         <lookupPhoneDialogsAdditionalFields>CONTACT.PHONE4</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>CONTACT.PHONE5</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>CONTACT.PHONE6</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>00Nd0000007tE6P</lookupPhoneDialogsAdditionalFields>
         <searchResultsAdditionalFields>FULL_NAME</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CONTACT.PHONE1</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CONTACT.EMAIL</searchResultsAdditionalFields>
@@ -2883,7 +2970,7 @@ SR1D	Self-Identified Veteran or Dependent</description>
         <searchResultsAdditionalFields>CONTACT.ADDRESS1_CITY</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CONTACT.ADDRESS1_STATE</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>ReadWrite</sharingModel>
+    <sharingModel>Read</sharingModel>
     <validationRules>
         <fullName>silverpop__Disable_Changing_Enable_Sync</fullName>
         <active>true</active>

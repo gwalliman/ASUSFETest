@@ -38,17 +38,6 @@
         <label><!-- PKB Name --></label>
         <name>PKB_Name__c</name>
     </fields>
-    <layouts>
-        <layout>PKB Featured Layout</layout>
-        <sections>
-            <label><!-- Custom Links --></label>
-            <section>Custom Links</section>
-        </sections>
-        <sections>
-            <label><!-- Features on Keyword Search --></label>
-            <section>Features on Keyword Search</section>
-        </sections>
-    </layouts>
     <startsWith>Consonant</startsWith>
     <validationRules>
         <errorMessage><!-- Article Number should be 9 digits (eg: 00001000). --></errorMessage>

@@ -16,12 +16,5 @@
         <label><!-- ISO Code --></label>
         <name>ISO_Code__c</name>
     </fields>
-    <layouts>
-        <layout>Country Layout</layout>
-        <sections>
-            <label><!-- Custom Links --></label>
-            <section>Custom Links</section>
-        </sections>
-    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>
