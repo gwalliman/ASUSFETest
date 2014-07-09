@@ -1303,5 +1303,12 @@
         <name>SI_Start_Term__c</name>
         <relationshipLabel><!-- Service Indicators --></relationshipLabel>
     </fields>
+    <layouts>
+        <layout>Service Indicator Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

@@ -316,6 +316,17 @@
             <translation><!-- Lead --></translation>
         </picklistValues>
     </fields>
+    <layouts>
+        <layout>Lead Interest Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Processing Information --></label>
+            <section>Processing Information</section>
+        </sections>
+    </layouts>
     <recordTypes>
         <label><!-- Admin --></label>
         <name>Admin</name>

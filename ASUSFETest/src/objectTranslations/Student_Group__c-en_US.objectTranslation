@@ -149,5 +149,12 @@
         <label><!-- Active --></label>
         <name>SG_Status__c</name>
     </fields>
+    <layouts>
+        <layout>Student Group Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

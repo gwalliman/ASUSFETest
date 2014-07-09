@@ -1033,6 +1033,48 @@
             <translation><!-- Not Used --></translation>
         </picklistValues>
     </fields>
+    <layouts>
+        <layout>External Mastered Contact Layout</layout>
+        <sections>
+            <label><!-- Affiliation --></label>
+            <section>Affiliation</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Insight --></label>
+            <section>Contact Insight</section>
+        </sections>
+        <sections>
+            <label><!-- Recruitment Data --></label>
+            <section>Recruitment Data</section>
+        </sections>
+        <sections>
+            <label><!-- Silverpop --></label>
+            <section>Silverpop</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SF Mastered Contact Layout</layout>
+        <sections>
+            <label><!-- Academic History --></label>
+            <section>Academic History</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Insight --></label>
+            <section>Contact Insight</section>
+        </sections>
+        <sections>
+            <label><!-- Silverpop --></label>
+            <section>Silverpop</section>
+        </sections>
+    </layouts>
     <recordTypes>
         <label><!-- External Mastered --></label>
         <name>External_Mastered</name>
