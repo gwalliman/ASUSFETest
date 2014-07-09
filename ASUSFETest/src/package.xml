@@ -1,124 +1,412 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <types>
-        <members>*</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexComponent</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexPage</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexTrigger</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>CustomApplication</name>
-    </types>
-    <types>
-        <members>*</members>
-        <members>Account</members>
-        <members>AccountContactRole</members>
-        <members>Activity</members>
-        <members>Asset</members>
-        <members>Campaign</members>
-        <members>CampaignMember</members>
-        <members>Case</members>
-        <members>CaseContactRole</members>
-        <members>Contact</members>
-        <members>ContentVersion</members>
-        <members>Contract</members>
-        <members>ContractContactRole</members>
-        <members>Event</members>
-        <members>Idea</members>
-        <members>Lead</members>
-        <members>Opportunity</members>
-        <members>OpportunityCompetitor</members>
-        <members>OpportunityContactRole</members>
-        <members>OpportunityLineItem</members>
-        <members>PartnerRole</members>
-        <members>Pricebook2</members>
-        <members>Product2</members>
-        <members>QuickText</members>
-        <members>Site</members>
-        <members>Solution</members>
-        <members>Task</members>
-        <members>User</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>CustomObjectTranslation</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>CustomTab</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>Layout</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>Scontrol</name>
-    </types>
-    <types>
-        <members>Academic_Interest__c</members>
-        <members>Account</members>
-        <members>Asset</members>
-        <members>Campaign</members>
-        <members>CampaignMember</members>
-        <members>Case</members>
-        <members>Case_Assignment_Rule__c</members>
-        <members>Contact</members>
-        <members>Contract</members>
-        <members>Country__c</members>
-        <members>Degree_Name__c</members>
-        <members>EmailMessage</members>
-        <members>Email_To_Case_Configuration__c</members>
-        <members>Email_To_Case_Filter__c</members>
-        <members>Event</members>
-        <members>FAQ__kav</members>
-        <members>FERPA_Consent__c</members>
-        <members>Financial_Aid_Package__c</members>
-        <members>GPA_Scale__c</members>
-        <members>How_To__kav</members>
-        <members>Idea</members>
-        <members>Informational__kav</members>
-        <members>Institution__c</members>
-        <members>Key_Value__c</members>
-        <members>Lead</members>
-        <members>Lead_Interest__c</members>
-        <members>Location__c</members>
-        <members>Opportunity</members>
-        <members>OpportunityLineItem</members>
-        <members>Organization</members>
-        <members>Organization__c</members>
-        <members>PKB_Article_Feedback_Deflection__c</members>
-        <members>PKB_Featured__c</members>
-        <members>PKB__c</members>
-        <members>Plan__c</members>
-        <members>Previous_Education__c</members>
-        <members>Product2</members>
-        <members>Program__c</members>
-        <members>QuickText</members>
-        <members>Service_Indicator__c</members>
-        <members>Site</members>
-        <members>Solution</members>
-        <members>Student_Group__c</members>
-        <members>Student_Program_Plan__c</members>
-        <members>Task</members>
-        <members>Term__c</members>
-        <members>Test_Score__c</members>
-        <members>User</members>
-        <members>UserLicense</members>
-        <members>pkb_ka__c</members>
-        <name>Workflow</name>
-    </types>
-    <version>30.0</version>
+  <types>
+    <name>CustomApplication</name>
+    <members>standard__ServiceConsole</members>
+    <members>standard__Service</members>
+    <members>standard__Sales</members>
+    <members>standard__Platform</members>
+    <members>standard__Marketing</members>
+    <members>standard__Community</members>
+    <members>standard__Chatter</members>
+    <members>standard__AppLauncher</members>
+    <members>Recruiting</members>
+    <members>PKB_2</members>
+    <members>Knowledge</members>
+    <members>Administrator</members>
+    <members>ASU_Service</members>
+    <members>ASU_Chatter</members>
+  </types>
+  <types>
+    <name>ApexClass</name>
+    <members>vfKeywordSearchController</members>
+    <members>pkb_mobile_proxy</members>
+    <members>pkb_mobile_controller</members>
+    <members>pkb_mobile_Test</members>
+    <members>pkb_Test</members>
+    <members>pkb_SiteMap</members>
+    <members>pkb_SettingsController</members>
+    <members>pkb_SecurityHandler</members>
+    <members>pkb_Mobile_CustomSettingModel</members>
+    <members>pkb_Mobile_ConfigController</members>
+    <members>pkb_Controller</members>
+    <members>newCase</members>
+    <members>caseSave</members>
+    <members>VfSearchControllerArticles</members>
+    <members>TriggerFactory</members>
+    <members>TopFiveArticleController</members>
+    <members>Test_TopFiveArticleController</members>
+    <members>Test_SCLaunchController</members>
+    <members>Test_OpportunityHandler</members>
+    <members>Test_NewProspectController</members>
+    <members>Test_NewLeadEntryController</members>
+    <members>Test_LeadHandler</members>
+    <members>Test_CreateLeadInterestTrigger</members>
+    <members>Test_ContactHandler</members>
+    <members>Test_CaseInboundEmailHandler</members>
+    <members>Test_AllPublishedArticlesController</members>
+    <members>TestController</members>
+    <members>SiteRegisterControllerTest</members>
+    <members>SiteRegisterController</members>
+    <members>SiteLoginControllerTest</members>
+    <members>SiteLoginController</members>
+    <members>SCLaunchController</members>
+    <members>OpportunityHandler</members>
+    <members>NewProspectController</members>
+    <members>NewLeadEntryController</members>
+    <members>NavLinks</members>
+    <members>MyProfilePageControllerTest</members>
+    <members>MyProfilePageController</members>
+    <members>MyConsoleController</members>
+    <members>LeadHandler</members>
+    <members>ITrigger</members>
+    <members>ForgotPasswordControllerTest</members>
+    <members>ForgotPasswordController</members>
+    <members>DataCategoryUtil</members>
+    <members>DataCategoryInfo</members>
+    <members>DataCategoryGroupInfo</members>
+    <members>ContactInfo</members>
+    <members>ContactHandler</members>
+    <members>CommunitiesSelfRegControllerTest</members>
+    <members>CommunitiesSelfRegController</members>
+    <members>CommunitiesSelfRegConfirmControllerTest</members>
+    <members>CommunitiesSelfRegConfirmController</members>
+    <members>CommunitiesLoginControllerTest</members>
+    <members>CommunitiesLoginController</members>
+    <members>CommunitiesLandingControllerTest</members>
+    <members>CommunitiesLandingController</members>
+    <members>ChangePasswordControllerTest</members>
+    <members>ChangePasswordController</members>
+    <members>CaseShowAllAttachmentsControllerExt</members>
+    <members>CaseReplyTemplateSelector</members>
+    <members>CaseInboundEmailHandler</members>
+    <members>AutoCompleteController</members>
+    <members>AllPublishedArticlesController</members>
+  </types>
+  <types>
+    <name>ApexComponent</name>
+    <members>pkb_search</members>
+    <members>pkb_results</members>
+    <members>pkb_remove_MyASU</members>
+    <members>pkb_related</members>
+    <members>pkb_popular</members>
+    <members>pkb_narrow</members>
+    <members>pkb_mobile_templates</members>
+    <members>pkb_mobile_setup_css</members>
+    <members>pkb_mobile_jsInit</members>
+    <members>pkb_mobile_css</members>
+    <members>pkb_mobileCustomSettingsKa</members>
+    <members>pkb_js</members>
+    <members>pkb_feedbackyesno</members>
+    <members>pkb_featured</members>
+    <members>pkb_fb_css</members>
+    <members>pkb_css_asu</members>
+    <members>pkb_css</members>
+    <members>pkb_contactus_buttons_article</members>
+    <members>pkb_categoryselect</members>
+    <members>pkb_articleview</members>
+    <members>pkb_articleicons</members>
+    <members>pkb_article</members>
+    <members>myasustyles</members>
+    <members>asu_responsive_header_section</members>
+    <members>asu_responsive_body_section</members>
+    <members>SitePoweredBy</members>
+    <members>SiteLogin</members>
+    <members>SiteHeader</members>
+    <members>SiteFooter</members>
+  </types>
+  <types>
+    <name>Layout</name>
+    <members>User-User Layout</members>
+    <members>Test_Score__c-Test Score Layout</members>
+    <members>Term__c-Term Layout</members>
+    <members>Task-Task Layout</members>
+    <members>Task-Admin Layout</members>
+    <members>Student_Program_Plan__c-Student Program Plan Layout</members>
+    <members>Student_Group__c-Student Group Layout</members>
+    <members>Solution-Solution Layout</members>
+    <members>Service_Indicator__c-Service Indicator Layout</members>
+    <members>QuickText-Quick Text Layout</members>
+    <members>Program__c-Program Layout</members>
+    <members>Product2-Product Layout</members>
+    <members>Pricebook2-Price Book Layout</members>
+    <members>Previous_Education__c-Previous Education Layout</members>
+    <members>Plan__c-Plan Layout</members>
+    <members>PKB_Featured__c-PKB Featured Layout</members>
+    <members>PKB_Article_Feedback_Deflection__c-PKB Article Deflection Layout</members>
+    <members>Organization__c-Organization Layout</members>
+    <members>OpportunityLineItem-Opportunity Product Layout</members>
+    <members>Opportunity-Undergraduate Prospect Layout</members>
+    <members>Opportunity-Undergraduate Application Layout</members>
+    <members>Opportunity-Opportunity Layout</members>
+    <members>Opportunity-Graduate Prospect Layout</members>
+    <members>Opportunity-Graduate Application Layout</members>
+    <members>Location__c-Location Layout</members>
+    <members>Lead_Interest__c-Lead Interest Layout</members>
+    <members>Lead-Lead Layout</members>
+    <members>Lead-Admin Layout</members>
+    <members>Key_Value__c-Key Value Layout</members>
+    <members>Institution__c-Institution Layout</members>
+    <members>Informational__kav-Informational Layout</members>
+    <members>Idea-Idea Layout</members>
+    <members>How_To__kav-How To Layout</members>
+    <members>Global-Global Layout</members>
+    <members>GPA_Scale__c-GPA Scale Layout</members>
+    <members>Financial_Aid_Package__c-Financial Aid Package Layout</members>
+    <members>FERPA_Consent__c-FERPA Consent for Access Layout</members>
+    <members>FAQ__kav-FAQ Layout</members>
+    <members>Event-Event Layout</members>
+    <members>Degree_Name__c-Degree Name Layout</members>
+    <members>Country__c-Country Layout</members>
+    <members>Contract-Contract Layout</members>
+    <members>Contact-SF Mastered Contact Layout</members>
+    <members>Contact-External Mastered Contact Layout</members>
+    <members>CollaborationGroup-Group Layout</members>
+    <members>Case_Assignment_Rule__c-Case Assignment Rule Layout</members>
+    <members>CaseClose-Close Case Layout</members>
+    <members>Case-Customer Community Layout</members>
+    <members>Case-Case Feed Layout</members>
+    <members>CampaignMember-Campaign Member Page Layout</members>
+    <members>Campaign-Marketing Layout</members>
+    <members>Campaign-Campaign Layout</members>
+    <members>Asset-Asset Layout</members>
+    <members>Account-SF Mastered Org Layout</members>
+    <members>Account-SF Mastered Contact Layout</members>
+    <members>Account-External Mastered Org Layout</members>
+    <members>Account-External Mastered Contact Layout</members>
+    <members>Academic_Interest__c-Academic Interest Layout</members>
+  </types>
+  <types>
+    <name>CustomObjectTranslation</name>
+    <members>silverpop__Silverpop_Settings__c-en_US</members>
+    <members>silverpop__Silverpop_PH__c-en_US</members>
+    <members>silverpop__Silverpop_Email_Campaign_Link__c-en_US</members>
+    <members>silverpop__Silverpop_Email_Campaign_Activity__c-en_US</members>
+    <members>silverpop__Silverpop_Email_Activity__c-en_US</members>
+    <members>silverpop__Email_Link__c-en_US</members>
+    <members>pkb_ka__c-en_US</members>
+    <members>Test_Score__c-en_US</members>
+    <members>Term__c-en_US</members>
+    <members>Student_Program_Plan__c-en_US</members>
+    <members>Student_Group__c-en_US</members>
+    <members>Service_Indicator__c-en_US</members>
+    <members>Program__c-en_US</members>
+    <members>Previous_Education__c-en_US</members>
+    <members>Plan__c-en_US</members>
+    <members>PKB__c-en_US</members>
+    <members>PKB_Featured__c-en_US</members>
+    <members>PKB_Article_Feedback_Deflection__c-en_US</members>
+    <members>Organization__c-en_US</members>
+    <members>Location__c-en_US</members>
+    <members>Lead_Interest__c-en_US</members>
+    <members>Lead-en_US</members>
+    <members>Key_Value__c-en_US</members>
+    <members>Institution__c-en_US</members>
+    <members>Informational__kav-en_US</members>
+    <members>How_To__kav-en_US</members>
+    <members>GPA_Scale__c-en_US</members>
+    <members>Financial_Aid_Package__c-en_US</members>
+    <members>Field_Trip__Object_Analysis__c-en_US</members>
+    <members>Field_Trip__Field_Analysis__c-en_US</members>
+    <members>FERPA_Consent__c-en_US</members>
+    <members>FAQ__kav-en_US</members>
+    <members>Email_To_Case_Filter__c-en_US</members>
+    <members>Email_To_Case_Configuration__c-en_US</members>
+    <members>Degree_Name__c-en_US</members>
+    <members>Country__c-en_US</members>
+    <members>Contact-en_US</members>
+    <members>ChangeCaseOwner__Max_Button_Queues_Setting__c-en_US</members>
+    <members>ChangeCaseOwner__Email_Template_Setting__c-en_US</members>
+    <members>Case_Assignment_Rule__c-en_US</members>
+    <members>Academic_Interest__c-en_US</members>
+  </types>
+  <types>
+    <name>CustomObject</name>
+    <members>pkb_ka__c</members>
+    <members>User</members>
+    <members>Test_Score__c</members>
+    <members>Term__c</members>
+    <members>Task</members>
+    <members>Student_Program_Plan__c</members>
+    <members>Student_Group__c</members>
+    <members>Solution</members>
+    <members>Site</members>
+    <members>Service_Indicator__c</members>
+    <members>QuickText</members>
+    <members>Program__c</members>
+    <members>Product2</members>
+    <members>Pricebook2</members>
+    <members>Previous_Education__c</members>
+    <members>Plan__c</members>
+    <members>PartnerRole</members>
+    <members>PKB__c</members>
+    <members>PKB_Featured__c</members>
+    <members>PKB_Article_Feedback_Deflection__c</members>
+    <members>Organization__c</members>
+    <members>OpportunityLineItem</members>
+    <members>OpportunityContactRole</members>
+    <members>OpportunityCompetitor</members>
+    <members>Opportunity</members>
+    <members>Location__c</members>
+    <members>Lead_Interest__c</members>
+    <members>Lead</members>
+    <members>Key_Value__c</members>
+    <members>Institution__c</members>
+    <members>Informational__kav</members>
+    <members>Idea</members>
+    <members>How_To__kav</members>
+    <members>GPA_Scale__c</members>
+    <members>Financial_Aid_Package__c</members>
+    <members>FERPA_Consent__c</members>
+    <members>FAQ__kav</members>
+    <members>Event</members>
+    <members>Email_To_Case_Filter__c</members>
+    <members>Email_To_Case_Configuration__c</members>
+    <members>Degree_Name__c</members>
+    <members>Country__c</members>
+    <members>ContractContactRole</members>
+    <members>Contract</members>
+    <members>ContentVersion</members>
+    <members>Contact</members>
+    <members>Case_Assignment_Rule__c</members>
+    <members>CaseContactRole</members>
+    <members>Case</members>
+    <members>CampaignMember</members>
+    <members>Campaign</members>
+    <members>Asset</members>
+    <members>Activity</members>
+    <members>AccountContactRole</members>
+    <members>Account</members>
+    <members>Academic_Interest__c</members>
+  </types>
+  <types>
+    <name>ApexPage</name>
+    <members>viewcase</members>
+    <members>studentSC</members>
+    <members>pkb_sitemap</members>
+    <members>pkb_siteMapIndex</members>
+    <members>pkb_robottxt</members>
+    <members>pkb_mobile</members>
+    <members>pkb_Template_fb</members>
+    <members>pkb_Template_ASU</members>
+    <members>pkb_Template</members>
+    <members>pkb_Settings</members>
+    <members>pkb_RSS</members>
+    <members>pkb_Home_fb</members>
+    <members>pkb_Home_ASU</members>
+    <members>pkb_Home</members>
+    <members>akb</members>
+    <members>UnderConstruction</members>
+    <members>Unauthorized</members>
+    <members>StdExceptionTemplate</members>
+    <members>SiteTemplate</members>
+    <members>SiteRegisterConfirm</members>
+    <members>SiteRegister</members>
+    <members>SiteLogin</members>
+    <members>SCLaunch</members>
+    <members>Return_to_Service_Center</members>
+    <members>RedirectToKB</members>
+    <members>NewProspect</members>
+    <members>NewLeadEntry</members>
+    <members>MyProfilePage</members>
+    <members>InMaintenance</members>
+    <members>IdeasHome</members>
+    <members>ForgotPasswordConfirm</members>
+    <members>ForgotPassword</members>
+    <members>FileNotFound</members>
+    <members>Exception</members>
+    <members>CommunitiesTemplate</members>
+    <members>CommunitiesSelfRegConfirm</members>
+    <members>CommunitiesSelfReg</members>
+    <members>CommunitiesLogin</members>
+    <members>CommunitiesLanding</members>
+    <members>ChangePassword</members>
+    <members>CaseShowAllAttachments</members>
+    <members>BandwidthExceeded</members>
+    <members>AnswersHome</members>
+    <members>AllPublishedArticles</members>
+  </types>
+  <types>
+    <name>CustomTab</name>
+    <members>Test_Score__c</members>
+    <members>Service_Center</members>
+    <members>Prospect_Entry</members>
+    <members>Program__c</members>
+    <members>Previous_Education__c</members>
+    <members>Plan__c</members>
+    <members>PKB_Featured__c</members>
+    <members>PKB_Article_Feedback_Deflection__c</members>
+    <members>PKB_2_Settings</members>
+    <members>Organization__c</members>
+    <members>New_Prospect</members>
+    <members>Location__c</members>
+    <members>Lead_Interest__c</members>
+    <members>Lead_Entry</members>
+    <members>Getting_Started_social</members>
+    <members>Getting_Started_reg</members>
+    <members>Degree_Name__c</members>
+    <members>Case_Assignment_Rule__c</members>
+    <members>Academic_Interest__c</members>
+  </types>
+  <types>
+    <name>ApexTrigger</name>
+    <members>createleadinterest</members>
+    <members>OpportunityTrigger</members>
+    <members>LeadTrigger</members>
+    <members>ContactTrigger</members>
+  </types>
+  <types>
+    <name>Workflow</name>
+    <members>pkb_ka__c</members>
+    <members>UserLicense</members>
+    <members>User</members>
+    <members>Test_Score__c</members>
+    <members>Term__c</members>
+    <members>Task</members>
+    <members>Student_Program_Plan__c</members>
+    <members>Student_Group__c</members>
+    <members>Solution</members>
+    <members>Site</members>
+    <members>Service_Indicator__c</members>
+    <members>QuickText</members>
+    <members>Program__c</members>
+    <members>Product2</members>
+    <members>Previous_Education__c</members>
+    <members>Plan__c</members>
+    <members>PKB__c</members>
+    <members>PKB_Featured__c</members>
+    <members>PKB_Article_Feedback_Deflection__c</members>
+    <members>Organization__c</members>
+    <members>Organization</members>
+    <members>OpportunityLineItem</members>
+    <members>Opportunity</members>
+    <members>Location__c</members>
+    <members>Lead_Interest__c</members>
+    <members>Lead</members>
+    <members>Key_Value__c</members>
+    <members>Institution__c</members>
+    <members>Informational__kav</members>
+    <members>Idea</members>
+    <members>How_To__kav</members>
+    <members>GPA_Scale__c</members>
+    <members>Financial_Aid_Package__c</members>
+    <members>FERPA_Consent__c</members>
+    <members>FAQ__kav</members>
+    <members>Event</members>
+    <members>Email_To_Case_Filter__c</members>
+    <members>Email_To_Case_Configuration__c</members>
+    <members>EmailMessage</members>
+    <members>Degree_Name__c</members>
+    <members>Country__c</members>
+    <members>Contract</members>
+    <members>Contact</members>
+    <members>Case_Assignment_Rule__c</members>
+    <members>Case</members>
+    <members>CampaignMember</members>
+    <members>Campaign</members>
+    <members>Asset</members>
+    <members>Account</members>
+    <members>Academic_Interest__c</members>
+  </types>
+  <version>30.0</version>
 </Package>
