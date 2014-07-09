@@ -20,5 +20,12 @@
         <label><!-- Interest Code --></label>
         <name>Interest_Code__c</name>
     </fields>
+    <layouts>
+        <layout>Academic Interest Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

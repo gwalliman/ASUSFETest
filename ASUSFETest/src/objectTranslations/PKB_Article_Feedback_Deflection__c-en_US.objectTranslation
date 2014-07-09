@@ -72,5 +72,20 @@
         <label><!-- Session ID --></label>
         <name>Session_ID__c</name>
     </fields>
+    <layouts>
+        <layout>PKB Article Deflection Layout</layout>
+        <sections>
+            <label><!-- Addition Information --></label>
+            <section>Addition Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Deflection Information --></label>
+            <section>Deflection Information</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>
