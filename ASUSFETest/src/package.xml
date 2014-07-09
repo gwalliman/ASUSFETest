@@ -13,6 +13,7 @@
     <members>Recruiting</members>
     <members>PKB_2</members>
     <members>Knowledge</members>
+    <members>AnthonyTestRecruiting</members>
     <members>Administrator</members>
     <members>ASU_Service</members>
     <members>ASU_Chatter</members>
@@ -131,6 +132,7 @@
     <members>Product2-Product Layout</members>
     <members>Pricebook2-Price Book Layout</members>
     <members>Previous_Education__c-Previous Education Layout</members>
+    <members>Position__c-Position Layout</members>
     <members>Plan__c-Plan Layout</members>
     <members>PKB_Featured__c-PKB Featured Layout</members>
     <members>PKB_Article_Feedback_Deflection__c-PKB Article Deflection Layout</members>
@@ -192,6 +194,7 @@
     <members>Service_Indicator__c-en_US</members>
     <members>Program__c-en_US</members>
     <members>Previous_Education__c-en_US</members>
+    <members>Position__c-en_US</members>
     <members>Plan__c-en_US</members>
     <members>PKB__c-en_US</members>
     <members>PKB_Featured__c-en_US</members>
@@ -237,6 +240,7 @@
     <members>Product2</members>
     <members>Pricebook2</members>
     <members>Previous_Education__c</members>
+    <members>Position__c</members>
     <members>Plan__c</members>
     <members>PartnerRole</members>
     <members>PKB__c</members>
@@ -333,6 +337,7 @@
     <members>Prospect_Entry</members>
     <members>Program__c</members>
     <members>Previous_Education__c</members>
+    <members>Position__c</members>
     <members>Plan__c</members>
     <members>PKB_Featured__c</members>
     <members>PKB_Article_Feedback_Deflection__c</members>
@@ -372,6 +377,7 @@
     <members>Program__c</members>
     <members>Product2</members>
     <members>Previous_Education__c</members>
+    <members>Position__c</members>
     <members>Plan__c</members>
     <members>PKB__c</members>
     <members>PKB_Featured__c</members>
